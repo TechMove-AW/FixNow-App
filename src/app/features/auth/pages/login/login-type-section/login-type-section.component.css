@@ -1,0 +1,13 @@
+h2 {
+    color: white;
+}
+
+.type-section-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+  
+.type-button {
+    width: 100%;
+}

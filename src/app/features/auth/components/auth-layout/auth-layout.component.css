@@ -1,0 +1,15 @@
+.auth-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: url("https://lh7-rt.googleusercontent.com/docsz/AD_4nXdg_atG82xKX6l2E-5APW3Y0ihaPnyjscVFhGFYT4HxjC0cJjjhtRRPhXpY-CVz-lMelx8DAQNT3tSlf4gSQXhXkVOcB4osui8Etzx7Qwc3OiIv6uIGNX9CJM6z_RlvNZ77sOvKhA?key=P2tIbjhaC9zadVx7rBOVYg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+h1{
+    color: white;
+}
