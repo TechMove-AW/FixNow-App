@@ -1,5 +1,5 @@
 import { Routes } from '@angular/router';
-import { AuthLayoutComponent } from '@/public/components/auth-layout/auth-layout.component';
+import { AuthLayoutComponent } from './public/components/auth-layout/auth-layout.component';
 import { LoginTypeSectionComponent } from './public/pages/login/login-type-section/login-type-section.component';
 import { LoginCustomerComponent } from './public/pages/login/login-customer/login-customer.component';
 import { LoginWorkerComponent } from './public/pages/login/login-worker/login-worker.component';
@@ -11,9 +11,9 @@ import { RegisterWorkerComponent } from './public/pages/register/register-worker
 import { CustomerLayoutComponent } from './customer/components/customer-layout/customer-layout.component';
 import { CustomerHomeComponent } from './customer/pages/customer-home/customer-home.component';
 
-import { WorkerLayoutComponent } from './worker/componentes/worker-layout/worker-layout.component';
+import { WorkerLayoutComponent } from './worker/components/worker-layout/worker-layout.component';
 import { WorkerHomeComponent } from './worker/pages/worker-home/worker-home.component';
-import { PageNotFoundComponent } from '@/public/pages/page-not-found/page-not-found.component';
+import { PageNotFoundComponent } from './public/pages/page-not-found/page-not-found.component';
 
 export const routes: Routes = [
   {
