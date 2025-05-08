@@ -1,0 +1,96 @@
+{
+    "workers":[
+        {
+            "workerId": "uuid",
+            "userId": "uuid",
+            "firstName": "string",
+            "lastName": "string",
+            "email": "string",
+            "field": "string",
+            "skills": ["string"],
+            "certifications": ["string"],
+            "availability": "string",
+            "hourlyRate": "decimal",
+            "projectsCompleted": "integer",
+            "externalRecommendations": ["string"],
+            "profilePicture": "string",
+            "createdAt": "datetime"
+        }
+    ],
+    "reviews": [
+        {
+        "reviewId": "uuid",
+        "fromUserId": "uuid",
+        "toUserId": "uuid",
+        "rating": "integer",
+        "comment": "string",
+        "createdAt": "datetime"
+        }
+    ],
+    "proposals": [
+        {
+        "proposalId": "uuid",
+        "workerId": "uuid",
+        "workerName": "string",
+        "title": "string",
+        "description": "string",
+        "price": "decimal",
+        "estimatedTime": "string",
+        "status": "string",
+        "submittedAt": "datetime"
+        }
+    ],
+    "specialties": [
+        {
+            "id": 1,
+            "name": "Fontanería",
+            "slug": "fontaneria"
+        },
+        {
+            "id": 2,
+            "name": "Electricidad",
+            "slug": "electricidad"
+        },
+        {
+            "id": 3,
+            "name": "Gasfitería",
+            "slug": "gasfiteria"
+        },
+        {
+            "id": 4,
+            "name": "Cerrejería",
+            "slug": "cerrejeria"
+        },
+        {
+            "id": 5,
+            "name": "Albañilería",
+            "slug": "albanileria"
+        },
+        {
+            "id": 6,
+            "name": "Carpintería",
+            "slug": "carpinteria"
+        },
+        {
+            "id": 7,
+            "name": "Pintura",
+            "slug": "pintura"
+        },
+        {
+            "id": 8,
+            "name": "Pisos",
+            "slug": "pisos"
+        },
+        {
+            "id": 9,
+            "name": "Drywall",
+            "slug": "drywall"
+        },
+        {
+            "id": 10,
+            "name": "Refrigeración",
+            "slug": "refrigeracion"
+        }
+    ]
+
+}

@@ -6,5 +6,9 @@ export const environment = {
   // Server Base URL for Spring Boot REST API
   // serverBaseURL: 'http://localhost:8080/api/v1'
   serverBaseUrl: 'http://localhost:3000/api/v1',
-  coursesEndpointPath: '/courses',
+  workersEndpointPath: '/workers',
+  reviewsEndpointPath: '/reviews',
+  customersEndpointPath: '/customers',
+  proposalsEndpointPath: '/proposals',
+
 };
