@@ -1,17 +1,22 @@
-<mat-toolbar>
-    <mat-toolbar-row>
-        <span>FixNow</span>
+<mat-toolbar class="tool-bar">
+    <mat-toolbar-row class="top-row">
+        <a routerLink="./home" class="logo-container">
+            <img src="logo.svg" class="logo">
+        </a>
         <span style="flex: 1 1 auto;"></span>
-        <button mat-fab aria-label="Example icon button with a delete icon">
-            <mat-icon>mail</mat-icon>
+        <button mat-button class="menu-button">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <button mat-button>
+            <mat-icon>person</mat-icon>
         </button>
     </mat-toolbar-row>
-
-    <mat-toolbar-row>
+   
+    <mat-toolbar-row class="categories-row">
         @for(speciality of specialities; track speciality.id){
-            <button mat-button [routerLink]="['./speciality', speciality.slug]">
+            <a mat-button [routerLink]="['./speciality', speciality.slug]" class="category-button">
                 {{ speciality.name }}
-            </button>
+            </a>
         }
     </mat-toolbar-row>
-</mat-toolbar>  
+</mat-toolbar>
