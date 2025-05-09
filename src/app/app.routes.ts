@@ -15,6 +15,8 @@ import { WorkerLayoutComponent } from './worker/components/worker-layout/worker-
 import { WorkerHomeComponent } from './worker/pages/worker-home/worker-home.component';
 import { PageNotFoundComponent } from './public/pages/page-not-found/page-not-found.component';
 
+import { CategoryComponent } from './customer/worker-catalog/pages/category/category.component';
+
 export const routes: Routes = [
   {
     path: '',
@@ -34,7 +36,7 @@ export const routes: Routes = [
     component: CustomerLayoutComponent,
     children: [
       { path: 'home', component: CustomerHomeComponent },
-      //{ path: 'specialty/:category', component: SpecialtyWorkersComponent },
+      { path: 'category/:category', component: CategoryComponent },
       //{ path: 'profile', component: CustomerProfileComponent },
       { path: '', redirectTo: 'home', pathMatch: 'full' },
       { path: '**', component: PageNotFoundComponent }

@@ -290,6 +290,59 @@
           }
         ]
       }
-    ]
-  }
+    ],
+    "categories":
+        [
+            {
+                "id": 1,
+                "name": "Fontanería",
+                "slug": "fontaneria"
+            },
+            {
+                "id": 2,
+                "name": "Electricidad",
+                "slug": "electricidad"
+            },
+            {
+                "id": 3,
+                "name": "Gasfitería",
+                "slug": "gasfiteria"
+            },
+            {
+                "id": 4,
+                "name": "Cerrejería",
+                "slug": "cerrejeria"
+            },
+            {
+                "id": 5,
+                "name": "Albañilería",
+                "slug": "albanileria"
+            },
+            {
+                "id": 6,
+                "name": "Carpintería",
+                "slug": "carpinteria"
+            },
+            {
+                "id": 7,
+                "name": "Pintura",
+                "slug": "pintura"
+            },
+            {
+                "id": 8,
+                "name": "Pisos",
+                "slug": "pisos"
+            },
+            {
+                "id": 9,
+                "name": "Drywall",
+                "slug": "drywall"
+            },
+            {
+                "id": 10,
+                "name": "Refrigeración",
+                "slug": "refrigeracion"
+            }
+        ]
+}
   

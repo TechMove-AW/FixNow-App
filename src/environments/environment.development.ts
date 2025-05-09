@@ -10,5 +10,5 @@ export const environment = {
   reviewsEndpointPath: '/reviews',
   customersEndpointPath: '/customers',
   proposalsEndpointPath: '/proposals',
-
+  categoriesEndpointPath: '/categories',
 };

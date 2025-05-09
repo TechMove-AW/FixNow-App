@@ -14,7 +14,7 @@
    
     <mat-toolbar-row class="categories-row">
         @for(speciality of specialities; track speciality.id){
-            <a mat-button [routerLink]="['./speciality', speciality.slug]" class="category-button">
+            <a mat-button [routerLink]="['./category', speciality.id]" class="category-button">
                 {{ speciality.name }}
             </a>
         }
