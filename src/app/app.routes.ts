@@ -14,6 +14,7 @@ import { CustomerHomeComponent } from './customer/pages/customer-home/customer-h
 import { WorkerLayoutComponent } from './worker/components/worker-layout/worker-layout.component';
 import { WorkerHomeComponent } from './worker/pages/worker-home/worker-home.component';
 import { PageNotFoundComponent } from './public/pages/page-not-found/page-not-found.component';
+import { AlertasComponent } from './customer/alerts/alertas.component';
 
 import { CategoryComponent } from './customer/worker-catalog/pages/category/category.component';
 
@@ -36,8 +37,9 @@ export const routes: Routes = [
     component: CustomerLayoutComponent,
     children: [
       { path: 'home', component: CustomerHomeComponent },
-      { path: 'category/:category', component: CategoryComponent },
+      { path: 'worker-catalog/:category', component: CategoryComponent },
       //{ path: 'profile', component: CustomerProfileComponent },
+      { path: 'alerts', component: AlertasComponent },
       { path: '', redirectTo: 'home', pathMatch: 'full' },
       { path: '**', component: PageNotFoundComponent }
     ]

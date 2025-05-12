@@ -40,3 +40,20 @@ export enum Role {
     Worker = "worker",
     Customer = "customer",
 }
+
+export interface Alert {
+  id: number;
+  userId: string;
+  type: 'system' | 'user';
+  systemName?: string;
+  logoUrl?: string;
+  message: string;
+  timestamp?: string;
+  date?: string;
+  read: boolean;
+  link: string;
+  username?: string;
+  avatarUrl?: string;
+  workerAvatarUrl?: string;
+  workerName?: string;
+}

@@ -1,22 +1,22 @@
 <mat-toolbar class="tool-bar">
     <mat-toolbar-row class="top-row">
-        <a routerLink="./home" class="logo-container">
-            <img src="logo.svg" class="logo">
-        </a>
-        <span style="flex: 1 1 auto;"></span>
-        <button mat-button class="menu-button">
-            <mat-icon>menu</mat-icon>
-        </button>
-        <button mat-button>
-            <mat-icon>person</mat-icon>
-        </button>
+      <a routerLink="./home" class="logo-container">
+        <img src="logo.svg" class="logo">
+      </a>
+      <span style="flex: 1 1 auto;"></span>
+      <button mat-button class="notifications-button" routerLink="/customer/alerts">
+        <mat-icon>notifications</mat-icon>
+      </button>
+      <button mat-button>
+        <mat-icon>person</mat-icon>
+      </button>
     </mat-toolbar-row>
-   
+
     <mat-toolbar-row class="categories-row">
-        @for(speciality of specialities; track speciality.id){
-            <a mat-button [routerLink]="['./category', speciality.id]" class="category-button">
-                {{ speciality.name }}
-            </a>
-        }
+      @for(speciality of specialities; track speciality.id){
+        <a mat-button [routerLink]="['./worker-catalog', speciality.id]" class="category-button">
+          {{ speciality.name }}
+        </a>
+      }
     </mat-toolbar-row>
-</mat-toolbar>
+  </mat-toolbar>

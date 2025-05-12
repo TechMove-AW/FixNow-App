@@ -1,0 +1,20 @@
+.category-page {
+  padding: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.category-title {
+  font-size: 24px;
+  margin-bottom: 24px;
+  color: #333;
+  font-weight: normal;
+}
+
+.category-title strong {
+  font-weight: bold;
+}
+
+.category-container {
+  width: 100%;
+}

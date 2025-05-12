@@ -1,1 +1,60 @@
-<p>customer-home works!</p>
+<mat-card class="fixit-banner mat-elevation-z4">
+  <div class="banner-content">
+    <h2>Únete a FIX IT PRO</h2>
+    <p>Contamos Con Profesionales De Distintas Áreas Para Brindarte Soluciones Rápidas, Confiables Y De Calidad.</p>
+  </div>
+  <div class="ver-mas-container">
+    <a href="#" class="ver-mas-button">Ver Más</a>
+  </div>
+</mat-card>
+
+<div class="profesionales-container">
+  <div class="profesionales-list">
+    <mat-card *ngFor="let prof of profesionales" class="profesional-card mat-elevation-z2">
+      <mat-card-header>
+        <div class="profesional-header-content">
+          <div class="profesional-avatar-container">
+            <img [src]="prof.imagen" alt="{{ prof.nombre }}">
+          </div>
+          <div class="profesional-info-header">
+            <mat-card-title>{{ prof.nombre }}</mat-card-title>
+            <mat-card-subtitle>{{ prof.especialidad }}</mat-card-subtitle>
+          </div>
+        </div>
+      </mat-card-header>
+      <mat-card-content>
+        <p>Tiempo estimado: {{ prof.tiempo }}</p>
+        <span class="badge">+{{ prof.cantidadTrabajos }} trabajos</span>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+
+<div class="ecosmart-section">
+  <mat-card class="ecosmart-card mat-elevation-z4">
+    <img mat-card-image [src]="producto.imagen" alt="{{ producto.nombre }}" class="ecosmart-image" />
+    <div class="ecosmart-info">
+      <mat-card-title>{{ producto.nombre }}</mat-card-title>
+      <mat-card-subtitle>{{ producto.descripcion }}</mat-card-subtitle>
+      <mat-card-content>
+        <p>{{ producto.detalle }}</p>
+        <ul>
+          <li *ngFor="let c of producto.caracteristicas">
+            <mat-icon color="primary">check_circle</mat-icon> {{ c }}
+          </li>
+        </ul>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button color="primary">Ir a Comprar</button>
+      </mat-card-actions>
+    </div>
+  </mat-card>
+</div>
+
+<div class="pago-icons">
+  <img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXc_lU0xQzu_eloNh4SEcfxf3qBr0ZjOoccfv5z7YT91s78svAnrmMZflM5Qx7KcBrXVf8ZgpQOgZtl4pXBXPTKpfO1Yw62OHUmQU8GuAgHiRmvPPP7qEySPsPD5gb1RlKTfzIuckQ?key=r2Z2D-f9M00zMKAFa5GPYQ" alt="Visa">
+  <img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXfc9zZUU2ncsx-OsYJdERbXp_HeMTOG2dZc5IpIiT6OkiU9z0quWvWk-9uVVaXUbOYQDDVe0FHz7-pGgEzuhBP8ld_E5VT8imwnYquGDXNy4Fembi5pI6uQXD4shh-jxnfPBn140Q?key=r2Z2D-f9M00zMKAFa5GPYQ" alt="Yape">
+  <img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXfrHjlqPfu1Q38tSUf4usklB5TP0K0uPb7ReyFirUYUaHJ7xQd9szdN9zVALsvaViUP943cZUx85avwzjh6QbOkuYdRhJuAd8fYmOH-_yVy53w-g3m0ZFifzKfmkmala5PXtvdGZw?key=r2Z2D-f9M00zMKAFa5GPYQ" alt="Mastercard">
+  <img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXcgjQuFynD9MZGVynEZvqUOC5Txg5n8wiEtK7hzwHAaa_8-RtbV-Rr8sAKZMv8UMfFm_H08nFtWsL3SwOPo50SXw3yzTMm4Oade0xyex2oRCQo0V_l2kQ3U3wnzIzJefT770DgFkg?key=r2Z2D-f9M00zMKAFa5GPYQ" alt="Plin">
+  <img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXcriopYfLxJtNCYTsXZ8Mfj2VTO1ApOQe86OiMz5ajosQBqlTtjcUNr-wzjiWsFW7CFpw_hGDP4lOH02HUgRCQ9SAAD7oVDjUa8h5DZMARPtWSsz5IX1_EHP32mXipkoCejJlO3Nw?key=r2Z2D-f9M00zMKAFa5GPYQ" alt="Efectivo">
+</div>

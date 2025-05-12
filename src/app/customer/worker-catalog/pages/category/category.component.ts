@@ -18,7 +18,6 @@ export class CategoryComponent implements OnInit {
   protected category_id: string = '';
   protected category: Category = {} as Category;
   protected workers: Worker[] = [];
-
   ngOnInit(): void {
     this.route.params.subscribe(params => {
       this.category_id = params['category'] || '';
@@ -48,7 +47,7 @@ export class CategoryComponent implements OnInit {
   private loadWorkers(): void {
     this.workerService.getAll().subscribe({
       next: (workers) => {
-        this.workers = workers.filter(worker => 
+        this.workers = workers.filter(worker =>
           worker.category.id === this.category.id
         );
       },

@@ -1,3 +1,66 @@
 .worker-card {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.worker-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.worker-info {
+  padding: 16px;
+}
+
+.worker-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.worker-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.category-name {
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.worker-description {
+  font-size: 0.9rem;
+  color: #333;
+  margin-bottom: 16px;
+  line-height: 1.4;
+}
+
+.worker-rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.card-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.view-profile {
+  color: #1976d2;
+  text-decoration: none;
+}
+
+.worker-time {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.worker-card {
     max-width: 400px;
   }

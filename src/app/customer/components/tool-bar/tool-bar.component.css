@@ -24,6 +24,9 @@
   justify-content: center;
   height: 100%;
 }
+.notifications-button {
+  margin-left: 10px; 
+}
 
 
 
