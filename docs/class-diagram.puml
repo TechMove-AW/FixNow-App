@@ -1,0 +1,337 @@
+@startuml FixNow-App Class Diagram
+
+' Configuración de estilo
+skinparam classFontSize 14
+skinparam classFontName Arial
+skinparam classAttributeFontSize 12
+skinparam classAttributeFontName Arial
+skinparam packageStyle rectangle
+
+' Paquete de modelos compartidos
+package "shared" {
+  package "models" {
+    class Alert {
+      -id: number
+      -userId: number
+      -title: string
+      -message: string
+      -timestamp: Date
+      -read: boolean
+    }
+
+    class WorkerProfile {
+      -id: string
+      -fullName: string
+      -email: string
+      -phoneNumber: string
+      -age: number
+      -dni: string
+      -specialty: string
+      -experienceYears: number
+      -address: string
+      -profileImageUrl: string
+      -username: string
+      -location: string
+      -memberSince: string
+      -paymentMethods: any[]
+    }
+
+    class Category {
+      -id: string
+      -name: string
+      -slug: string
+    }
+
+    class Worker {
+      -id: string
+      -user: User
+      -category: Category
+      -experienceDescription: string
+      -hourlyRate: number
+      -projectsCompleted: number
+      -rating: number
+      -reviewIds: string[]
+      -serviceIds: string[]
+    }
+  }
+
+  package "services" {
+    class AlertService {
+      +getAlertsForUser(userId: number): Observable<Alert[]>
+      +createAlert(alert: Alert): Observable<Alert>
+    }
+
+    class WorkerService {
+      +create(workerData: any): Observable<any>
+      +getAll(): Observable<Worker[]>
+    }
+
+    class BaseService<T> {
+      #resourceEndpoint: string
+      +getAll(): Observable<T[]>
+      +getById(id: string): Observable<T>
+      +create(entity: T): Observable<T>
+      +update(id: string, entity: T): Observable<T>
+      +delete(id: string): Observable<void>
+    }
+  }
+}
+
+' Paquete de sección técnica
+package "tec-section" {
+  package "pages" {
+    class ProfileEditComponent {
+      -profileDataForForm: WorkerProfile | null
+      +ngOnInit(): void
+      +handleProfileSave(formDataFromChild: Partial<WorkerProfile>): void
+    }
+
+    class ProfileViewComponent {
+      -worker: WorkerProfile | null
+      +ngOnInit(): void
+      +navigateToEdit(): void
+    }
+  }
+
+  package "components" {
+    class WorkerProfileFormComponent {
+      -profileForm: FormGroup
+      -specialties: string[]
+      +ngOnInit(): void
+      +onSubmit(): void
+    }
+
+    class ErrorDialogComponent {
+    }
+  }
+
+  package "show-services" {
+    package "pages" {
+      class ShowServicesComponent {
+        -services: Service[]
+        -newService: Partial<Service>
+        -editingIndex: number | null
+        -previewUrl: any
+        +addOrUpdateService(): void
+        +editService(index: number): void
+        +deleteService(index: number): void
+        +onImageSelected(event: Event): void
+      }
+
+      class AgendaComponent {
+        -workRequests: WorkRequest[]
+        -currentRequestForDetail: WorkRequest | null
+        -showDetailModal: boolean
+        +ngOnInit(): void
+        +loadWorkRequests(): void
+        +openDetails(request: WorkRequest, event?: MouseEvent): void
+        +closeDetails(): void
+        +acceptWorkRequest(request: WorkRequest): void
+        +rejectWorkRequest(request: WorkRequest): void
+        +askToDelete(request: WorkRequest, event: MouseEvent): void
+        +deleteRequest(requestId: string): void
+      }
+
+      class WorkAcceptedComponent {
+        -workRequestDetails: WorkRequest | null
+        -clientName: string
+        -messages: ChatMessage[]
+        -newMessageText: string
+        -detailsPanelOpenState: boolean
+        +ngOnInit(): void
+        +sendMessage(): void
+        +openPutPriceDialog(): void
+        +processFinishedWork(finishData: PutPriceDialogResult): void
+        +closePage(): void
+      }
+    }
+
+    package "components" {
+      class ConfirmationDeleteComponent {
+        -title: string
+        -messageToShow: string
+        -confirmButtonText: string
+        -cancelButtonText: string
+        +onConfirm(): void
+        +onCancel(): void
+      }
+
+      class PutPriceComponent {
+        -putPriceForm: FormGroup
+        +onCancel(): void
+        +onSubmit(): void
+      }
+
+      class WorkRequestComponent {
+        -requestData: WorkRequest | null
+        -isVisible: boolean
+        -defaultMapImage: string
+        +onOverlayClick(eventTarget: EventTarget | null): void
+        +onCloseButtonClicked(): void
+        +onAccept(): void
+        +onReject(): void
+        +stopPropagation(event: MouseEvent): void
+      }
+    }
+
+    package "model" {
+      class WorkRequest {
+        -id: string
+        -title: string
+        -description: string
+        -time: string
+        -date: Date
+        -endTime: string
+        -dayText: string
+        -technicianName: string
+        -address: string
+        -mapImageUrl: string
+        -status?: string
+        -finalAmount?: number
+        -finalWorkDescription?: string
+      }
+
+      class ConfirmationDeleteDialogData {
+        -message: string
+        -title?: string
+        -confirmButtonText?: string
+        -cancelButtonText?: string
+      }
+
+      class PutPriceDialogData {
+      }
+
+      class PutPriceDialogResult {
+        -finalAmount: number
+        -workDescription: string
+      }
+    }
+  }
+}
+
+' Paquete público
+package "public" {
+  package "pages" {
+    package "home" {
+      class CustomerHomeComponent {
+        -mostrarPagoModal: boolean
+        -producto: Producto
+        -profesionales: Profesional[]
+        +mostrarFormularioPago(): void
+        +cerrarFormularioPago(): void
+      }
+    }
+
+    package "login" {
+      class LoginCustomerComponent {
+        +onLogin(): void
+      }
+
+      class LoginWorkerComponent {
+        +onLogin(): void
+      }
+    }
+
+    package "register" {
+      class RegisterCustomerComponent {
+        +onRegister(): void
+      }
+
+      class RegisterWorkerComponent {
+        -specialities: any[]
+        -registerForm: FormGroup
+        -isSubmitting: boolean
+        +onRegister(): void
+      }
+    }
+  }
+}
+
+' Paquete de pagos
+package "pagos" {
+  class PagosComponent {
+    -paymentForm: FormGroup
+    +submitForm(): void
+    +cerrarModal(): void
+    -markFormGroupTouched(formGroup: FormGroup): void
+  }
+}
+
+' Paquete de alertas
+package "alerts" {
+  class AlertasComponent {
+    -alerts: Alert[]
+    -currentUserId: number
+    +ngOnInit(): void
+    +loadAlerts(): void
+    +formatDate(dateString: string): string
+    +formatTimestamp(timestamp: Date): string
+  }
+}
+
+' Paquete de catálogo de trabajadores
+package "worker-catalog" {
+  package "pages" {
+    class CategoryComponent implements OnInit {
+      -route: ActivatedRoute
+      -categoryService: CategoryService
+      -workerService: WorkerService
+      #category_id: string
+      #category: Category
+      #workers: Worker[]
+      +ngOnInit(): void
+      -loadCategoryAndWorkers(): void
+      -loadWorkers(): void
+    }
+  }
+
+  package "components" {
+    class WorkerCardComponent {
+      @Input() worker: Worker
+      #alertService: AlertService
+      +handleViewWorker(): void
+    }
+
+    class WorkerListComponent {
+      @Input() workers: Worker[]
+    }
+  }
+
+  package "services" {
+    class CategoryService extends BaseService<Category> {
+      -resourceEndpoint: string
+    }
+  }
+}
+
+' Relaciones
+ProfileEditComponent --> WorkerProfileFormComponent: contiene
+ProfileEditComponent --> WorkerProfile: gestiona
+WorkerProfileFormComponent --> WorkerProfile: gestiona
+ProfileViewComponent --> WorkerProfile: muestra
+
+AgendaComponent --> WorkRequestComponent: contiene
+AgendaComponent --> ConfirmationDeleteComponent: usa
+AgendaComponent --> WorkRequest: gestiona
+WorkAcceptedComponent --> WorkRequest: gestiona
+WorkAcceptedComponent --> PutPriceComponent: usa
+
+CustomerHomeComponent --> PagosComponent: contiene
+RegisterWorkerComponent ..> WorkerService: usa
+AlertasComponent ..> AlertService: usa
+
+' Relaciones del catálogo de trabajadores
+CategoryComponent --> WorkerListComponent: contiene
+WorkerListComponent --> WorkerCardComponent: contiene
+CategoryComponent ..> CategoryService: usa
+CategoryComponent ..> WorkerService: usa
+WorkerCardComponent ..> AlertService: usa
+CategoryService --|> BaseService: extiende
+
+' Relaciones de eventos
+WorkerProfileFormComponent ..> ProfileEditComponent: emite eventos
+WorkRequestComponent ..> AgendaComponent: emite eventos
+PutPriceComponent ..> WorkAcceptedComponent: emite resultados
+WorkerCardComponent ..> AlertasComponent: emite alertas
+
+@enduml
