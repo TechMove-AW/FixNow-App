@@ -1,0 +1,137 @@
+.auth-form-card {
+  background-color: rgba(30, 41, 59, 0.85);
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 420px;
+  color: #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-card-logo {
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+}
+
+.forgot-password-link {
+  text-align: right;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+
+.forgot-password-link a {
+  color: #94a3b8;
+  font-size: 0.9em;
+  text-decoration: none;
+}
+
+.forgot-password-link a:hover {
+  color: #3b82f6;
+  text-decoration: underline;
+}
+
+.auth-tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  border-bottom: 1px solid rgba(100, 116, 139, 0.7);
+  width: 100%;
+}
+
+.auth-tabs a {
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #94a3b8;
+  font-weight: 600;
+  font-size: 1.1em;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -1px;
+  transition: color 0.3s ease, border-bottom-color 0.3s ease;
+}
+
+.auth-tabs a.active-tab {
+  color: #3b82f6;
+  border-bottom-color: #3b82f6;
+}
+
+.auth-tabs a:not(.active-tab):hover {
+  color: #cbd5e1;
+}
+
+.auth-inner-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.form-field {
+  width: 100%;
+}
+
+.form-submit-button {
+  background-color: #2563eb;
+  color: white;
+  padding: 12px 0;
+  font-size: 1.1em ;
+  border-radius: 8px ;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border: none;
+}
+
+.form-submit-button:hover {
+  background-color: #1d4ed8;
+}
+
+.social-login-divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #94a3b8;
+  font-size: 0.9em;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  width: 100%;
+}
+.social-login-divider::before,
+.social-login-divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid #475569;
+}
+.social-login-divider:not(:empty)::before {
+  margin-right: .5em;
+}
+.social-login-divider:not(:empty)::after {
+  margin-left: .5em;
+}
+
+.social-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.social-button {
+  color: #cbd5e1 ;
+  border-color: #475569 ;
+  border-radius: 6px;
+  flex-grow: 1;
+  min-width: 100px;
+}
+
+.social-button:hover {
+  background-color: rgba(71, 85, 105, 0.2) ;
+  border-color: #64748b ;
+}

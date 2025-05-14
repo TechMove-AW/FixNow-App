@@ -1,0 +1,35 @@
+<div class="auth-form-card">
+  <div class="form-card-logo">FIX IT</div>
+  <nav class="auth-tabs">
+    <a routerLink="/register/customer" routerLinkActive="active-tab">REGISTRASE</a>
+    <a routerLink="/login/customer" routerLinkActive="active-tab">INICIAR SESIÓN</a>
+  </nav>
+  <form (ngSubmit)="onLogin()" class="auth-inner-form">
+    <mat-form-field appearance="fill" class="form-field">
+      <mat-label>Correo</mat-label>
+      <input matInput type="email" name="email" placeholder="ejemplo@correo.com">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="form-field">
+      <mat-label>Contraseña</mat-label>
+      <input matInput type="password" name="password" placeholder="Tu contraseña">
+    </mat-form-field>
+
+    <div class="forgot-password-link">
+      <a routerLink="#">¿Olvidaste tu contraseña?</a>
+    </div>
+
+    <button mat-flat-button type="submit" class="submit-button form-submit-button">
+      Iniciar Sesión
+    </button>
+
+    <div class="social-login-divider">
+      <span>O inicia sesión con</span>
+    </div>
+    <div class="social-buttons">
+      <button mat-stroked-button type="button" class="social-button">Facebook</button>
+      <button mat-stroked-button type="button" class="social-button">Google</button>
+      <button mat-stroked-button type="button" class="social-button">Apple</button>
+    </div>
+  </form>
+</div>
