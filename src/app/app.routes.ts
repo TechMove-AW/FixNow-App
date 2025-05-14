@@ -42,9 +42,17 @@ export const routes: Routes = [
     component: CustomerLayoutComponent,
     children: [
       { path: 'home', component: CustomerHomeComponent },
-      { path: 'worker-catalog/:category', component: CategoryComponent },
+      { 
+        path: 'worker-catalog/:category', 
+        component: CategoryComponent,
+        data: { renderMode: 'client' } 
+      },
       { path: 'alerts', component: AlertasComponent },
-      { path: 'worker-profile/:workerId', component: WorkerProfileComponent },
+      { 
+        path: 'worker-profile/:workerId', 
+        component: WorkerProfileComponent,
+        data: { renderMode: 'client' } 
+      },
       { path: '', redirectTo: 'home', pathMatch: 'full' },
       { path: '**', component: PageNotFoundComponent },
     ],
@@ -57,7 +65,11 @@ export const routes: Routes = [
       { path: 'profile/view', component: ProfileViewComponent }, // URL: /tec-section/profile/view
       { path: 'profile/edit', component: ProfileEditComponent }, // URL: /tec-section/profile/edit
       { path: 'agenda', component: AgendaComponent }, // URL: /tec-section/agenda
-      { path: 'work-accepted/:requestId', component: WorkAcceptedComponent }, // URL: /tec-section/work-accepted/ID
+      { 
+        path: 'work-accepted/:requestId', 
+        component: WorkAcceptedComponent,
+        data: { renderMode: 'client' } 
+      }, // URL: /tec-section/work-accepted/ID
       { path: 'manage-services', component: ShowServicesComponent }, // URL: /tec-section/manage-services
     ],
   },
