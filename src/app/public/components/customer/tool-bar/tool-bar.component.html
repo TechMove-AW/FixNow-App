@@ -1,0 +1,27 @@
+<mat-toolbar class="tool-bar">
+    <mat-toolbar-row class="top-row">
+      <a routerLink="./home">
+        <img src="logo.svg" class="logo" width="150">
+      </a>
+      <span style="flex: 1 1 auto;"></span>
+      <div class="header-actions">
+        <a mat-icon-button aria-label="Notificaciones" routerLink="./alerts">
+          <mat-icon>notifications_none</mat-icon>
+        </a>
+        <button mat-icon-button aria-label="Mensajes">
+          <mat-icon>mail_outline</mat-icon>
+        </button>
+        <button mat-icon-button class="profile-icon-button" aria-label="Perfil del trabajador" routerLink="/tec-section/profile/view">
+          <span class="profile-initial">C</span>
+        </button>
+      </div>
+    </mat-toolbar-row>
+
+    <mat-toolbar-row class="categories-row">
+      @for(speciality of specialities; track speciality.id){
+        <a mat-button [routerLink]="['./worker-catalog', speciality.id]" class="category-button">
+          {{ speciality.name }}
+        </a>
+      }
+    </mat-toolbar-row>
+  </mat-toolbar>

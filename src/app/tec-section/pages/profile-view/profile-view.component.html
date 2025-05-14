@@ -1,0 +1,95 @@
+<div class="profile-view-page" *ngIf="worker">
+  <div class="profile-header-actions">
+    <button mat-flat-button
+
+            (click)="navigateToService()" class="edit-link-button">EDITAR
+      {{ worker.specialty }}
+    </button>
+
+    <button mat-flat-button
+            class="action-button yellow-button"
+            routerLink="/tec-section/agenda">
+      Agenda
+    </button>
+  </div>
+
+  <div class="profile-card">
+    <div class="profile-main-info">
+      <div class="profile-picture-container">
+        <img
+          [src]="previewUrl || worker.profileImageUrl"
+          alt="Foto de perfil"
+          class="profile-picture"
+        />
+        <button mat-button class="change-photo-button" (click)="triggerFileInput()">CAMBIAR FOTO</button>
+        <input type="file" accept="image/*" #fileInput (change)="onFileSelected($event)" hidden />
+
+
+      </div>
+      <div class="profile-text-details">
+        <div class="profile-name-and-edit">
+          <span class="profile-name">{{ worker.fullName }}</span>
+        </div>
+        <div class="profile-username">
+          <span>{{ worker.username }}</span>
+          <button (click)="navigateToEdit()" class="edit-link-inline-button">EDITAR</button>
+        </div>
+        <div class="profile-location-joined">
+          <span>📍 {{ worker.location }}</span>
+          <span>👤 {{ worker.memberSince }}</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="profile-details">
+      <div class="detail-item">
+        <div class="detail-content">
+          <div class="detail-label">Especialidad</div>
+          <p class="detail-value">{{ worker.specialty }}</p>
+        </div>
+        <button (click)="navigateToEdit()" class="edit-link-button">EDITAR</button>
+      </div>
+
+      <div class="detail-item">
+        <div class="detail-content">
+          <div class="detail-label">Nombre Completo</div>
+          <p class="detail-value">{{ worker.fullName }}</p>
+        </div>
+        <button (click)="navigateToEdit()" class="edit-link-button">EDITAR</button>
+      </div>
+
+      <div class="detail-item">
+        <div class="detail-content">
+          <div class="detail-label">Año de Experiencia</div>
+          <p class="detail-value">{{ worker.experienceYears }} años</p>
+        </div>
+        <button (click)="navigateToEdit()" class="edit-link-button">EDITAR</button>
+      </div>
+
+      <div class="detail-item">
+        <div class="detail-content">
+          <div class="detail-label">Número de Celular</div>
+          <p class="detail-value">{{ worker.phoneNumber }}</p>
+        </div>
+        <button (click)="navigateToEdit()" class="edit-link-button">EDITAR</button>
+      </div>
+
+      <div class="detail-item">
+        <div class="detail-content">
+          <div class="detail-label">Método de pago</div>
+          <div class="payment-methods" *ngIf="worker.paymentMethods && worker.paymentMethods.length > 0">
+            <ng-container *ngFor="let method of worker.paymentMethods">
+              <span class="payment-method-item">
+                {{ method.iconName }} {{ method.label }}
+              </span>
+            </ng-container>
+          </div>
+        </div>
+        <button (click)="navigateToEdit()" class="edit-link-button">EDITAR</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div *ngIf="!worker" class="loading-text">
+  Cargando perfil...
+</div>

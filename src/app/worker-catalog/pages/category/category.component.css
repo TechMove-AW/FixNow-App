@@ -1,0 +1,37 @@
+.category-page {
+  padding: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.category-title {
+  font-size: 24px;
+  margin-bottom: 24px;
+  color: #333;
+  font-weight: normal;
+}
+
+.category-title strong {
+  font-weight: bold;
+}
+
+.category-container {
+  width: 100%;
+}
+.pago-icons {
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.pago-icons img {
+  height: 40px;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.pago-icons img:hover {
+  opacity: 1;
+}

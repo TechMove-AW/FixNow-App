@@ -1,0 +1,13 @@
+<div class="container">
+  @for(service of workerServices; track service.id){
+    <div class="trabajo-item">
+      <img [src]="service.imageUrl || 'assets/images/default-service.jpg'" [alt]="service.description">
+      <div class="trabajo-info">
+        <h4>{{ service.description }}</h4>
+        <span class="precio">S/ {{ service.price }}</span>
+      </div>
+    </div>
+  }@empty {
+    <p class="empty-message">No hay servicios disponibles</p>
+  }
+</div>

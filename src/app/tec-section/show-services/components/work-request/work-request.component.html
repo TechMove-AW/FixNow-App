@@ -1,0 +1,59 @@
+<div class="modal-overlay" *ngIf="isVisible" (click)="onOverlayClick($event.target)">
+  <div class="modal-content" (click)="stopPropagation($event)">
+    <button mat-icon-button class="close-button-modal" (click)="onCloseButtonClicked()">
+      <mat-icon>close</mat-icon>
+    </button>
+
+    <header class="modal-header">
+      <mat-icon class="header-icon">calendar_today</mat-icon>
+      <h2>Agenda</h2>
+    </header>
+
+    <p class="cita-subtitle" *ngIf="requestData">Tienes una cita</p>
+
+    <div class="map-container">
+      <img [src]="requestData?.mapImageUrl || defaultMapImage" alt="Mapa de ubicación" class="map-image">
+    </div>
+
+    <!-- Dentro de este *ngIf, requestData NO es null -->
+    <div class="time-info" *ngIf="requestData">
+      <p class="day-text">{{ requestData.dayText || 'Hoy' }}</p>
+      <p class="time-range-text">{{ requestData.time }} <span *ngIf="requestData.endTime">- {{ requestData.endTime }}</span></p>
+    </div>
+
+    <mat-accordion class="details-accordion">
+      <mat-expansion-panel class="details-expansion-panel">
+        <mat-expansion-panel-header>
+          <mat-panel-title class="details-title">
+            Detalles
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+
+        <!-- Dentro de este *ngIf, requestData NO es null -->
+        <div class="details-content-panel" *ngIf="requestData">
+          <div class="detail-item">
+            <mat-icon>event</mat-icon>
+            <span><strong>Fecha:</strong> {{ requestData.date | date:'dd MMMM yyyy':'':'es' }}</span>
+          </div>
+          <div class="detail-item">
+            <mat-icon>schedule</mat-icon>
+            <span><strong>Hora:</strong> {{ requestData.time }} <span *ngIf="requestData.endTime">- {{ requestData.endTime }}</span></span>
+          </div>
+          <div class="detail-item">
+            <mat-icon>engineering</mat-icon>
+            <span><strong>Técnico:</strong> {{ requestData.technicianName || 'No asignado' }}</span>
+          </div>
+          <div class="detail-item">
+            <mat-icon>location_on</mat-icon>
+            <span><strong>Dirección:</strong> {{ requestData.address || 'No especificada' }}</span>
+          </div>
+        </div>
+      </mat-expansion-panel>
+    </mat-accordion>
+
+    <div class="action-buttons-modal">
+      <button mat-flat-button class="yellow-button accept-button" (click)="onAccept()">Aceptar Trabajo</button>
+      <button mat-flat-button class="yellow-button reject-button" (click)="onReject()">Rechazar Trabajo</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,1604 @@
+{
+  "workers": [
+    {
+      "id": 1,
+      "user": {
+        "id": 1,
+        "firstName": "Luis",
+        "lastName": "Pérez",
+        "email": "luis.perez@example.com",
+        "role": "worker",
+        "age": 34,
+        "dni": "98765432A",
+        "profilePicture": "https://randomuser.me/api/portraits/men/1.jpg",
+        "location": {
+          "display_name": "Jr asnas",
+          "latitude": 40.4168,
+          "longitude": -3.7038
+        }
+      },
+      "category": {
+        "id": 1,
+        "name": "Fontanería",
+        "slug": "fontaneria"
+      },
+      "experienceDescription": "10 años reparando cañerías y griferías.",
+      "hourlyRate": 25,
+      "projectsCompleted": 58,
+      "rating": 4.7,
+      "reviewIds": [
+        1,
+        2,
+        3
+      ],
+      "serviceIds": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": 2,
+      "user": {
+        "id": 2,
+        "firstName": "Ana",
+        "lastName": "García",
+        "email": "ana.garcia@example.com",
+        "role": "worker",
+        "age": 29,
+        "dni": "12345678B",
+        "profilePicture": "https://randomuser.me/api/portraits/women/5.jpg",
+        "location": {
+          "display_name": "Calle Serrano 45",
+          "latitude": 40.4256,
+          "longitude": -3.6859
+        }
+      },
+      "category": {
+        "id": 2,
+        "name": "Electricidad",
+        "slug": "electricidad"
+      },
+      "experienceDescription": "Especialista en instalaciones eléctricas residenciales y comerciales con 7 años de experiencia.",
+      "hourlyRate": 30,
+      "projectsCompleted": 42,
+      "rating": 4.8,
+      "reviewIds": [
+        4,
+        5
+      ],
+      "serviceIds": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": 3,
+      "user": {
+        "id": 3,
+        "firstName": "Carlos",
+        "lastName": "Martínez",
+        "email": "carlos.martinez@example.com",
+        "role": "worker",
+        "age": 42,
+        "dni": "87654321C",
+        "profilePicture": "https://randomuser.me/api/portraits/men/15.jpg",
+        "location": {
+          "display_name": "Av. Constitución 120",
+          "latitude": 40.3979,
+          "longitude": -3.7121
+        }
+      },
+      "category": {
+        "id": 5,
+        "name": "Albañilería",
+        "slug": "albanileria"
+      },
+      "experienceDescription": "Más de 15 años en construcción y remodelación. Especialista en acabados de alta calidad.",
+      "hourlyRate": 35,
+      "projectsCompleted": 75,
+      "rating": 4.9,
+      "reviewIds": [
+        6,
+        7,
+        8
+      ],
+      "serviceIds": [
+        5,
+        6
+      ]
+    },
+    {
+      "id": 4,
+      "user": {
+        "id": 6,
+        "firstName": "Elena",
+        "lastName": "Sánchez",
+        "email": "elena.sanchez@example.com",
+        "role": "worker",
+        "age": 37,
+        "dni": "33445566F",
+        "profilePicture": "https://randomuser.me/api/portraits/women/28.jpg",
+        "location": {
+          "display_name": "Paseo de la Castellana 200",
+          "latitude": 40.4619,
+          "longitude": -3.6883
+        }
+      },
+      "category": {
+        "id": 7,
+        "name": "Pintura",
+        "slug": "pintura"
+      },
+      "experienceDescription": "Pintora profesional con experiencia en técnicas decorativas y acabados especiales.",
+      "hourlyRate": 28,
+      "projectsCompleted": 63,
+      "rating": 4.6,
+      "reviewIds": [
+        9,
+        10
+      ],
+      "serviceIds": [
+        7,
+        8
+      ]
+    },
+    {
+      "id": 5,
+      "user": {
+        "id": 7,
+        "firstName": "Pablo",
+        "lastName": "Fernández",
+        "email": "pablo.fernandez@example.com",
+        "role": "worker",
+        "age": 33,
+        "dni": "44556677G",
+        "profilePicture": "https://randomuser.me/api/portraits/men/32.jpg",
+        "location": {
+          "display_name": "Gran Vía 56",
+          "latitude": 40.4201,
+          "longitude": -3.7021
+        }
+      },
+      "category": {
+        "id": 4,
+        "name": "Cerrejería",
+        "slug": "cerrejeria"
+      },
+      "experienceDescription": "Cerrajero especializado en sistemas de seguridad y cerraduras de alta gama.",
+      "hourlyRate": 32,
+      "projectsCompleted": 48,
+      "rating": 4.5,
+      "reviewIds": [
+        11,
+        12
+      ],
+      "serviceIds": [
+        9,
+        10
+      ]
+    },
+    {
+      "id": 6,
+      "user": {
+        "id": 8,
+        "firstName": "Juan",
+        "lastName": "Torres",
+        "email": "juan.torres@example.com",
+        "role": "worker",
+        "age": 39,
+        "dni": "55667788H",
+        "profilePicture": "https://randomuser.me/api/portraits/men/45.jpg",
+        "location": {
+          "display_name": "Calle Orense 12",
+          "latitude": 40.4578,
+          "longitude": -3.6912
+        }
+      },
+      "category": {
+        "id": 3,
+        "name": "Gasfitería",
+        "slug": "gasfiteria"
+      },
+      "experienceDescription": "Especialista en sistemas de gas natural y butano con 12 años de experiencia.",
+      "hourlyRate": 33,
+      "projectsCompleted": 67,
+      "rating": 4.8,
+      "reviewIds": [
+        13,
+        14
+      ],
+      "serviceIds": [
+        11,
+        12
+      ]
+    },
+    {
+      "id": 7,
+      "user": {
+        "id": 9,
+        "firstName": "Laura",
+        "lastName": "Navarro",
+        "email": "laura.navarro@example.com",
+        "role": "worker",
+        "age": 31,
+        "dni": "66778899I",
+        "profilePicture": "https://randomuser.me/api/portraits/women/42.jpg",
+        "location": {
+          "display_name": "Calle Princesa 78",
+          "latitude": 40.4305,
+          "longitude": -3.7148
+        }
+      },
+      "category": {
+        "id": 6,
+        "name": "Carpintería",
+        "slug": "carpinteria"
+      },
+      "experienceDescription": "Carpintera con especialización en muebles a medida y restauración de madera antigua.",
+      "hourlyRate": 29,
+      "projectsCompleted": 52,
+      "rating": 4.7,
+      "reviewIds": [
+        15,
+        16
+      ],
+      "serviceIds": [
+        13,
+        14
+      ]
+    },
+    {
+      "id": 8,
+      "user": {
+        "id": 10,
+        "firstName": "Javier",
+        "lastName": "Ruiz",
+        "email": "javier.ruiz@example.com",
+        "role": "worker",
+        "age": 35,
+        "dni": "77889900J",
+        "profilePicture": "https://randomuser.me/api/portraits/men/63.jpg",
+        "location": {
+          "display_name": "Calle Alcalá 215",
+          "latitude": 40.431,
+          "longitude": -3.6698
+        }
+      },
+      "category": {
+        "id": 8,
+        "name": "Pisos",
+        "slug": "pisos"
+      },
+      "experienceDescription": "Instalador de todo tipo de pisos con 9 años de experiencia en materiales porcelánicos y madera.",
+      "hourlyRate": 31,
+      "projectsCompleted": 45,
+      "rating": 4.6,
+      "reviewIds": [
+        17,
+        18
+      ],
+      "serviceIds": [
+        15,
+        16
+      ]
+    },
+    {
+      "id": 9,
+      "user": {
+        "id": 11,
+        "firstName": "Isabel",
+        "lastName": "López",
+        "email": "isabel.lopez@example.com",
+        "role": "worker",
+        "age": 34,
+        "dni": "88990011K",
+        "profilePicture": "https://randomuser.me/api/portraits/women/33.jpg",
+        "location": {
+          "display_name": "Avenida de América 41",
+          "latitude": 40.4389,
+          "longitude": -3.6757
+        }
+      },
+      "category": {
+        "id": 9,
+        "name": "Drywall",
+        "slug": "drywall"
+      },
+      "experienceDescription": "Especialista en instalación y acabado de sistemas de construcción en seco y paneles de yeso.",
+      "hourlyRate": 27,
+      "projectsCompleted": 39,
+      "rating": 4.5,
+      "reviewIds": [
+        19,
+        20
+      ],
+      "serviceIds": [
+        17,
+        18
+      ]
+    },
+    {
+      "id": 10,
+      "user": {
+        "id": 12,
+        "firstName": "Raúl",
+        "lastName": "Jiménez",
+        "email": "raul.jimenez@example.com",
+        "role": "worker",
+        "age": 40,
+        "dni": "99001122L",
+        "profilePicture": "https://randomuser.me/api/portraits/men/77.jpg",
+        "location": {
+          "display_name": "Calle Velázquez 121",
+          "latitude": 40.4266,
+          "longitude": -3.6824
+        }
+      },
+      "category": {
+        "id": 10,
+        "name": "Refrigeración",
+        "slug": "refrigeracion"
+      },
+      "experienceDescription": "Técnico especializado en sistemas de climatización y refrigeración con certificación oficial.",
+      "hourlyRate": 34,
+      "projectsCompleted": 61,
+      "rating": 4.7,
+      "reviewIds": [
+        21,
+        22
+      ],
+      "serviceIds": [
+        19,
+        20
+      ]
+    },
+    {
+      "id": 15,
+      "user": {
+        "id": 13,
+        "firstName": "Manuel",
+        "lastName": "Vargas",
+        "email": "manuel.vargas@example.com",
+        "role": "worker",
+        "age": 32,
+        "dni": "11223344M",
+        "profilePicture": "https://randomuser.me/api/portraits/men/23.jpg",
+        "location": {
+          "display_name": "Calle García Luna 8",
+          "latitude": 40.4421,
+          "longitude": -3.6746
+        }
+      },
+      "category": {
+        "id": 1,
+        "name": "Fontanería",
+        "slug": "fontaneria"
+      },
+      "experienceDescription": "Fontanero especializado en instalaciones nuevas y reformas integrales de baños.",
+      "hourlyRate": 26,
+      "projectsCompleted": 37,
+      "rating": 4.5,
+      "reviewIds": [],
+      "serviceIds": []
+    },
+    {
+      "id": 16,
+      "user": {
+        "id": 14,
+        "firstName": "Carmen",
+        "lastName": "Ortiz",
+        "email": "carmen.ortiz@example.com",
+        "role": "worker",
+        "age": 41,
+        "dni": "22334455N",
+        "profilePicture": "https://randomuser.me/api/portraits/women/17.jpg",
+        "location": {
+          "display_name": "Paseo de Recoletos 24",
+          "latitude": 40.4226,
+          "longitude": -3.6916
+        }
+      },
+      "category": {
+        "id": 1,
+        "name": "Fontanería",
+        "slug": "fontaneria"
+      },
+      "experienceDescription": "Experta en detección y reparación de fugas ocultas con tecnología especializada.",
+      "hourlyRate": 28,
+      "projectsCompleted": 49,
+      "rating": 4.6,
+      "reviewIds": [],
+      "serviceIds": []
+    },
+    {
+      "id": 17,
+      "user": {
+        "id": 15,
+        "firstName": "Roberto",
+        "lastName": "Blanco",
+        "email": "roberto.blanco@example.com",
+        "role": "worker",
+        "age": 36,
+        "dni": "33445566O",
+        "profilePicture": "https://randomuser.me/api/portraits/men/52.jpg",
+        "location": {
+          "display_name": "Calle Embajadores 115",
+          "latitude": 40.4025,
+          "longitude": -3.7018
+        }
+      },
+      "category": {
+        "id": 2,
+        "name": "Electricidad",
+        "slug": "electricidad"
+      },
+      "experienceDescription": "Electricista industrial con experiencia en instalaciones de alta potencia y cuadros eléctricos.",
+      "hourlyRate": 32,
+      "projectsCompleted": 43,
+      "rating": 4.7,
+      "reviewIds": [],
+      "serviceIds": []
+    },
+    {
+      "id": 18,
+      "user": {
+        "id": 16,
+        "firstName": "Sofía",
+        "lastName": "Moreno",
+        "email": "sofia.moreno@example.com",
+        "role": "worker",
+        "age": 30,
+        "dni": "44556677P",
+        "profilePicture": "https://randomuser.me/api/portraits/women/21.jpg",
+        "location": {
+          "display_name": "Calle Goya 88",
+          "latitude": 40.4271,
+          "longitude": -3.6761
+        }
+      },
+      "category": {
+        "id": 2,
+        "name": "Electricidad",
+        "slug": "electricidad"
+      },
+      "experienceDescription": "Especialista en sistemas domóticos e instalaciones eléctricas inteligentes.",
+      "hourlyRate": 35,
+      "projectsCompleted": 28,
+      "rating": 4.9,
+      "reviewIds": [],
+      "serviceIds": []
+    },
+    {
+      "id": 19,
+      "user": {
+        "id": 17,
+        "firstName": "Pedro",
+        "lastName": "Alonso",
+        "email": "pedro.alonso@example.com",
+        "role": "worker",
+        "age": 43,
+        "dni": "55667788Q",
+        "profilePicture": "https://randomuser.me/api/portraits/men/36.jpg",
+        "location": {
+          "display_name": "Avenida Donostiarra 34",
+          "latitude": 40.4398,
+          "longitude": -3.6571
+        }
+      },
+      "category": {
+        "id": 3,
+        "name": "Gasfitería",
+        "slug": "gasfiteria"
+      },
+      "experienceDescription": "Especialista en mantenimiento de calderas y sistemas de calefacción central.",
+      "hourlyRate": 30,
+      "projectsCompleted": 55,
+      "rating": 4.6,
+      "reviewIds": [],
+      "serviceIds": []
+    },
+    {
+      "id": 20,
+      "user": {
+        "id": 18,
+        "firstName": "Teresa",
+        "lastName": "Díaz",
+        "email": "teresa.diaz@example.com",
+        "role": "worker",
+        "age": 38,
+        "dni": "66778899R",
+        "profilePicture": "https://randomuser.me/api/portraits/women/49.jpg",
+        "location": {
+          "display_name": "Calle Alcántara 62",
+          "latitude": 40.4318,
+          "longitude": -3.6747
+        }
+      },
+      "category": {
+        "id": 3,
+        "name": "Gasfitería",
+        "slug": "gasfiteria"
+      },
+      "experienceDescription": "Técnica certificada en revisiones de gas y emisión de boletines oficiales.",
+      "hourlyRate": 31,
+      "projectsCompleted": 44,
+      "rating": 4.7,
+      "reviewIds": [],
+      "serviceIds": []
+    },
+    {
+      "id": 21,
+      "user": {
+        "id": 19,
+        "firstName": "Eduardo",
+        "lastName": "Fernández",
+        "email": "eduardo.fernandez@example.com",
+        "role": "worker",
+        "age": 45,
+        "dni": "77889900S",
+        "profilePicture": "https://randomuser.me/api/portraits/men/71.jpg",
+        "location": {
+          "display_name": "Calle Doctor Esquerdo 122",
+          "latitude": 40.4103,
+          "longitude": -3.6683
+        }
+      },
+      "category": {
+        "id": 4,
+        "name": "Cerrejería",
+        "slug": "cerrejeria"
+      },
+      "experienceDescription": "Cerrajero experto en cajas fuertes y sistemas de alta seguridad.",
+      "hourlyRate": 33,
+      "projectsCompleted": 51,
+      "rating": 4.8,
+      "reviewIds": [],
+      "serviceIds": []
+    },
+    {
+      "id": 22,
+      "user": {
+        "id": 20,
+        "firstName": "Marina",
+        "lastName": "Castillo",
+        "email": "marina.castillo@example.com",
+        "role": "worker",
+        "age": 29,
+        "dni": "88990011T",
+        "profilePicture": "https://randomuser.me/api/portraits/women/37.jpg",
+        "location": {
+          "display_name": "Calle Ferraz 41",
+          "latitude": 40.4253,
+          "longitude": -3.7192
+        }
+      },
+      "category": {
+        "id": 4,
+        "name": "Cerrejería",
+        "slug": "cerrejeria"
+      },
+      "experienceDescription": "Especialista en automatización de accesos y cerraduras electrónicas.",
+      "hourlyRate": 30,
+      "projectsCompleted": 36,
+      "rating": 4.7,
+      "reviewIds": [],
+      "serviceIds": []
+    },
+    {
+      "id": 23,
+      "user": {
+        "id": 21,
+        "firstName": "Antonio",
+        "lastName": "Ramos",
+        "email": "antonio.ramos@example.com",
+        "role": "worker",
+        "age": 51,
+        "dni": "99001122U",
+        "profilePicture": "https://randomuser.me/api/portraits/men/82.jpg",
+        "location": {
+          "display_name": "Calle Ayala 98",
+          "latitude": 40.4259,
+          "longitude": -3.6785
+        }
+      },
+      "category": {
+        "id": 5,
+        "name": "Albañilería",
+        "slug": "albanileria"
+      },
+      "experienceDescription": "Maestro albañil con décadas de experiencia en construcciones tradicionales.",
+      "hourlyRate": 32,
+      "projectsCompleted": 91,
+      "rating": 4.9,
+      "reviewIds": [],
+      "serviceIds": []
+    },
+    {
+      "id": 24,
+      "user": {
+        "id": 22,
+        "firstName": "Lucía",
+        "lastName": "Gómez",
+        "email": "lucia.gomez@example.com",
+        "role": "worker",
+        "age": 33,
+        "dni": "10293847V",
+        "profilePicture": "https://randomuser.me/api/portraits/women/55.jpg",
+        "location": {
+          "display_name": "Calle Argensola 15",
+          "latitude": 40.4265,
+          "longitude": -3.6958
+        }
+      },
+      "category": {
+        "id": 5,
+        "name": "Albañilería",
+        "slug": "albanileria"
+      },
+      "experienceDescription": "Especialista en reformas integrales con enfoques sostenibles y ecológicos.",
+      "hourlyRate": 34,
+      "projectsCompleted": 42,
+      "rating": 4.8,
+      "reviewIds": [],
+      "serviceIds": []
+    },
+    {
+      "id": 25,
+      "user": {
+        "id": 23,
+        "firstName": "Ricardo",
+        "lastName": "Serrano",
+        "email": "ricardo.serrano@example.com",
+        "role": "worker",
+        "age": 47,
+        "dni": "11223344W",
+        "profilePicture": "https://randomuser.me/api/portraits/men/59.jpg",
+        "location": {
+          "display_name": "Paseo del Prado 28",
+          "latitude": 40.4153,
+          "longitude": -3.6941
+        }
+      },
+      "category": {
+        "id": 6,
+        "name": "Carpintería",
+        "slug": "carpinteria"
+      },
+      "experienceDescription": "Carpintero especializado en estructuras de madera y fabricación de escaleras.",
+      "hourlyRate": 31,
+      "projectsCompleted": 58,
+      "rating": 4.5,
+      "reviewIds": [],
+      "serviceIds": []
+    },
+    {
+      "id": 26,
+      "user": {
+        "id": 24,
+        "firstName": "Eva",
+        "lastName": "Muñoz",
+        "email": "eva.munoz@example.com",
+        "role": "worker",
+        "age": 36,
+        "dni": "22334455X",
+        "profilePicture": "https://randomuser.me/api/portraits/women/61.jpg",
+        "location": {
+          "display_name": "Calle Fuencarral 132",
+          "latitude": 40.4343,
+          "longitude": -3.7031
+        }
+      },
+      "category": {
+        "id": 6,
+        "name": "Carpintería",
+        "slug": "carpinteria"
+      },
+      "experienceDescription": "Artesana de la madera especializada en diseño y restauración de muebles vintage.",
+      "hourlyRate": 33,
+      "projectsCompleted": 47,
+      "rating": 4.8,
+      "reviewIds": [],
+      "serviceIds": []
+    },
+    {
+      "id": 27,
+      "user": {
+        "id": 25,
+        "firstName": "David",
+        "lastName": "Santos",
+        "email": "david.santos@example.com",
+        "role": "worker",
+        "age": 38,
+        "dni": "33445566Y",
+        "profilePicture": "https://randomuser.me/api/portraits/men/41.jpg",
+        "location": {
+          "display_name": "Calle Atocha 78",
+          "latitude": 40.4127,
+          "longitude": -3.6953
+        }
+      },
+      "category": {
+        "id": 7,
+        "name": "Pintura",
+        "slug": "pintura"
+      },
+      "experienceDescription": "Pintor con experiencia en revestimientos industriales y tratamientos anticorrosivos.",
+      "hourlyRate": 29,
+      "projectsCompleted": 53,
+      "rating": 4.7,
+      "reviewIds": [],
+      "serviceIds": []
+    },
+    {
+      "id": 28,
+      "user": {
+        "id": 26,
+        "firstName": "Cristina",
+        "lastName": "Flores",
+        "email": "cristina.flores@example.com",
+        "role": "worker",
+        "age": 34,
+        "dni": "44556677Z",
+        "profilePicture": "https://randomuser.me/api/portraits/women/68.jpg",
+        "location": {
+          "display_name": "Avenida Ciudad de Barcelona 65",
+          "latitude": 40.4079,
+          "longitude": -3.6736
+        }
+      },
+      "category": {
+        "id": 7,
+        "name": "Pintura",
+        "slug": "pintura"
+      },
+      "experienceDescription": "Decoradora de interiores especializada en murales y pinturas artísticas.",
+      "hourlyRate": 32,
+      "projectsCompleted": 39,
+      "rating": 4.9,
+      "reviewIds": [],
+      "serviceIds": []
+    },
+    {
+      "id": 29,
+      "user": {
+        "id": 27,
+        "firstName": "Fernando",
+        "lastName": "Vega",
+        "email": "fernando.vega@example.com",
+        "role": "worker",
+        "age": 42,
+        "dni": "55667788A1",
+        "profilePicture": "https://randomuser.me/api/portraits/men/19.jpg",
+        "location": {
+          "display_name": "Calle Narváez 53",
+          "latitude": 40.4215,
+          "longitude": -3.6713
+        }
+      },
+      "category": {
+        "id": 8,
+        "name": "Pisos",
+        "slug": "pisos"
+      },
+      "experienceDescription": "Experto en instalación de suelos técnicos y elevados para oficinas y centros de datos.",
+      "hourlyRate": 34,
+      "projectsCompleted": 48,
+      "rating": 4.7,
+      "reviewIds": [],
+      "serviceIds": []
+    },
+    {
+      "id": 30,
+      "user": {
+        "id": 28,
+        "firstName": "Beatriz",
+        "lastName": "Cruz",
+        "email": "beatriz.cruz@example.com",
+        "role": "worker",
+        "age": 37,
+        "dni": "66778899B1",
+        "profilePicture": "https://randomuser.me/api/portraits/women/24.jpg",
+        "location": {
+          "display_name": "Calle Hermosilla 38",
+          "latitude": 40.4262,
+          "longitude": -3.6818
+        }
+      },
+      "category": {
+        "id": 8,
+        "name": "Pisos",
+        "slug": "pisos"
+      },
+      "experienceDescription": "Especialista en restauración de suelos históricos y parquets antiguos.",
+      "hourlyRate": 33,
+      "projectsCompleted": 41,
+      "rating": 4.6,
+      "reviewIds": [],
+      "serviceIds": []
+    },
+    {
+      "id": 31,
+      "user": {
+        "id": 29,
+        "firstName": "Alberto",
+        "lastName": "Mendoza",
+        "email": "alberto.mendoza@example.com",
+        "role": "worker",
+        "age": 39,
+        "dni": "77889900C1",
+        "profilePicture": "https://randomuser.me/api/portraits/men/27.jpg",
+        "location": {
+          "display_name": "Calle O'Donnell 22",
+          "latitude": 40.4236,
+          "longitude": -3.6735
+        }
+      },
+      "category": {
+        "id": 9,
+        "name": "Drywall",
+        "slug": "drywall"
+      },
+      "experienceDescription": "Experto en construcción de espacios acústicos y aislamiento sonoro con sistemas de drywall.",
+      "hourlyRate": 30,
+      "projectsCompleted": 44,
+      "rating": 4.5,
+      "reviewIds": [],
+      "serviceIds": []
+    },
+    {
+      "id": 32,
+      "user": {
+        "id": 30,
+        "firstName": "María",
+        "lastName": "Vidal",
+        "email": "maria.vidal@example.com",
+        "role": "worker",
+        "age": 35,
+        "dni": "88990011D1",
+        "profilePicture": "https://randomuser.me/api/portraits/women/12.jpg",
+        "location": {
+          "display_name": "Calle Alonso Cano 55",
+          "latitude": 40.4393,
+          "longitude": -3.6946
+        }
+      },
+      "category": {
+        "id": 9,
+        "name": "Drywall",
+        "slug": "drywall"
+      },
+      "experienceDescription": "Especialista en diseños arquitectónicos complejos utilizando sistemas de paneles de yeso.",
+      "hourlyRate": 28,
+      "projectsCompleted": 37,
+      "rating": 4.6,
+      "reviewIds": [],
+      "serviceIds": []
+    },
+    {
+      "id": 30,
+      "user": {
+        "id": 28,
+        "firstName": "Rob",
+        "lastName": "Rojas",
+        "email": "rob.rojas@example.com",
+        "role": "worker",
+        "age": 39,
+        "dni": "66778899B1",
+        "profilePicture": "https://randomuser.me/api/portraits/men/25.jpg",
+        "location": {
+          "display_name": "Calle O'Donnell 33",
+          "latitude": 40.4238,
+          "longitude": -3.6728
+        }
+      },
+      "category": {
+        "id": 8,
+        "name": "Pisos",
+        "slug": "pisos"
+      },
+      "experienceDescription": "Especialista en instalación de pisos de mármol y piedra natural.",
+      "hourlyRate": 33,
+      "projectsCompleted": 41,
+      "rating": 4.7,
+      "reviewIds": [],
+      "serviceIds": []
+    },
+    {
+      "id": 31,
+      "user": {
+        "id": 29,
+        "firstName": "Diana",
+        "lastName": "Herrera",
+        "email": "diana.herrera@example.com",
+        "role": "worker",
+        "age": 31,
+        "dni": "77889900C1",
+        "profilePicture": "https://randomuser.me/api/portraits/women/72.jpg",
+        "location": {
+          "display_name": "Calle Jorge Juan 89",
+          "latitude": 40.4242,
+          "longitude": -3.6775
+        }
+      },
+      "category": {
+        "id": 9,
+        "name": "Drywall",
+        "slug": "drywall"
+      },
+      "experienceDescription": "Experta en diseño e instalación de tabiques y cielos rasos de drywall.",
+      "hourlyRate": 29,
+      "projectsCompleted": 35,
+      "rating": 4.6,
+      "reviewIds": [],
+      "serviceIds": []
+    },
+    {
+      "id": 32,
+      "user": {
+        "id": 30,
+        "firstName": "Alberto",
+        "lastName": "Cruz",
+        "email": "alberto.cruz@example.com",
+        "role": "worker",
+        "age": 44,
+        "dni": "88990011D1",
+        "profilePicture": "https://randomuser.me/api/portraits/men/67.jpg",
+        "location": {
+          "display_name": "Calle Príncipe de Vergara 128",
+          "latitude": 40.4331,
+          "longitude": -3.6768
+        }
+      },
+      "category": {
+        "id": 9,
+        "name": "Drywall",
+        "slug": "drywall"
+      },
+      "experienceDescription": "Especialista en acabados texturizados y soluciones acústicas en drywall.",
+      "hourlyRate": 31,
+      "projectsCompleted": 48,
+      "rating": 4.8,
+      "reviewIds": [],
+      "serviceIds": []
+    },
+    {
+      "id": 33,
+      "user": {
+        "id": 31,
+        "firstName": "Marcos",
+        "lastName": "Silva",
+        "email": "marcos.silva@example.com",
+        "role": "worker",
+        "age": 37,
+        "dni": "99001122E1",
+        "profilePicture": "https://randomuser.me/api/portraits/men/89.jpg",
+        "location": {
+          "display_name": "Calle Padilla 92",
+          "latitude": 40.4289,
+          "longitude": -3.6738
+        }
+      },
+      "category": {
+        "id": 10,
+        "name": "Refrigeración",
+        "slug": "refrigeracion"
+      },
+      "experienceDescription": "Técnico especializado en sistemas industriales de refrigeración.",
+      "hourlyRate": 35,
+      "projectsCompleted": 52,
+      "rating": 4.7,
+      "reviewIds": [],
+      "serviceIds": []
+    },
+    {
+      "id": 34,
+      "user": {
+        "id": 32,
+        "firstName": "Patricia",
+        "lastName": "Mendoza",
+        "email": "patricia.mendoza@example.com",
+        "role": "worker",
+        "age": 33,
+        "dni": "10112233F1",
+        "profilePicture": "https://randomuser.me/api/portraits/women/91.jpg",
+        "location": {
+          "display_name": "Calle Lista 45",
+          "latitude": 40.4276,
+          "longitude": -3.6744
+        }
+      },
+      "category": {
+        "id": 10,
+        "name": "Refrigeración",
+        "slug": "refrigeracion"
+      },
+      "experienceDescription": "Especialista en mantenimiento de sistemas de aire acondicionado y cámaras frigoríficas.",
+      "hourlyRate": 32,
+      "projectsCompleted": 38,
+      "rating": 4.6,
+      "reviewIds": [],
+      "serviceIds": []
+    },
+    {
+      "id": 1747172806427,
+      "user": {
+        "id": 1747172806427,
+        "firstName": "asdasdasd",
+        "lastName": "22222",
+        "email": "sdasd@gmail.com",
+        "role": "worker",
+        "age": 30,
+        "dni": "12345678X",
+        "profilePicture": "https://randomuser.me/api/portraits/men/1.jpg",
+        "password": "asdasdasdasd",
+        "location": {
+          "display_name": "Lima, Perú",
+          "latitude": 40.4168,
+          "longitude": -3.7038
+        }
+      },
+      "category": {
+        "id": 2,
+        "name": "Electricidad",
+        "slug": "electricidad"
+      },
+      "experienceDescription": "Nuevo profesional en la plataforma",
+      "hourlyRate": 25,
+      "projectsCompleted": 0,
+      "rating": 0,
+      "reviewIds": [],
+      "serviceIds": []
+    },
+    {
+      "id": 1747173297347,
+      "user": {
+        "id": 1747173297347,
+        "firstName": "Tecnico Test",
+        "lastName": "Gae",
+        "email": "sdasd@gmail.com",
+        "role": "worker",
+        "age": 30,
+        "dni": "12345678X",
+        "profilePicture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRshqigHTcEn9iYFV64flSzDJYCdbnfRO7Ysw&s",
+        "password": "123456",
+        "location": {
+          "display_name": "Lima, Perú",
+          "latitude": 40.4168,
+          "longitude": -3.7038
+        }
+      },
+      "category": {
+        "id": 4,
+        "name": "Cerrejería",
+        "slug": "cerrejeria"
+      },
+      "experienceDescription": "Nuevo profesional en la plataforma",
+      "hourlyRate": 25,
+      "projectsCompleted": 0,
+      "rating": 0,
+      "reviewIds": [],
+      "serviceIds": []
+    }
+  ],
+  "worker-services": [
+    {
+      "id": 1,
+      "workerId": 1,
+      "serviceName": "Reparación de tuberías",
+      "price": 80,
+      "description": "Reparación profesional de cañerías dañadas.",
+      "imageUrl": "https://i.pinimg.com/736x/25/03/fd/2503fdba3004a928fea1de75c5e28e92.jpg"
+    },
+    {
+      "id": 2,
+      "workerId": 1,
+      "serviceName": "Instalación de grifería",
+      "price": 65,
+      "description": "Instalación de todo tipo de grifos y sistemas de agua.",
+      "imageUrl": "https://i.pinimg.com/736x/25/03/fd/2503fdba3004a928fea1de75c5e28e92.jpg"
+    },
+    {
+      "id": 3,
+      "workerId": 2,
+      "serviceName": "Instalación eléctrica residencial",
+      "price": 120,
+      "description": "Instalación completa para hogares y apartamentos.",
+      "imageUrl": "https://i.pinimg.com/736x/25/03/fd/2503fdba3004a928fea1de75c5e28e92.jpg"
+    },
+    {
+      "id": 4,
+      "workerId": 2,
+      "serviceName": "Reparación de cortocircuitos",
+      "price": 90,
+      "description": "Diagnóstico y solución de problemas eléctricos.",
+      "imageUrl": "https://i.pinimg.com/736x/25/03/fd/2503fdba3004a928fea1de75c5e28e92.jpg"
+    },
+    {
+      "id": 5,
+      "workerId": 3,
+      "serviceName": "Construcción de muros",
+      "price": 150,
+      "description": "Levantamiento de muros interiores y exteriores con acabados.",
+      "imageUrl": "https://i.pinimg.com/736x/25/03/fd/2503fdba3004a928fea1de75c5e28e92.jpg"
+    },
+    {
+      "id": 6,
+      "workerId": 3,
+      "serviceName": "Remodelación de baños",
+      "price": 600,
+      "description": "Servicio completo de renovación de baños.",
+      "imageUrl": "https://i.pinimg.com/736x/25/03/fd/2503fdba3004a928fea1de75c5e28e92.jpg"
+    },
+    {
+      "id": 7,
+      "workerId": 4,
+      "serviceName": "Pintura interior",
+      "price": 250,
+      "description": "Servicio de pintura para espacios interiores con preparación de superficies.",
+      "imageUrl": "https://i.pinimg.com/736x/25/03/fd/2503fdba3004a928fea1de75c5e28e92.jpg"
+    },
+    {
+      "id": 8,
+      "workerId": 4,
+      "serviceName": "Técnicas decorativas",
+      "price": 350,
+      "description": "Aplicación de técnicas especiales como estucos y veladuras.",
+      "imageUrl": "https://i.pinimg.com/736x/25/03/fd/2503fdba3004a928fea1de75c5e28e92.jpg"
+    },
+    {
+      "id": 9,
+      "workerId": 5,
+      "serviceName": "Instalación de cerraduras",
+      "price": 70,
+      "description": "Montaje e instalación de cerraduras de diversos tipos.",
+      "imageUrl": "https://i.pinimg.com/736x/25/03/fd/2503fdba3004a928fea1de75c5e28e92.jpg"
+    },
+    {
+      "id": 10,
+      "workerId": 5,
+      "serviceName": "Apertura de puertas",
+      "price": 95,
+      "description": "Servicio urgente de apertura de puertas sin daños.",
+      "imageUrl": "https://i.pinimg.com/736x/25/03/fd/2503fdba3004a928fea1de75c5e28e92.jpg"
+    },
+    {
+      "id": 11,
+      "workerId": 6,
+      "serviceName": "Instalación de sistemas de gas",
+      "price": 180,
+      "description": "Instalación completa de sistemas de gas natural o butano con certificación.",
+      "imageUrl": "https://i.pinimg.com/736x/25/03/fd/2503fdba3004a928fea1de75c5e28e92.jpg"
+    },
+    {
+      "id": 12,
+      "workerId": 6,
+      "serviceName": "Reparación de calentadores",
+      "price": 110,
+      "description": "Diagnóstico y reparación de calentadores de agua y sistemas de calefacción a gas.",
+      "imageUrl": "https://i.pinimg.com/736x/25/03/fd/2503fdba3004a928fea1de75c5e28e92.jpg"
+    },
+    {
+      "id": 13,
+      "workerId": 7,
+      "serviceName": "Fabricación de muebles a medida",
+      "price": 450,
+      "description": "Diseño y fabricación de muebles personalizados según necesidades del cliente.",
+      "imageUrl": "https://i.pinimg.com/736x/25/03/fd/2503fdba3004a928fea1de75c5e28e92.jpg"
+    },
+    {
+      "id": 14,
+      "workerId": 7,
+      "serviceName": "Restauración de muebles antiguos",
+      "price": 280,
+      "description": "Recuperación y restauración de muebles antiguos conservando su valor estético.",
+      "imageUrl": "https://i.pinimg.com/736x/25/03/fd/2503fdba3004a928fea1de75c5e28e92.jpg"
+    },
+    {
+      "id": 15,
+      "workerId": 8,
+      "serviceName": "Instalación de pisos de madera",
+      "price": 320,
+      "description": "Colocación profesional de pisos de madera, laminados o vinílicos.",
+      "imageUrl": "https://i.pinimg.com/736x/25/03/fd/2503fdba3004a928fea1de75c5e28e92.jpg"
+    },
+    {
+      "id": 16,
+      "workerId": 8,
+      "serviceName": "Colocación de porcelanatos",
+      "price": 290,
+      "description": "Instalación de pisos y revestimientos de porcelanato con acabado perfecto.",
+      "imageUrl": "https://i.pinimg.com/736x/25/03/fd/2503fdba3004a928fea1de75c5e28e92.jpg"
+    },
+    {
+      "id": 17,
+      "workerId": 9,
+      "serviceName": "Instalación de tabiques de drywall",
+      "price": 240,
+      "description": "Construcción de divisiones internas con sistema de paneles de yeso.",
+      "imageUrl": "https://i.pinimg.com/736x/25/03/fd/2503fdba3004a928fea1de75c5e28e92.jpg"
+    },
+    {
+      "id": 18,
+      "workerId": 9,
+      "serviceName": "Cielos rasos y techos falsos",
+      "price": 270,
+      "description": "Instalación de techos modulares y decorativos con sistema drywall.",
+      "imageUrl": "https://i.pinimg.com/736x/25/03/fd/2503fdba3004a928fea1de75c5e28e92.jpg"
+    },
+    {
+      "id": 19,
+      "workerId": 10,
+      "serviceName": "Instalación de aire acondicionado",
+      "price": 420,
+      "description": "Montaje y configuración de sistemas de climatización residencial o comercial.",
+      "imageUrl": "https://i.pinimg.com/736x/25/03/fd/2503fdba3004a928fea1de75c5e28e92.jpg"
+    },
+    {
+      "id": 20,
+      "workerId": 10,
+      "serviceName": "Mantenimiento de sistemas de refrigeración",
+      "price": 150,
+      "description": "Servicio completo de mantenimiento preventivo para equipos de climatización.",
+      "imageUrl": "https://i.pinimg.com/736x/25/03/fd/2503fdba3004a928fea1de75c5e28e92.jpg"
+    }
+  ],
+  "reviews": [
+    {
+      "id": 1,
+      "workerId": 1,
+      "userId": 4,
+      "rating": 5,
+      "comment": "Excelente trabajo, muy profesional y puntual.",
+      "date": "2025-04-15T14:30:00Z"
+    },
+    {
+      "id": 2,
+      "workerId": 1,
+      "userId": 5,
+      "rating": 4,
+      "comment": "Buen servicio, lo recomendaría.",
+      "date": "2025-03-22T10:15:00Z"
+    },
+    {
+      "id": 3,
+      "workerId": 1,
+      "userId": 4,
+      "rating": 5,
+      "comment": "Resolvió el problema rápidamente, muy profesional.",
+      "date": "2025-05-01T16:45:00Z"
+    },
+    {
+      "id": 4,
+      "workerId": 2,
+      "userId": 5,
+      "rating": 5,
+      "comment": "Instalación perfecta, muy atenta a los detalles.",
+      "date": "2025-04-10T09:20:00Z"
+    },
+    {
+      "id": 5,
+      "workerId": 2,
+      "userId": 4,
+      "rating": 4.5,
+      "comment": "Trabajo limpio y bien hecho, solo un poco de retraso.",
+      "date": "2025-03-18T15:30:00Z"
+    },
+    {
+      "id": 6,
+      "workerId": 3,
+      "userId": 4,
+      "rating": 5,
+      "comment": "Increíble calidad de trabajo, superó mis expectativas.",
+      "date": "2025-04-28T11:00:00Z"
+    },
+    {
+      "id": 7,
+      "workerId": 3,
+      "userId": 5,
+      "rating": 5,
+      "comment": "Carlos es un profesional excepcional, muy recomendable.",
+      "date": "2025-03-05T14:20:00Z"
+    },
+    {
+      "id": 8,
+      "workerId": 3,
+      "userId": 4,
+      "rating": 4.7,
+      "comment": "Gran trabajo en la remodelación, muy satisfecho.",
+      "date": "2025-05-08T13:15:00Z"
+    },
+    {
+      "id": 9,
+      "workerId": 4,
+      "userId": 5,
+      "rating": 4.5,
+      "comment": "Excelente acabado en la pintura, muy detallista.",
+      "date": "2025-04-12T10:30:00Z"
+    },
+    {
+      "id": 10,
+      "workerId": 4,
+      "userId": 4,
+      "rating": 4.8,
+      "comment": "Quedé muy contenta con las técnicas decorativas aplicadas.",
+      "date": "2025-03-25T16:40:00Z"
+    },
+    {
+      "id": 11,
+      "workerId": 5,
+      "userId": 4,
+      "rating": 4,
+      "comment": "Buen servicio, resolvió el problema rápidamente.",
+      "date": "2025-04-20T12:45:00Z"
+    },
+    {
+      "id": 12,
+      "workerId": 5,
+      "userId": 5,
+      "rating": 5,
+      "comment": "Muy profesional y eficiente, lo recomendaría.",
+      "date": "2025-03-15T09:10:00Z"
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Fontanería",
+      "slug": "fontaneria"
+    },
+    {
+      "id": 2,
+      "name": "Electricidad",
+      "slug": "electricidad"
+    },
+    {
+      "id": 3,
+      "name": "Gasfitería",
+      "slug": "gasfiteria"
+    },
+    {
+      "id": 4,
+      "name": "Cerrejería",
+      "slug": "cerrejeria"
+    },
+    {
+      "id": 5,
+      "name": "Albañilería",
+      "slug": "albanileria"
+    },
+    {
+      "id": 6,
+      "name": "Carpintería",
+      "slug": "carpinteria"
+    },
+    {
+      "id": 7,
+      "name": "Pintura",
+      "slug": "pintura"
+    },
+    {
+      "id": 8,
+      "name": "Pisos",
+      "slug": "pisos"
+    },
+    {
+      "id": 9,
+      "name": "Drywall",
+      "slug": "drywall"
+    },
+    {
+      "id": 10,
+      "name": "Refrigeración",
+      "slug": "refrigeracion"
+    }
+  ],
+  "alerts": [
+    {
+      "id": 1,
+      "userId": 1,
+      "type": "system",
+      "systemName": "Fix It",
+      "date": "11/5/2025",
+      "logoUrl": "logo.svg",
+      "message": "Muchas gracias por solicitar mis servicios...",
+      "timestamp": "2025-05-10T01:00:00Z",
+      "read": false,
+      "link": "#",
+      "sender": null
+    },
+    {
+      "id": 2,
+      "userId": 4,
+      "type": "user",
+      "message": "He terminado el trabajo en tu casa. Por favor, revisa y confirma que todo esté correcto.",
+      "timestamp": "2025-05-11T15:30:00Z",
+      "date": "11/5/2025",
+      "read": true,
+      "link": "#",
+      "sender": {
+        "userId": 1,
+        "firstName": "Luis",
+        "lastName": "Pérez",
+        "profilePicture": "https://randomuser.me/api/portraits/men/1.jpg"
+      }
+    },
+    {
+      "id": 3,
+      "userId": 1,
+      "type": "system",
+      "systemName": "Fix It",
+      "logoUrl": "logo.svg",
+      "message": "Tienes un nuevo trabajo solicitado para mañana a las 15:00.",
+      "timestamp": "2025-05-11T10:15:00Z",
+      "date": "11/5/2025",
+      "read": false,
+      "link": "#",
+      "sender": null
+    },
+    {
+      "id": 4,
+      "userId": 2,
+      "type": "user",
+      "message": "¿Podrías revisar un problema eléctrico urgente en mi casa?",
+      "timestamp": "2025-05-12T08:45:00Z",
+      "date": "12/5/2025",
+      "read": false,
+      "link": "#",
+      "sender": {
+        "userId": 5,
+        "firstName": "José",
+        "lastName": "Rodríguez",
+        "profilePicture": "https://randomuser.me/api/portraits/men/22.jpg"
+      }
+    },
+    {
+      "id": 5,
+      "userId": 5,
+      "type": "system",
+      "systemName": "Fix It",
+      "logoUrl": "logo.svg",
+      "message": "Tu pago por el trabajo #123 ha sido procesado correctamente.",
+      "timestamp": "2025-05-11T18:20:00Z",
+      "date": "11/5/2025",
+      "read": false,
+      "link": "#",
+      "sender": null
+    },
+    {
+      "id": 1747169072309,
+      "userId": 1,
+      "type": "user",
+      "date": "Tue May 13 2025",
+      "logoUrl": "https://randomuser.me/api/portraits/men/71.jpg",
+      "message": "Has contratado a Eduardo Fernández",
+      "timestamp": "2025-05-13T20:44:32.309Z",
+      "read": false,
+      "link": "#",
+      "sender": {
+        "userId": 19,
+        "firstName": "Eduardo",
+        "lastName": "Fernández",
+        "profilePicture": "https://randomuser.me/api/portraits/men/71.jpg"
+      }
+    },
+    {
+      "id": 1747169152042,
+      "userId": 1,
+      "type": "user",
+      "date": "Tue May 13 2025",
+      "logoUrl": "https://randomuser.me/api/portraits/women/55.jpg",
+      "message": "Has contratado a Lucía Gómez",
+      "timestamp": "2025-05-13T20:45:52.042Z",
+      "read": false,
+      "link": "/",
+      "sender": {
+        "userId": 22,
+        "firstName": "Lucía",
+        "lastName": "Gómez",
+        "profilePicture": "https://randomuser.me/api/portraits/women/55.jpg"
+      }
+    },
+    {
+      "id": 1747172921502,
+      "userId": 1,
+      "type": "user",
+      "date": "Tue May 13 2025",
+      "logoUrl": "https://randomuser.me/api/portraits/men/1.jpg",
+      "message": "Has contratado a asdasdasd 22222",
+      "timestamp": "2025-05-13T21:48:41.503Z",
+      "read": false,
+      "link": "/",
+      "sender": {
+        "userId": 1747172806427,
+        "firstName": "asdasdasd",
+        "lastName": "22222",
+        "profilePicture": "https://randomuser.me/api/portraits/men/1.jpg"
+      }
+    },
+    {
+      "id": 1747173332003,
+      "userId": 1,
+      "type": "user",
+      "date": "Tue May 13 2025",
+      "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRshqigHTcEn9iYFV64flSzDJYCdbnfRO7Ysw&s",
+      "message": "Has contratado a Tecnico Test Gae",
+      "timestamp": "2025-05-13T21:55:32.004Z",
+      "read": false,
+      "link": "/",
+      "sender": {
+        "userId": 1747173297347,
+        "firstName": "Tecnico Test",
+        "lastName": "Gae",
+        "profilePicture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRshqigHTcEn9iYFV64flSzDJYCdbnfRO7Ysw&s"
+      }
+    },
+    {
+      "id": 1747182742890,
+      "userId": 1,
+      "type": "user",
+      "date": "Tue May 13 2025",
+      "logoUrl": "https://randomuser.me/api/portraits/women/28.jpg",
+      "message": "Has contratado a Elena Sánchez",
+      "timestamp": "2025-05-14T00:32:22.890Z",
+      "read": false,
+      "link": "/",
+      "sender": {
+        "userId": 6,
+        "firstName": "Elena",
+        "lastName": "Sánchez",
+        "profilePicture": "https://randomuser.me/api/portraits/women/28.jpg"
+      }
+    },
+    {
+      "id": 1747182749529,
+      "userId": 1,
+      "type": "user",
+      "date": "Tue May 13 2025",
+      "logoUrl": "https://randomuser.me/api/portraits/women/28.jpg",
+      "message": "Has contratado a Elena Sánchez",
+      "timestamp": "2025-05-14T00:32:29.529Z",
+      "read": false,
+      "link": "/",
+      "sender": {
+        "userId": 6,
+        "firstName": "Elena",
+        "lastName": "Sánchez",
+        "profilePicture": "https://randomuser.me/api/portraits/women/28.jpg"
+      }
+    },
+    {
+      "id": 1747183716563,
+      "userId": 1,
+      "type": "user",
+      "date": "Tue May 13 2025",
+      "logoUrl": "https://randomuser.me/api/portraits/men/1.jpg",
+      "message": "Has contratado a Luis Pérez",
+      "timestamp": "2025-05-14T00:48:36.563Z",
+      "read": false,
+      "link": "/",
+      "sender": {
+        "userId": 1,
+        "firstName": "Luis",
+        "lastName": "Pérez",
+        "profilePicture": "https://randomuser.me/api/portraits/men/1.jpg"
+      }
+    },
+    {
+      "id": 1747186159859,
+      "userId": 1,
+      "type": "user",
+      "date": "Tue May 13 2025",
+      "logoUrl": "https://randomuser.me/api/portraits/men/19.jpg",
+      "message": "Has contratado a Fernando Vega",
+      "timestamp": "2025-05-14T01:29:19.859Z",
+      "read": false,
+      "link": "/",
+      "sender": {
+        "userId": 27,
+        "firstName": "Fernando",
+        "lastName": "Vega",
+        "profilePicture": "https://randomuser.me/api/portraits/men/19.jpg"
+      }
+    }
+  ]
+}
