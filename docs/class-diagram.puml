@@ -20,20 +20,20 @@ package "shared" {
     }
 
     class WorkerProfile {
-      -id: string
+      -id?: string
+      -profileImageUrl?: string
       -fullName: string
       -email: string
       -phoneNumber: string
-      -age: number
+      -age?: number | null
       -dni: string
       -specialty: string
       -experienceYears: number
-      -address: string
-      -profileImageUrl: string
-      -username: string
-      -location: string
-      -memberSince: string
-      -paymentMethods: any[]
+      -address?: string
+      -username?: string
+      -location?: string
+      -memberSince?: string
+      -paymentMethods?: { iconName: string, label: string }[]
     }
 
     class Category {
@@ -52,6 +52,28 @@ package "shared" {
       -rating: number
       -reviewIds: string[]
       -serviceIds: string[]
+    }
+
+    class Producto {
+      -nombre: string
+      -descripcion: string
+      -detalle: string
+      -imagen: string
+      -caracteristicas: string[]
+    }
+
+    class Profesional {
+      -nombre: string
+      -especialidad: string
+      -tiempo: string
+      -cantidadTrabajos: number
+      -imagen: string
+    }
+
+    class ChatMessage {
+      -text: string
+      -sender: string
+      -timestamp: Date
     }
   }
 
@@ -86,10 +108,15 @@ package "tec-section" {
       +handleProfileSave(formDataFromChild: Partial<WorkerProfile>): void
     }
 
-    class ProfileViewComponent {
+    class ProfileViewComponent implements OnInit, OnDestroy {
       -worker: WorkerProfile | null
+      -previewUrl: string
       +ngOnInit(): void
       +navigateToEdit(): void
+      +navigateToService(): void
+      +triggerFileInput(): void
+      +onFileSelected(event: Event): void
+      +ngOnDestroy(): void
     }
   }
 
@@ -112,6 +139,7 @@ package "tec-section" {
         -newService: Partial<Service>
         -editingIndex: number | null
         -previewUrl: any
+        -worker: WorkerProfile | null
         +addOrUpdateService(): void
         +editService(index: number): void
         +deleteService(index: number): void
@@ -132,13 +160,16 @@ package "tec-section" {
         +deleteRequest(requestId: string): void
       }
 
-      class WorkAcceptedComponent {
+      class WorkAcceptedComponent implements OnInit, AfterViewChecked {
         -workRequestDetails: WorkRequest | null
         -clientName: string
         -messages: ChatMessage[]
         -newMessageText: string
         -detailsPanelOpenState: boolean
+        -defaultMapImage: string
         +ngOnInit(): void
+        +ngAfterViewChecked(): void
+        +scrollToBottom(): void
         +sendMessage(): void
         +openPutPriceDialog(): void
         +processFinishedWork(finishData: PutPriceDialogResult): void
@@ -245,6 +276,14 @@ package "public" {
       }
     }
   }
+
+  package "components" {
+    package "worker" {
+      class WorkerLayoutComponent {
+        -workerInitial: string
+      }
+    }
+  }
 }
 
 ' Paquete de pagos
@@ -283,6 +322,13 @@ package "worker-catalog" {
       -loadCategoryAndWorkers(): void
       -loadWorkers(): void
     }
+
+    class WorkerProfileComponent {
+      -worker: Worker
+      -isLoading: boolean
+      -workerServices: any[]
+      +handleHireWorker(): void
+    }
   }
 
   package "components" {
@@ -295,6 +341,10 @@ package "worker-catalog" {
     class WorkerListComponent {
       @Input() workers: Worker[]
     }
+
+    class WorkerServicesComponent {
+      @Input() workerServices: any[]
+    }
   }
 
   package "services" {
@@ -302,6 +352,11 @@ package "worker-catalog" {
       -resourceEndpoint: string
     }
   }
+}
+
+' Componente principal de la aplicación
+class AppComponent {
+  -title: string = 'FixNow-App'
 }
 
 ' Relaciones
@@ -315,8 +370,11 @@ AgendaComponent --> ConfirmationDeleteComponent: usa
 AgendaComponent --> WorkRequest: gestiona
 WorkAcceptedComponent --> WorkRequest: gestiona
 WorkAcceptedComponent --> PutPriceComponent: usa
+WorkAcceptedComponent --> ChatMessage: gestiona
 
 CustomerHomeComponent --> PagosComponent: contiene
+CustomerHomeComponent --> Producto: gestiona
+CustomerHomeComponent --> Profesional: gestiona
 RegisterWorkerComponent ..> WorkerService: usa
 AlertasComponent ..> AlertService: usa
 
@@ -327,6 +385,7 @@ CategoryComponent ..> CategoryService: usa
 CategoryComponent ..> WorkerService: usa
 WorkerCardComponent ..> AlertService: usa
 CategoryService --|> BaseService: extiende
+WorkerProfileComponent --> WorkerServicesComponent: contiene
 
 ' Relaciones de eventos
 WorkerProfileFormComponent ..> ProfileEditComponent: emite eventos
