@@ -1,0 +1,7 @@
+<div class="worker-list-container">
+  @for(worker of workers; track worker.id){
+    <app-worker-card [worker]="worker"></app-worker-card>
+  }@empty {
+    <p>No hay trabajadores disponibles</p>
+  }
+</div>
