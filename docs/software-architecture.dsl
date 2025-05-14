@@ -1,50 +1,51 @@
-workspace "Learning Center - Angular/Spring Boot Stack Edition" "Software architecture diagrams for the Learning Center application" {
+workspace "FixIt - Angular/Spring Boot Stack Edition" "Software architecture diagrams for the FixIt application" {
 
   model {
     # People
-    admin = person "Course Administrator" "A person who manages and maintains course content"
-    student = person "Student" "A person who views and enrolls in courses"
+    client = person "Client" "User who searches for, contacts, and hires technicians for specific services."
+    technician = person "Technician" "Professional offering specific services (e.g., plumbing, electrical work)."
 
     # Software System
-    learningCenter = softwareSystem "Learning Center" "Allows administrators to manage online courses and students to view course offerings" {
+    FixIt = softwareSystem "FixIt" "A platform that connects clients with technicians for home and specialized services. It allows managing profiles, requests, payments, and service ratings." {
+      
       # Containers
-      webApplication = container "Web Application" "Delivers the static content and the Learning Center single page application" "Angular, TypeScript" "webapp"
+      webApplication = container "Web Application" "Serves static content and loads the Single Page Application (SPA)." "Angular, TypeScript"
 
-      singlePageApplication = container "Single Page Application" "Provides all course management functionality to administrators and students via their web browser" "TypeScript, Angular, NGX-Translate, Angular Material" "spa" {
+      singlePageApplication = container "Single Page Application" "User interface for clients and technicians to search technicians, view profiles, send service requests, chat, and manage services." "TypeScript, Angular, Angular Material" {
         tags "Web Browser"
       }
 
-      apiApplication = container "API Application" "Provides course management functionality via RESTful API" "Spring Boot, Java" "api" {
+      apiApplication = container "API Application" "Handles the business logic and exposes RESTful APIs for user management, service requests, profiles, payments, and more." "Spring Boot, Java" {
         tags "API"
       }
 
-      database = container "Database" "Stores course information, categories, and metadata" "MySQL Server" "database" {
+      database = container "Database" "Stores data about users, technicians, services, requests, history, and payment methods." "MySQL Server" {
         tags "Database"
       }
     }
 
     # Relationships between people and system
-    admin -> learningCenter "Manages courses using"
-    student -> learningCenter "Views and searches courses using"
+    client -> FixIt "Search for technicians, send service requests, and rate services"
+    technician -> FixIt "Manage profile, accept/reject requests, and offer services"
 
     # Relationships between containers
-    admin -> webApplication "Visits learning-center.com using" "HTTPS"
-    student -> webApplication "Visits learning-center.com using" "HTTPS"
+    client -> webApplication "Accesses via http://localhost:4200" "HTTP"
+    technician -> webApplication  "Accesses via http://localhost:4200" "HTTP"
 
-    webApplication -> singlePageApplication "Delivers to the customer's web browser"
+    webApplication -> singlePageApplication "Loads and delivers the SPA to the user's browser"
 
-    singlePageApplication -> apiApplication "Makes API calls to" "JSON/HTTPS" "REST API"
+    singlePageApplication -> apiApplication "Sends API requests to" "JSON/HTTPS" "REST API"
 
-    apiApplication -> database "Reads from and writes to" "Spring Data JPA"
+    apiApplication -> database "Reads and writes data to" "Spring Data JPA"
   }
 
   views {
-    systemContext learningCenter "SystemContext" "The system context diagram for the Learning Center" {
+    systemContext FixIt "SystemContext" "The system context diagram for the FixIt platform" {
       include *
       autoLayout lr
     }
 
-    container learningCenter "Containers" "The container diagram for the Learning Center" {
+    container FixIt "Containers" "The container diagram for the FixIt platform" {
       include *
       autoLayout lr
     }
