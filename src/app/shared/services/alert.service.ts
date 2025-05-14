@@ -2,15 +2,13 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Alert } from '../models/interfaces';
-import {environment} from '@src/environments/environment';
-
 // No necesitamos importar Alert aquí, ya que está definida en el componente
 
 @Injectable({
   providedIn: 'root'
 })
 export class AlertService {
-  private apiUrl = environment;
+  private apiUrl = 'http://localhost:3000'; // URL de tu fake API
 
   constructor(private http: HttpClient) { }
 
