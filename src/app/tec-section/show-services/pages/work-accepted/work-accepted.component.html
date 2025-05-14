@@ -1,0 +1,96 @@
+<div class="page-container" *ngIf="workRequestDetails">
+  <header class="page-header">
+    <div class="header-content">
+      <mat-icon class="header-icon-main">assignment_turned_in</mat-icon>
+      <h1>Trabajo en Curso</h1>
+    </div>
+    <button mat-icon-button (click)="closePage()" aria-label="Cerrar">
+      <mat-icon>close</mat-icon>
+    </button>
+  </header>
+
+  <p class="cita-subtitle">Detalles del trabajo y chat con el cliente.</p>
+
+  <div class="work-details-card">
+    <div class="map-container">
+      <!-- CORREGIDO -->
+      <img [src]="workRequestDetails.mapImageUrl || defaultMapImage" alt="Mapa de ubicación" class="map-image">
+    </div>
+    <div class="time-info">
+      <!-- CORREGIDO -->
+      <p class="day-text">{{ workRequestDetails.dayText || 'Hoy' }}</p>
+      <p class="time-range-text">
+        <!-- CORREGIDO -->
+        {{ workRequestDetails.time }}
+
+        <span *ngIf="workRequestDetails.endTime"> - {{ workRequestDetails.endTime }}</span>
+      </p>
+    </div>
+    <mat-accordion>
+      <mat-expansion-panel class="details-expansion-panel" [(expanded)]="detailsPanelOpenState">
+        <mat-expansion-panel-header>
+          <mat-panel-title class="details-title">
+            Detalles del Trabajo
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <div class="details-content-panel">
+          <div class="detail-item">
+            <mat-icon>event</mat-icon>
+
+            <span><strong>Fecha:</strong> {{ workRequestDetails.date | date:'dd MMMM yyyy':'':'es' }}</span>
+          </div>
+          <div class="detail-item">
+            <mat-icon>schedule</mat-icon>
+
+            <span><strong>Hora:</strong> {{ workRequestDetails.time }} <span *ngIf="workRequestDetails.endTime">- {{ workRequestDetails.endTime }}</span></span>
+          </div>
+          <div class="detail-item">
+            <mat-icon>person_pin</mat-icon>
+
+            <span><strong>Cliente:</strong> {{ workRequestDetails.technicianName || 'No especificado' }}</span>
+          </div>
+          <div class="detail-item">
+            <mat-icon>location_on</mat-icon>
+
+            <span><strong>Dirección:</strong> {{ workRequestDetails.address || 'No especificada' }}</span>
+          </div>
+        </div>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
+
+  <div class="chat-window">
+    <header class="chat-header-internal">
+      <mat-icon class="avatar-icon">chat_bubble_outline</mat-icon>
+      <span class="client-name">Chat con Sra./Sr. {{ clientName }}</span>
+    </header>
+    <div class="messages-area" #chatMessagesContainer>
+      <div *ngFor="let msg of messages"
+           class="message-bubble"
+           [ngClass]="{'sent': msg.sender === 'worker', 'received': msg.sender === 'client'}">
+        <p class="message-text">{{ msg.text }}</p>
+        <span class="message-timestamp">{{ msg.timestamp | date:'shortTime' }}</span>
+      </div>
+    </div>
+    <footer class="chat-input-area">
+      <mat-form-field appearance="outline" class="message-input-field">
+        <input matInput
+               [(ngModel)]="newMessageText"
+               placeholder="Escribe un mensaje..."
+               (keyup.enter)="sendMessage()">
+      </mat-form-field>
+      <button mat-icon-button color="primary" (click)="sendMessage()" class="send-button" aria-label="Enviar mensaje">
+        <mat-icon>send</mat-icon>
+      </button>
+    </footer>
+  </div>
+
+  <button mat-flat-button class="terminar-main-button" (click)="openPutPriceDialog()">
+    Terminar Trabajo
+  </button>
+</div>
+
+<div *ngIf="!workRequestDetails" class="loading-error-container">
+  <p>Cargando detalles del trabajo o no se encontraron datos...</p>
+  <button mat-stroked-button routerLink="/tec-section/agenda">Volver a la Agenda</button>
+</div>

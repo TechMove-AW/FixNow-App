@@ -1,0 +1,10 @@
+<div class="confirm-dialog-box">
+  <h2 mat-dialog-title>{{ title }}</h2>
+  <mat-dialog-content>
+    <p>{{ messageToShow }}</p>
+  </mat-dialog-content>
+  <mat-dialog-actions align="center">
+    <button mat-stroked-button (click)="onCancel()">{{ cancelButtonText }}</button>
+    <button mat-flat-button class="yellow-button" (click)="onConfirm()">{{ confirmButtonText }}</button>
+  </mat-dialog-actions>
+</div>
