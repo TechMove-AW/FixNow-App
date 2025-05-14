@@ -45,13 +45,25 @@ export const routes: Routes = [
       { 
         path: 'worker-catalog/:category', 
         component: CategoryComponent,
-        data: { renderMode: 'client' } 
+        data: { renderMode: 'client' },
+        providers: [
+          {
+            provide: 'prerender',
+            useValue: false
+          }
+        ]
       },
       { path: 'alerts', component: AlertasComponent },
       { 
         path: 'worker-profile/:workerId', 
         component: WorkerProfileComponent,
-        data: { renderMode: 'client' } 
+        data: { renderMode: 'client' },
+        providers: [
+          {
+            provide: 'prerender',
+            useValue: false
+          }
+        ]
       },
       { path: '', redirectTo: 'home', pathMatch: 'full' },
       { path: '**', component: PageNotFoundComponent },
@@ -68,7 +80,13 @@ export const routes: Routes = [
       { 
         path: 'work-accepted/:requestId', 
         component: WorkAcceptedComponent,
-        data: { renderMode: 'client' } 
+        data: { renderMode: 'client' },
+        providers: [
+          {
+            provide: 'prerender',
+            useValue: false
+          }
+        ]
       }, // URL: /tec-section/work-accepted/ID
       { path: 'manage-services', component: ShowServicesComponent }, // URL: /tec-section/manage-services
     ],
