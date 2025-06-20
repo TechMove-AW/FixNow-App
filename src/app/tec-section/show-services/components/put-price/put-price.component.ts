@@ -7,13 +7,13 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { PutPriceDialogData, PutPriceDialogResult } from '../../../model/work-request.model';
-
+import { TranslateModule } from '@ngx-translate/core';
 @Component({
   selector: 'app-put-price',
   standalone: true,
   imports: [
     CommonModule, FormsModule, ReactiveFormsModule, MatDialogModule,
-    MatFormFieldModule, MatInputModule, MatButtonModule, MatIconModule
+    MatFormFieldModule, MatInputModule, MatButtonModule, MatIconModule,TranslateModule
   ],
   templateUrl: './put-price.component.html',
   styleUrls: ['./put-price.component.css']

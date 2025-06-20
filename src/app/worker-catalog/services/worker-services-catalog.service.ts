@@ -6,7 +6,7 @@ import { WorkerService } from '@/shared/models/interfaces';
 /**
  * API endpoint path for courses obtained from environment configuration.
  */
-const categoryResourceEndpointPath = environment.servicesEndpointPath;
+const categoryResourceEndpointPath = environment.categoriesEndpointPath;
 
 @Injectable({
   providedIn: 'root'

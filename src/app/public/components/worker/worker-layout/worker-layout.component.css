@@ -1,8 +1,11 @@
 .worker-dashboard-container {
+  min-height: 100vh;
+  background-image: url("/assets/auth-background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-  background-color: #f0f2f5;
 }
 
 .worker-header {
@@ -38,7 +41,7 @@
 }
 
 .header-actions .mat-icon-button .mat-icon {
-  color: #5f6368;
+  color: #0d61c9;
   font-size: 24px;
 }
 

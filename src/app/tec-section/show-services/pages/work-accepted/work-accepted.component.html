@@ -2,27 +2,23 @@
   <header class="page-header">
     <div class="header-content">
       <mat-icon class="header-icon-main">assignment_turned_in</mat-icon>
-      <h1>Trabajo en Curso</h1>
+      <h1>{{ 'workInProgressPage.title' | translate }}</h1>
     </div>
-    <button mat-icon-button (click)="closePage()" aria-label="Cerrar">
+    <button mat-icon-button (click)="closePage()" [attr.aria-label]="'workInProgressPage.closeButtonLabel' | translate">
       <mat-icon>close</mat-icon>
     </button>
   </header>
 
-  <p class="cita-subtitle">Detalles del trabajo y chat con el cliente.</p>
+  <p class="cita-subtitle">{{ 'workInProgressPage.subtitle' | translate }}</p>
 
   <div class="work-details-card">
     <div class="map-container">
-      <!-- CORREGIDO -->
-      <img [src]="workRequestDetails.mapImageUrl || defaultMapImage" alt="Mapa de ubicación" class="map-image">
+      <img [src]="workRequestDetails.mapImageUrl || defaultMapImage" [alt]="'workInProgressPage.mapAlt' | translate" class="map-image">
     </div>
     <div class="time-info">
-      <!-- CORREGIDO -->
-      <p class="day-text">{{ workRequestDetails.dayText || 'Hoy' }}</p>
+      <p class="day-text">{{ workRequestDetails.dayText || ('workInProgressPage.today' | translate) }}</p>
       <p class="time-range-text">
-        <!-- CORREGIDO -->
         {{ workRequestDetails.time }}
-
         <span *ngIf="workRequestDetails.endTime"> - {{ workRequestDetails.endTime }}</span>
       </p>
     </div>
@@ -30,29 +26,25 @@
       <mat-expansion-panel class="details-expansion-panel" [(expanded)]="detailsPanelOpenState">
         <mat-expansion-panel-header>
           <mat-panel-title class="details-title">
-            Detalles del Trabajo
+            {{ 'workInProgressPage.detailsTitle' | translate }}
           </mat-panel-title>
         </mat-expansion-panel-header>
         <div class="details-content-panel">
           <div class="detail-item">
             <mat-icon>event</mat-icon>
-
-            <span><strong>Fecha:</strong> {{ workRequestDetails.date | date:'dd MMMM yyyy':'':'es' }}</span>
+            <span><strong>{{ 'workInProgressPage.dateLabel' | translate }}</strong> {{ workRequestDetails.date | date:'dd MMMM yyyy':'':'es' }}</span>
           </div>
           <div class="detail-item">
             <mat-icon>schedule</mat-icon>
-
-            <span><strong>Hora:</strong> {{ workRequestDetails.time }} <span *ngIf="workRequestDetails.endTime">- {{ workRequestDetails.endTime }}</span></span>
+            <span><strong>{{ 'workInProgressPage.timeLabel' | translate }}</strong> {{ workRequestDetails.time }} <span *ngIf="workRequestDetails.endTime">- {{ workRequestDetails.endTime }}</span></span>
           </div>
           <div class="detail-item">
             <mat-icon>person_pin</mat-icon>
-
-            <span><strong>Cliente:</strong> {{ workRequestDetails.technicianName || 'No especificado' }}</span>
+            <span><strong>{{ 'workInProgressPage.clientLabel' | translate }}</strong> {{ workRequestDetails.technicianName || ('workInProgressPage.notSpecified' | translate) }}</span>
           </div>
           <div class="detail-item">
             <mat-icon>location_on</mat-icon>
-
-            <span><strong>Dirección:</strong> {{ workRequestDetails.address || 'No especificada' }}</span>
+            <span><strong>{{ 'workInProgressPage.addressLabel' | translate }}</strong> {{ workRequestDetails.address || ('workInProgressPage.notSpecified' | translate) }}</span>
           </div>
         </div>
       </mat-expansion-panel>
@@ -62,7 +54,7 @@
   <div class="chat-window">
     <header class="chat-header-internal">
       <mat-icon class="avatar-icon">chat_bubble_outline</mat-icon>
-      <span class="client-name">Chat con Sra./Sr. {{ clientName }}</span>
+      <span class="client-name">{{ 'workInProgressPage.chatTitlePrefix' | translate }} {{ clientName }}</span>
     </header>
     <div class="messages-area" #chatMessagesContainer>
       <div *ngFor="let msg of messages"
@@ -76,21 +68,21 @@
       <mat-form-field appearance="outline" class="message-input-field">
         <input matInput
                [(ngModel)]="newMessageText"
-               placeholder="Escribe un mensaje..."
+               [placeholder]="'workInProgressPage.chatPlaceholder' | translate"
                (keyup.enter)="sendMessage()">
       </mat-form-field>
-      <button mat-icon-button color="primary" (click)="sendMessage()" class="send-button" aria-label="Enviar mensaje">
+      <button mat-icon-button color="primary" (click)="sendMessage()" class="send-button" [attr.aria-label]="'workInProgressPage.sendButtonLabel' | translate">
         <mat-icon>send</mat-icon>
       </button>
     </footer>
   </div>
 
   <button mat-flat-button class="terminar-main-button" (click)="openPutPriceDialog()">
-    Terminar Trabajo
+    {{ 'workInProgressPage.finishWorkButton' | translate }}
   </button>
 </div>
 
 <div *ngIf="!workRequestDetails" class="loading-error-container">
-  <p>Cargando detalles del trabajo o no se encontraron datos...</p>
-  <button mat-stroked-button routerLink="/tec-section/agenda">Volver a la Agenda</button>
+  <p>{{ 'workInProgressPage.loadingText' | translate }}</p>
+  <button mat-stroked-button routerLink="/tec-section/agenda">{{ 'workInProgressPage.backToAgendaButton' | translate }}</button>
 </div>

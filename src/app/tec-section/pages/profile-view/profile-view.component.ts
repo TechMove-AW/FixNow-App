@@ -1,16 +1,16 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { Router, RouterLink } from '@angular/router'; // MANTENEMOS RouterLink por el botón de Agenda
+import { Router, RouterLink } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { CommonModule } from '@angular/common';
 import { WorkerProfile } from '../../model/worker-profile.model';
-
+import { TranslateModule } from '@ngx-translate/core';
 import { ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-profile-view',
   standalone: true,
-  imports: [CommonModule, RouterLink, MatButtonModule, MatIconModule],
+  imports: [CommonModule, RouterLink, MatButtonModule, MatIconModule, TranslateModule],
   templateUrl: './profile-view.component.html',
   styleUrl: './profile-view.component.css'
 })
@@ -21,7 +21,6 @@ export class ProfileViewComponent implements OnInit, OnDestroy {
 
   constructor(
     private router: Router,
-
   ) {
     const navigation = this.router.getCurrentNavigation();
     const state = navigation?.extras.state as { workerData: WorkerProfile };
@@ -31,9 +30,8 @@ export class ProfileViewComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-
-
     if (!this.worker) {
+      // CORREGIDO: Se añade 'status' para cumplir con la interfaz WorkerProfile
       this.worker = {
         id: 'fallback-worker',
         profileImageUrl: 'https://via.placeholder.com/150/007bff/FFFFFF?Text=EX',
@@ -46,7 +44,8 @@ export class ProfileViewComponent implements OnInit, OnDestroy {
         username: '@EjemploTecnico',
         location: 'Ciudad Ejemplo',
         memberSince: 'Enero 2024',
-        //paymentMethods: [{ iconName: '💳', label: 'Transferencia' }]
+        paymentMethods: [],
+        status: 'ACTIVE' // <-- CORRECCIÓN
       };
     }
     if (this.worker) {
@@ -61,13 +60,14 @@ export class ProfileViewComponent implements OnInit, OnDestroy {
       if (!this.worker.paymentMethods) this.worker.paymentMethods = [];
     }
   }
-  navigateToService():void{
+  navigateToService(): void {
     this.router.navigate(['/tec-section/manage-services'], { state: { workerData: this.worker } });
-
   }
+
   navigateToEdit(): void {
     this.router.navigate(['/tec-section/profile/edit'], { state: { workerDataToEdit: this.worker } });
   }
+
   triggerFileInput(): void {
     this.fileInput.nativeElement.click();
   }

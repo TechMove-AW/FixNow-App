@@ -4,6 +4,9 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import {FormsModule} from '@angular/forms';
+import { TranslateModule } from '@ngx-translate/core';
+import {HttpClient} from '@angular/common/http';
+import {NgIf} from '@angular/common';
 
 @Component({
   selector: 'app-login-customer',
@@ -14,15 +17,43 @@ import {FormsModule} from '@angular/forms';
     MatButtonModule,
     RouterLink,
     RouterLinkActive,
-    FormsModule
+    FormsModule,
+    TranslateModule,
+    NgIf
   ],
   templateUrl: './login-customer.component.html',
   styleUrl: './login-customer.component.css'
 })
+
 export class LoginCustomerComponent {
-  constructor(private router: Router) {}
+
+  email: string='';
+  password: string='';
+  errorMessage: string = '';
+
+  constructor(private router: Router, private http: HttpClient) {}
 
   onLogin(): void {
-    this.router.navigate(['/customer/home']);
+    this.http.get<any[]>('http://localhost:3000/registers').subscribe({
+      next:users=>{
+        const foundUser= users.find(user=>
+          user.email===this.email && user.password===this.password);
+        if(foundUser){
+          this.router.navigate(['/customer/home']); // Esto es correcto
+        } else {
+          this.errorMessage = 'Correo o contraseña incorrectos';
+        }
+      },
+      error: err => {
+        console.error('Error al obtener usuarios:', err);
+        this.errorMessage = 'Error del servidor. Intenta más tarde.';
+      }
+    });
+
+
+
+
+
   }
+
 }

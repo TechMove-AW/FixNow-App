@@ -1,11 +1,17 @@
 <div class="type-selection-container">
-  <h1 class="type-selection-title">ELIGE TU TIPO DE USUARIO</h1>
+  <h1 class="type-selection-title">{{ 'loginType.title' | translate }}</h1>
+
   <div class="type-options">
-    <a mat-flat-button routerLink="/login/customer" class="type-button customer-button">
-      Deseo contratar<br>un servicio
+    <a mat-flat-button
+       routerLink="/login/customer"
+       class="type-button customer-button"
+       [innerHTML]="'loginType.customerButton' | translate">
     </a>
-    <a mat-flat-button routerLink="/login/worker" class="type-button worker-button">
-      Deseo brindar<br>mis servicios
+
+    <a mat-flat-button
+       routerLink="/login/worker"
+       class="type-button worker-button"
+       [innerHTML]="'loginType.workerButton' | translate">
     </a>
   </div>
 </div>

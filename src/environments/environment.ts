@@ -6,6 +6,6 @@ export const environment = {
   workersEndpointPath: '/workers',
   reviewsEndpointPath: '/reviews',
   customersEndpointPath: '/customers',
-  servicesEndpointPath: '/worker-services',
+  proposalsEndpointPath: '/proposals',
   categoriesEndpointPath: '/categories',
 };

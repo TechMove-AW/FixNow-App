@@ -12,7 +12,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { WorkerServicesComponent } from '@/worker-catalog/components/worker-services/worker-services.component';
 import { WorkerServicesCatalog } from '@/worker-catalog/services/worker-services-catalog.service';
-
+import { TranslateModule } from '@ngx-translate/core';
 @Component({
   selector: 'app-worker-profile',
   imports: [
@@ -20,6 +20,7 @@ import { WorkerServicesCatalog } from '@/worker-catalog/services/worker-services
     MatButtonModule,
     MatIconModule,
     WorkerServicesComponent,
+    TranslateModule
   ],
   templateUrl: './worker-profile.component.html',
   styleUrl: './worker-profile.component.css',

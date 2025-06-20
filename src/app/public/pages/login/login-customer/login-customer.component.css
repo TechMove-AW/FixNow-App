@@ -135,3 +135,8 @@
   background-color: rgba(71, 85, 105, 0.2) ;
   border-color: #64748b ;
 }
+.error-message {
+  color: red;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+}

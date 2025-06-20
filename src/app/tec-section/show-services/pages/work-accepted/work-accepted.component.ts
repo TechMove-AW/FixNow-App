@@ -11,7 +11,7 @@ import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { WorkRequest } from '../../../model/work-request.model';
 import { PutPriceComponent } from '../../components/put-price/put-price.component';
 import { PutPriceDialogResult } from '../../../model/work-request.model';
-
+import { TranslateModule } from '@ngx-translate/core';
 interface ChatMessage {
   text: string;
   sender: 'worker' | 'client';
@@ -23,7 +23,7 @@ interface ChatMessage {
   standalone: true,
   imports: [
     CommonModule, FormsModule, RouterModule, MatIconModule, MatButtonModule,
-    MatFormFieldModule, MatInputModule, MatExpansionModule, DatePipe, MatDialogModule
+    MatFormFieldModule, MatInputModule, MatExpansionModule, DatePipe, MatDialogModule,TranslateModule
   ],
   templateUrl: './work-accepted.component.html',
   styleUrls: ['./work-accepted.component.css']

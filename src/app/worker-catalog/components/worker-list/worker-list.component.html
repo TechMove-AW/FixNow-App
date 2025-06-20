@@ -2,6 +2,6 @@
   @for(worker of workers; track worker.id){
     <app-worker-card [worker]="worker"></app-worker-card>
   }@empty {
-    <p>No hay trabajadores disponibles</p>
+    <p>{{ 'workerListPage.noWorkersAvailable' | translate }}</p>
   }
 </div>
