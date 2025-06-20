@@ -1,0 +1,197 @@
+{
+  "loginType": {
+    "title": "CHOOSE YOUR USER TYPE",
+    "customerButton": "I want to hire<br>a service",
+    "workerButton": "I want to offer<br>my services"
+  },
+  "authForm": {
+    "registerTab": "SIGN UP",
+    "loginTab": "LOG IN",
+    "emailLabel": "Email",
+    "emailPlaceholder": "example@email.com",
+    "passwordLabel": "Password",
+    "passwordPlaceholder": "Your password",
+    "forgotPasswordLink": "Forgot your password?",
+    "submitButton": "Log In",
+    "socialDivider": "Or log in with",
+    "nameLabel": "Name",
+    "namePlaceholder": "Your full name",
+    "createPasswordPlaceholder": "Create a password",
+    "submitButtonRegister": "Sign Up",
+    "socialDividerRegister": "Or sign up with",
+    "workerRegister": {
+      "lastNameLabel": "Last Name",
+      "lastNamePlaceholder": "Your last name",
+      "phoneLabel": "Phone",
+      "phonePlaceholder": "Your phone number",
+      "specialtyLabel": "Main Specialty",
+      "avatarUrlLabel": "Avatar URL",
+      "avatarUrlPlaceholder": "https://example.com/your-avatar.jpg",
+      "avatarUrlHint": "Enter the URL of your profile picture",
+      "submitting": "Registering..."
+    },
+    "worker": {
+      "registerTab": "SIGN UP (WORKER)",
+      "loginTab": "LOG IN (WORKER)"
+    }
+  },
+  "homePage": {
+    "banner": {
+      "title": "Join FIX IT PRO",
+      "description": "We have professionals from different areas to provide you with fast, reliable, and quality solutions.",
+      "seeMoreButton": "See More"
+    },
+    "professionals": {
+      "estimatedTime": "Estimated time:",
+      "jobsSuffix": "jobs"
+    },
+    "ecosmart": {
+      "buyButton": "Go to Purchase"
+    }
+  },
+  "dialogs": {
+    "fieldError": {
+      "title": "ERROR",
+      "message": "Please complete the fields before using this option",
+      "acceptButton": "Accept"
+    },
+    "putPrice": {
+      "title": "Enter Final Price",
+      "closeLabel": "Close dialog",
+      "amountLabel": "Final amount",
+      "amountPlaceholder": "Enter price",
+      "amountRequiredError": "The amount is required.",
+      "amountPatternError": "Invalid amount (e.g., 150 or 150.50).",
+      "descriptionLabel": "Description of work performed",
+      "descriptionPlaceholder": "Details of the completed work...",
+      "descriptionRequiredError": "The description is required.",
+      "descriptionMaxLengthError": "Maximum 500 characters.",
+      "submitButton": "Finish"
+    }
+  },
+  "profilePage": {
+    "nameLabel": "Name",
+    "emailLabel": "Email",
+    "phoneLabel": "Phone Number",
+    "ageLabel": "Age",
+    "dniLabel": "ID Number",
+    "specialtyLabel": "What is your specialty?",
+    "experienceLabel": "Years of Experience",
+    "addressLabel": "Address/Location",
+    "saveButton": "Save",
+    "verification": {
+      "title": "Profile Verification",
+      "subtitle": "Complete the following fields to activate your profile on our platform.",
+      "dniFrontLabel": "ID Photo (Front) *",
+      "dniBackLabel": "ID Photo (Back) *",
+      "certificatesLabel": "Certificates or Diplomas (Optional)",
+      "selectFileButton": "Select File",
+      "addCertificatesButton": "Add Certificates",
+      "termsCheckbox": "I accept the Terms and Conditions.",
+      "submitButtonVerification": "Save and Activate Profile",
+      "dniRequiredError": "Please upload both sides of your ID.",
+      "successMessage": "Profile saved successfully! You will be redirected."
+    },
+    "view": {
+      "editButton": "EDIT",
+      "agendaButton": "Agenda",
+      "changePhotoButton": "CHANGE PHOTO",
+      "profilePhotoAlt": "Profile picture",
+      "specialtyLabel": "Specialty",
+      "fullNameLabel": "Full Name",
+      "experienceLabel": "Year of Experience",
+      "experienceSuffix": "years",
+      "phoneLabel": "Phone Number",
+      "paymentMethodLabel": "Payment Method",
+      "loadingText": "Loading profile..."
+    }
+  },
+  "agendaModal": {
+    "title": "Schedule",
+    "subtitle": "You have an appointment",
+    "mapAlt": "Location map",
+    "today": "Today",
+    "detailsTitle": "Details",
+    "dateLabel": "Date:",
+    "timeLabel": "Time:",
+    "technicianLabel": "Technician:",
+    "notAssigned": "Not assigned",
+    "addressLabel": "Address:",
+    "notSpecified": "Not specified",
+    "acceptButton": "Accept Job",
+    "rejectButton": "Reject Job"
+  },
+  "agendaPage": {
+    "title": "Work Schedule",
+    "viewMoreButton": "View More",
+    "deleteButtonLabel": "Delete request",
+    "noRequestsMessage": "You have no pending work requests in your schedule."
+  },
+  "servicesPage": {
+    "titleSuffix": "Professionals",
+    "profileImageAlt": "Professional's profile picture",
+    "professionalLabel": "Professional:",
+    "specialtyLabel": "Specialty:",
+    "locationLabel": "Location:",
+    "memberSinceLabel": "Member since:",
+    "hireButton": "Hire",
+    "previousJobsTitle": "Previous Jobs",
+    "descriptionPlaceholder": "Enter description",
+    "newPublicationTitle": "Add publication",
+    "descriptionLabel": "Description",
+    "priceLabel": "Price",
+    "uploadImageButton": "Upload image",
+    "updateButton": "Update",
+    "publishButton": "Publish",
+    "previewImageAlt": "Image preview",
+    "editButton": "Edit",
+    "deleteButton": "Delete",
+    "noServicesAvailable": "No services available"
+  },
+  "workInProgressPage": {
+    "title": "Work in Progress",
+    "closeButtonLabel": "Close",
+    "subtitle": "Job details and chat with the client.",
+    "mapAlt": "Location map",
+    "today": "Today",
+    "detailsTitle": "Job Details",
+    "dateLabel": "Date:",
+    "timeLabel": "Time:",
+    "clientLabel": "Client:",
+    "notSpecified": "Not specified",
+    "addressLabel": "Address:",
+    "chatTitlePrefix": "Chat with Ms./Mr.",
+    "chatPlaceholder": "Type a message...",
+    "sendButtonLabel": "Send message",
+    "finishWorkButton": "Finish Work",
+    "loadingText": "Loading job details or no data found...",
+    "backToAgendaButton": "Back to Schedule"
+  },
+  "workerListPage": {
+    "noWorkersAvailable": "No workers available"
+  },
+  "workerCard": {
+    "profilePictureAlt": "Worker's profile picture",
+    "viewProfileButton": "View profile",
+    "minutesAbbreviation": "min"
+  },
+  "categoryPage": {
+    "titleSuffix": "Available professionals"
+  },
+  "customerWorkerProfile": {
+    "titleFallback": "Professional",
+    "titleSuffix": "Professionals",
+    "professionalLabel": "Professional:",
+    "specialtyLabel": "Specialty:",
+    "locationLabel": "Location:",
+    "estimatedTimeLabel": "Estimated time:",
+    "hireButton": "Hire",
+    "previousJobsTitle": "Previous Jobs",
+    "defaultExperienceDescription": "Professional with experience in the sector.",
+    "offeredServicesTitle": "Offered Services",
+    "reviewsTitle": "Reviews",
+    "sampleReview1": "Fast and clean work. Installed everything with great precision.",
+    "sampleReview2": "Helped me repair a water leak in record time. Very professional and with fair prices.",
+    "sampleReview3": "Excellent service. Arrived on time and left everything spotless."
+  }
+}
