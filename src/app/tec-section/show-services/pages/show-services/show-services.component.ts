@@ -8,7 +8,7 @@ import {MatFormField, MatInput, MatLabel} from '@angular/material/input';
 import { TextareaModule } from 'primeng/textarea';
 import {WorkerProfile} from '@/tec-section/model/worker-profile.model';
 import {Router} from '@angular/router';
-
+import { TranslateModule } from '@ngx-translate/core';
 interface Service {
   id: number;
   description: string;
@@ -32,7 +32,8 @@ interface Service {
     MatInput,
     MatCardImage,
     MatLabel,
-    TextareaModule
+    TextareaModule,
+    TranslateModule
   ],
   styleUrls: ['./show-services.components.css']
 })

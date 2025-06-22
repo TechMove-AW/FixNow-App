@@ -5,10 +5,10 @@ import { CategoryService } from '../../services/category.service';
 import { WorkerService } from '@/shared/services/worker.service';
 import { Category, Worker } from '@/shared/models/interfaces';
 import {MatProgressSpinner} from '@angular/material/progress-spinner';
-
+import { TranslateModule } from '@ngx-translate/core';
 @Component({
   selector: 'app-category',
-  imports: [WorkerListComponent, MatProgressSpinner],
+  imports: [WorkerListComponent, MatProgressSpinner,TranslateModule],
   templateUrl: './category.component.html',
   styleUrl: './category.component.css',
 })

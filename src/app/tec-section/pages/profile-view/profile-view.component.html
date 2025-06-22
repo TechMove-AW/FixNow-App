@@ -1,15 +1,14 @@
 <div class="profile-view-page" *ngIf="worker">
   <div class="profile-header-actions">
     <button mat-flat-button
-
-            (click)="navigateToService()" class="edit-link-button">EDITAR
-      {{ worker.specialty }}
+            (click)="navigateToService()" class="edit-link-button">
+      {{ 'profilePage.view.editButton' | translate }} {{ worker.specialty }}
     </button>
 
     <button mat-flat-button
             class="action-button yellow-button"
             routerLink="/tec-section/agenda">
-      Agenda
+      {{ 'profilePage.view.agendaButton' | translate }}
     </button>
   </div>
 
@@ -18,13 +17,13 @@
       <div class="profile-picture-container">
         <img
           [src]="previewUrl || worker.profileImageUrl"
-          alt="Foto de perfil"
+          [alt]="'profilePage.view.profilePhotoAlt' | translate"
           class="profile-picture"
         />
-        <button mat-button class="change-photo-button" (click)="triggerFileInput()">CAMBIAR FOTO</button>
+        <button mat-button class="change-photo-button" (click)="triggerFileInput()">
+          {{ 'profilePage.view.changePhotoButton' | translate }}
+        </button>
         <input type="file" accept="image/*" #fileInput (change)="onFileSelected($event)" hidden />
-
-
       </div>
       <div class="profile-text-details">
         <div class="profile-name-and-edit">
@@ -32,7 +31,9 @@
         </div>
         <div class="profile-username">
           <span>{{ worker.username }}</span>
-          <button (click)="navigateToEdit()" class="edit-link-inline-button">EDITAR</button>
+          <button (click)="navigateToEdit()" class="edit-link-inline-button">
+            {{ 'profilePage.view.editButton' | translate }}
+          </button>
         </div>
         <div class="profile-location-joined">
           <span>📍 {{ worker.location }}</span>
@@ -44,39 +45,39 @@
     <div class="profile-details">
       <div class="detail-item">
         <div class="detail-content">
-          <div class="detail-label">Especialidad</div>
+          <div class="detail-label">{{ 'profilePage.view.specialtyLabel' | translate }}</div>
           <p class="detail-value">{{ worker.specialty }}</p>
         </div>
-        <button (click)="navigateToEdit()" class="edit-link-button">EDITAR</button>
+        <button (click)="navigateToEdit()" class="edit-link-button">{{ 'profilePage.view.editButton' | translate }}</button>
       </div>
 
       <div class="detail-item">
         <div class="detail-content">
-          <div class="detail-label">Nombre Completo</div>
+          <div class="detail-label">{{ 'profilePage.view.fullNameLabel' | translate }}</div>
           <p class="detail-value">{{ worker.fullName }}</p>
         </div>
-        <button (click)="navigateToEdit()" class="edit-link-button">EDITAR</button>
+        <button (click)="navigateToEdit()" class="edit-link-button">{{ 'profilePage.view.editButton' | translate }}</button>
       </div>
 
       <div class="detail-item">
         <div class="detail-content">
-          <div class="detail-label">Año de Experiencia</div>
-          <p class="detail-value">{{ worker.experienceYears }} años</p>
+          <div class="detail-label">{{ 'profilePage.view.experienceLabel' | translate }}</div>
+          <p class="detail-value">{{ worker.experienceYears }} {{ 'profilePage.view.experienceSuffix' | translate }}</p>
         </div>
-        <button (click)="navigateToEdit()" class="edit-link-button">EDITAR</button>
+        <button (click)="navigateToEdit()" class="edit-link-button">{{ 'profilePage.view.editButton' | translate }}</button>
       </div>
 
       <div class="detail-item">
         <div class="detail-content">
-          <div class="detail-label">Número de Celular</div>
+          <div class="detail-label">{{ 'profilePage.view.phoneLabel' | translate }}</div>
           <p class="detail-value">{{ worker.phoneNumber }}</p>
         </div>
-        <button (click)="navigateToEdit()" class="edit-link-button">EDITAR</button>
+        <button (click)="navigateToEdit()" class="edit-link-button">{{ 'profilePage.view.editButton' | translate }}</button>
       </div>
 
       <div class="detail-item">
         <div class="detail-content">
-          <div class="detail-label">Método de pago</div>
+          <div class="detail-label">{{ 'profilePage.view.paymentMethodLabel' | translate }}</div>
           <div class="payment-methods" *ngIf="worker.paymentMethods && worker.paymentMethods.length > 0">
             <ng-container *ngFor="let method of worker.paymentMethods">
               <span class="payment-method-item">
@@ -85,11 +86,11 @@
             </ng-container>
           </div>
         </div>
-        <button (click)="navigateToEdit()" class="edit-link-button">EDITAR</button>
+        <button (click)="navigateToEdit()" class="edit-link-button">{{ 'profilePage.view.editButton' | translate }}</button>
       </div>
     </div>
   </div>
 </div>
 <div *ngIf="!worker" class="loading-text">
-  Cargando perfil...
+  {{ 'profilePage.view.loadingText' | translate }}
 </div>

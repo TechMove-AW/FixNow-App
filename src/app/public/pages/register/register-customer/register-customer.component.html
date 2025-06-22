@@ -1,32 +1,53 @@
 <div class="auth-form-card">
   <div class="form-card-logo">FIX IT</div>
   <nav class="auth-tabs">
-    <a routerLink="/register/customer" routerLinkActive="active-tab">REGISTRASE</a>
-    <a routerLink="/login/customer" routerLinkActive="active-tab">INICIAR SESIÓN</a>
+    <!-- Reutilizamos las claves de las pestañas -->
+    <a routerLink="/register/customer" routerLinkActive="active-tab">{{ 'authForm.registerTab' | translate }}</a>
+    <a routerLink="/login/customer" routerLinkActive="active-tab">{{ 'authForm.loginTab' | translate }}</a>
   </nav>
+
   <form (ngSubmit)="onRegister()" class="auth-inner-form">
+    <!-- Campo de Nombre -->
     <mat-form-field appearance="fill" class="form-field">
-      <mat-label>Nombre</mat-label>
-      <input matInput name="name" placeholder="Tu nombre completo">
+      <mat-label>{{ 'authForm.nameLabel' | translate }}</mat-label>
+      <input matInput
+             name="name"
+             required
+             [(ngModel)]="name"
+             [placeholder]="'authForm.namePlaceholder' | translate">
     </mat-form-field>
 
+    <!-- Campo de Correo (reutilizado) -->
     <mat-form-field appearance="fill" class="form-field">
-      <mat-label>Correo</mat-label>
-      <input matInput type="email" name="email" placeholder="ejemplo@correo.com">
+      <mat-label>{{ 'authForm.emailLabel' | translate }}</mat-label>
+      <input matInput type="email"
+             name="email"
+             required
+             [(ngModel)]="email"
+             [placeholder]="'authForm.emailPlaceholder' | translate">
     </mat-form-field>
 
+    <!-- Campo de Contraseña (con nuevo placeholder) -->
     <mat-form-field appearance="fill" class="form-field">
-      <mat-label>Contraseña</mat-label>
-      <input matInput type="password" name="password" placeholder="Crea una contraseña">
+      <mat-label>{{ 'authForm.passwordLabel' | translate }}</mat-label>
+
+      <input matInput type="password"
+             name="password"
+             required
+             [(ngModel)]="password"
+             [placeholder]="'authForm.createPasswordPlaceholder' | translate">
     </mat-form-field>
 
+    <!-- Botón de Registrarse -->
     <button mat-flat-button type="submit" class="submit-button form-submit-button">
-      Registrarse
+      {{ 'authForm.submitButtonRegister' | translate }}
     </button>
 
+    <!-- Divisor social de Registrarse -->
     <div class="social-login-divider">
-      <span>O regístrate con</span>
+      <span>{{ 'authForm.socialDividerRegister' | translate }}</span>
     </div>
+
     <div class="social-buttons">
       <button mat-stroked-button type="button" class="social-button">Facebook</button>
       <button mat-stroked-button type="button" class="social-button">Google</button>

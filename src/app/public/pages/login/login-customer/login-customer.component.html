@@ -1,31 +1,53 @@
 <div class="auth-form-card">
+  <!-- El logo es un nombre de marca, por lo general no se traduce -->
   <div class="form-card-logo">FIX IT</div>
+
   <nav class="auth-tabs">
-    <a routerLink="/register/customer" routerLinkActive="active-tab">REGISTRASE</a>
-    <a routerLink="/login/customer" routerLinkActive="active-tab">INICIAR SESIÓN</a>
+    <a routerLink="/register/customer" routerLinkActive="active-tab">{{ 'authForm.registerTab' | translate }}</a>
+    <a routerLink="/login/customer" routerLinkActive="active-tab">{{ 'authForm.loginTab' | translate }}</a>
   </nav>
+
   <form (ngSubmit)="onLogin()" class="auth-inner-form">
     <mat-form-field appearance="fill" class="form-field">
-      <mat-label>Correo</mat-label>
-      <input matInput type="email" name="email" placeholder="ejemplo@correo.com">
+      <mat-label>{{ 'authForm.emailLabel' | translate }}</mat-label>
+      <input
+        matInput
+        type="email"
+        name="email"
+        required
+        [(ngModel)]="email"
+        [placeholder]="'authForm.emailPlaceholder' | translate">
     </mat-form-field>
 
     <mat-form-field appearance="fill" class="form-field">
-      <mat-label>Contraseña</mat-label>
-      <input matInput type="password" name="password" placeholder="Tu contraseña">
+      <mat-label>{{ 'authForm.passwordLabel' | translate }}</mat-label>
+      <input
+        matInput
+        type="password"
+        name="password"
+        required
+        [(ngModel)]="password"
+        [placeholder]="'authForm.passwordPlaceholder' | translate">
     </mat-form-field>
 
+
+    <div *ngIf="errorMessage" class="error-message">
+      {{ errorMessage }}
+    </div>
+
     <div class="forgot-password-link">
-      <a routerLink="#">¿Olvidaste tu contraseña?</a>
+      <a routerLink="#">{{ 'authForm.forgotPasswordLink' | translate }}</a>
     </div>
 
     <button mat-flat-button type="submit" class="submit-button form-submit-button">
-      Iniciar Sesión
+      {{ 'authForm.submitButton' | translate }}
     </button>
 
     <div class="social-login-divider">
-      <span>O inicia sesión con</span>
+      <span>{{ 'authForm.socialDivider' | translate }}</span>
     </div>
+
+    <!-- Los nombres de marcas como Facebook, Google, Apple no se traducen -->
     <div class="social-buttons">
       <button mat-stroked-button type="button" class="social-button">Facebook</button>
       <button mat-stroked-button type="button" class="social-button">Google</button>

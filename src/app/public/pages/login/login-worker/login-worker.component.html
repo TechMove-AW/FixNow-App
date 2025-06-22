@@ -1,31 +1,46 @@
 <div class="auth-form-card">
   <div class="form-card-logo">FIX IT</div>
   <nav class="auth-tabs">
-    <a routerLink="/register/worker" routerLinkActive="active-tab">REGISTRASE (TRABAJADOR)</a>
-    <a routerLink="/login/worker" routerLinkActive="active-tab">INICIAR SESIÓN (TRABAJADOR)</a>
+    <!-- Claves específicas para el trabajador -->
+    <a routerLink="/register/worker" routerLinkActive="active-tab">{{ 'authForm.worker.registerTab' | translate }}</a>
+    <a routerLink="/login/worker" routerLinkActive="active-tab">{{ 'authForm.worker.loginTab' | translate }}</a>
   </nav>
+
   <form (ngSubmit)="onLogin()" class="auth-inner-form">
+    <!-- Reutilización de claves genéricas -->
     <mat-form-field appearance="fill" class="form-field">
-      <mat-label>Correo Electrónico</mat-label>
-      <input matInput type="email" name="email" placeholder="ejemplo@correo.com">
+      <mat-label>{{ 'authForm.emailLabel' | translate }}</mat-label>
+      <input matInput type="email" name="email"
+             required
+             [(ngModel)]="email"
+             [placeholder]="'authForm.emailPlaceholder' | translate">
     </mat-form-field>
 
     <mat-form-field appearance="fill" class="form-field">
-      <mat-label>Contraseña</mat-label>
-      <input matInput type="password" name="password" placeholder="Tu contraseña">
+      <mat-label>{{ 'authForm.passwordLabel' | translate }}</mat-label>
+      <input matInput type="password"
+             name="password"
+             required
+             [(ngModel)]="password"
+             [placeholder]="'authForm.passwordPlaceholder' | translate">
     </mat-form-field>
+
+    <div *ngIf="errorMessage" class="error-message">
+      {{ errorMessage }}
+    </div>
 
     <div class="forgot-password-link">
-      <a routerLink="#">¿Olvidaste tu contraseña?</a>
+      <a routerLink="#">{{ 'authForm.forgotPasswordLink' | translate }}</a>
     </div>
 
     <button mat-flat-button type="submit" class="submit-button form-submit-button">
-      Iniciar Sesión
+      {{ 'authForm.submitButton' | translate }}
     </button>
 
     <div class="social-login-divider">
-      <span>O inicia sesión con</span>
+      <span>{{ 'authForm.socialDivider' | translate }}</span>
     </div>
+
     <div class="social-buttons">
       <button mat-stroked-button type="button" class="social-button">Facebook</button>
       <button mat-stroked-button type="button" class="social-button">Google</button>

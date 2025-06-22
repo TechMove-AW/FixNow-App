@@ -1,57 +1,70 @@
 <div class="auth-form-card">
   <div class="form-card-logo">FIX IT</div>
   <nav class="auth-tabs">
-    <a routerLink="/register/worker" routerLinkActive="active-tab">REGISTRASE (TRABAJADOR)</a>
-    <a routerLink="/login/worker" routerLinkActive="active-tab">INICIAR SESIÓN (TRABAJADOR)</a>
+    <!-- Claves específicas de las pestañas de trabajador -->
+    <a routerLink="/register/worker" routerLinkActive="active-tab">{{ 'authForm.worker.registerTab' | translate }}</a>
+    <a routerLink="/login/worker" routerLinkActive="active-tab">{{ 'authForm.worker.loginTab' | translate }}</a>
   </nav>
+
   <form [formGroup]="registerForm" (ngSubmit)="onRegister()" class="auth-inner-form">
+    <!-- Campo Nombre (reutilizado) -->
     <mat-form-field appearance="fill" class="form-field">
-      <mat-label>Nombre</mat-label>
-      <input matInput formControlName="firstName" placeholder="Tu nombre">
+      <mat-label>{{ 'authForm.nameLabel' | translate }}</mat-label>
+      <input matInput formControlName="firstName" [placeholder]="'authForm.namePlaceholder' | translate">
     </mat-form-field>
 
+    <!-- Campo Apellido -->
     <mat-form-field appearance="fill" class="form-field">
-      <mat-label>Apellido</mat-label>
-      <input matInput formControlName="lastName" placeholder="Tu apellido">
+      <mat-label>{{ 'authForm.workerRegister.lastNameLabel' | translate }}</mat-label>
+      <input matInput formControlName="lastName" [placeholder]="'authForm.workerRegister.lastNamePlaceholder' | translate">
     </mat-form-field>
 
+    <!-- Campo Correo (reutilizado) -->
     <mat-form-field appearance="fill" class="form-field">
-      <mat-label>Correo Electrónico</mat-label>
-      <input matInput type="email" formControlName="email" placeholder="ejemplo@correo.com">
+      <mat-label>{{ 'authForm.emailLabel' | translate }}</mat-label>
+      <input matInput type="email" formControlName="email"
+             [placeholder]="'authForm.emailPlaceholder' | translate">
     </mat-form-field>
 
+    <!-- Campo Teléfono -->
     <mat-form-field appearance="fill" class="form-field">
-      <mat-label>Teléfono</mat-label>
-      <input matInput type="tel" formControlName="phone" placeholder="Tu número de teléfono">
+      <mat-label>{{ 'authForm.workerRegister.phoneLabel' | translate }}</mat-label>
+      <input matInput type="tel" formControlName="phone" [placeholder]="'authForm.workerRegister.phonePlaceholder' | translate">
     </mat-form-field>
 
+    <!-- Campo Especialidad -->
     <mat-form-field appearance="fill" class="form-field">
-      <mat-label>Especialidad Principal</mat-label>
+      <mat-label>{{ 'authForm.workerRegister.specialtyLabel' | translate }}</mat-label>
       <mat-select formControlName="specialty">
         <mat-option *ngFor="let spec of specialities" [value]="spec.id">
-          {{ spec.name }}
+          {{ spec.name }} <!-- Asumo que 'spec.name' ya viene en el idioma correcto desde el backend o se gestiona de otra forma -->
         </mat-option>
       </mat-select>
     </mat-form-field>
 
+    <!-- Campo Avatar -->
     <mat-form-field appearance="fill" class="form-field">
-      <mat-label>URL de Avatar</mat-label>
-      <input matInput formControlName="avatarUrl" placeholder="https://ejemplo.com/tu-avatar.jpg">
-      <mat-hint>Introduce la URL de tu imagen de perfil</mat-hint>
+      <mat-label>{{ 'authForm.workerRegister.avatarUrlLabel' | translate }}</mat-label>
+      <input matInput formControlName="avatarUrl" [placeholder]="'authForm.workerRegister.avatarUrlPlaceholder' | translate">
+      <mat-hint>{{ 'authForm.workerRegister.avatarUrlHint' | translate }}</mat-hint>
     </mat-form-field>
 
+    <!-- Campo Contraseña (reutilizado) -->
     <mat-form-field appearance="fill" class="form-field">
-      <mat-label>Contraseña</mat-label>
-      <input matInput type="password" formControlName="password" placeholder="Crea una contraseña">
+      <mat-label>{{ 'authForm.passwordLabel' | translate }}</mat-label>
+      <input matInput type="password" formControlName="password" [placeholder]="'authForm.createPasswordPlaceholder' | translate">
     </mat-form-field>
 
+    <!-- Botón de Submit con texto dinámico -->
     <button mat-flat-button type="submit" class="submit-button form-submit-button" [disabled]="registerForm.invalid || isSubmitting">
-      {{ isSubmitting ? 'Registrando...' : 'Registrarse' }}
+      {{ (isSubmitting ? 'authForm.workerRegister.submitting' : 'authForm.submitButtonRegister') | translate }}
     </button>
 
+    <!-- Divisor social (reutilizado) -->
     <div class="social-login-divider">
-      <span>O regístrate con</span>
+      <span>{{ 'authForm.socialDividerRegister' | translate }}</span>
     </div>
+
     <div class="social-buttons">
       <button mat-stroked-button type="button" class="social-button">Facebook</button>
       <button mat-stroked-button type="button" class="social-button">Google</button>

@@ -4,6 +4,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { PagosComponent } from '@/pagos/pagos.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 interface Producto {
   nombre: string;
@@ -24,7 +25,7 @@ interface Profesional {
 @Component({
   selector: 'app-customer-home',
   standalone: true,
-  imports: [CommonModule, MatCardModule, MatIconModule, MatButtonModule, PagosComponent], // Incluye PagosComponent
+  imports: [CommonModule, MatCardModule, MatIconModule, MatButtonModule, PagosComponent,TranslateModule], // Incluye PagosComponent
   templateUrl: './customer-home.component.html',
   styleUrls: ['./customer-home.component.css']
 })

@@ -1,54 +1,54 @@
-<h1 class="section-title">Fontanería | Profesionales</h1>
+<h1 class="section-title">{{ worker?.specialty || '' }} | {{ 'servicesPage.titleSuffix' | translate }}</h1>
 
 <div class="container">
   <mat-card class="profile-card">
     <div class="profile-content">
-      <img [src]="worker?.profileImageUrl || 'https://via.placeholder.com/150'" alt="Plomero" class="profile-img-lg">
+      <img [src]="worker?.profileImageUrl || 'https://via.placeholder.com/150'" [alt]="'servicesPage.profileImageAlt' | translate" class="profile-img-lg">
       <div class="profile-info">
-        <p><strong>Profesional:</strong> {{worker?.fullName || 'Nombre no disponible'}}</p>
-        <p><strong>Dedicación:</strong> {{worker?.specialty || 'Dedicación no disponible'}}</p>
-        <p><strong>Ubicación:</strong> {{worker?.location || 'Ubicación no disponible'}}</p>
-        <p><strong>Miembro desde:</strong> {{worker?.memberSince || 'Fecha de registro no disponible'}}</p>
+        <p><strong>{{ 'servicesPage.professionalLabel' | translate }}</strong> {{worker?.fullName || 'Nombre no disponible'}}</p>
+        <p><strong>{{ 'servicesPage.specialtyLabel' | translate }}</strong> {{worker?.specialty || 'Dedicación no disponible'}}</p>
+        <p><strong>{{ 'servicesPage.locationLabel' | translate }}</strong> {{worker?.location || 'Ubicación no disponible'}}</p>
+        <p><strong>{{ 'servicesPage.memberSinceLabel' | translate }}</strong> {{worker?.memberSince || 'Fecha de registro no disponible'}}</p>
         <button mat-raised-button class="btn-contratar">
-          <mat-icon>person_add</mat-icon> Contratar
+          <mat-icon>person_add</mat-icon> {{ 'servicesPage.hireButton' | translate }}
         </button>
       </div>
     </div>
   </mat-card>
 
   <section class="section">
-    <h3>Trabajos Anteriores</h3>
+    <h3>{{ 'servicesPage.previousJobsTitle' | translate }}</h3>
     <mat-form-field appearance="outline" class="full-width">
-      <textarea matInput placeholder="Ingresa descripción"></textarea>
+      <textarea matInput [placeholder]="'servicesPage.descriptionPlaceholder' | translate"></textarea>
     </mat-form-field>
   </section>
 
   <section class="section">
-    <h3>Ingresar publicación</h3>
+    <h3>{{ 'servicesPage.newPublicationTitle' | translate }}</h3>
     <form (ngSubmit)="addOrUpdateService()" class="form-publication">
-      <img *ngIf="previewUrl" [src]="previewUrl" class="preview-img" alt="Preview" />
+      <img *ngIf="previewUrl" [src]="previewUrl" class="preview-img" [alt]="'servicesPage.previewImageAlt' | translate" />
 
       <div class="form-fields">
         <mat-form-field appearance="fill">
-          <mat-label>Descripción</mat-label>
+          <mat-label>{{ 'servicesPage.descriptionLabel' | translate }}</mat-label>
           <input matInput [(ngModel)]="newService.description" name="description" required>
         </mat-form-field>
 
         <mat-form-field appearance="fill">
-          <mat-label>Precio</mat-label>
+          <mat-label>{{ 'servicesPage.priceLabel' | translate }}</mat-label>
           <input matInput type="number" [(ngModel)]="newService.price" name="price" required>
         </mat-form-field>
 
         <div class="button-group">
           <label class="upload-button" mat-stroked-button>
             <mat-icon>upload</mat-icon>
-            Subir imagen
+            {{ 'servicesPage.uploadImageButton' | translate }}
             <input type="file" (change)="onImageSelected($event)" hidden />
           </label>
 
           <button class="upload-button2" mat-raised-button color="primary" type="submit">
             <mat-icon>{{ editingIndex !== null ? 'edit' : 'send' }}</mat-icon>
-            {{ editingIndex !== null ? 'Actualizar' : 'Publicar' }}
+            {{ (editingIndex !== null ? 'servicesPage.updateButton' : 'servicesPage.publishButton') | translate }}
           </button>
         </div>
 
@@ -63,16 +63,14 @@
         <p><strong>{{ service.description }}</strong></p>
         <p class="price">${{ service.price }}</p>
 
-
-          <button mat-stroked-button color="primary" (click)="editService(i)">
-            <mat-icon>edit</mat-icon>&nbsp;Editar
-          </button>
-          <button mat-stroked-button color="warn" (click)="deleteService(i)">
-            <mat-icon>delete</mat-icon>&nbsp;Eliminar
-          </button>
+        <button mat-stroked-button color="primary" (click)="editService(i)">
+          <mat-icon>edit</mat-icon> {{ 'servicesPage.editButton' | translate }}
+        </button>
+        <button mat-stroked-button color="warn" (click)="deleteService(i)">
+          <mat-icon>delete</mat-icon> {{ 'servicesPage.deleteButton' | translate }}
+        </button>
 
       </mat-card-content>
-
     </mat-card>
   </div>
 </div>

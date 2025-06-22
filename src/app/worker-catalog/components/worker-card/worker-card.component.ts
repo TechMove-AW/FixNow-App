@@ -4,10 +4,10 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import { MatIcon } from '@angular/material/icon';
 import { RouterLink } from '@angular/router';
-
+import { TranslateModule } from '@ngx-translate/core';
 @Component({
   selector: 'app-worker-card',
-  imports: [MatButtonModule, MatCardModule, MatIcon, RouterLink],
+  imports: [MatButtonModule, MatCardModule, MatIcon, RouterLink,TranslateModule],
   templateUrl: './worker-card.component.html',
   styleUrl: './worker-card.component.css'
 })

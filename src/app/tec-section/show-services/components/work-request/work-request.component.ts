@@ -4,12 +4,12 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { WorkRequest } from '../../../model/work-request.model';
-
+import { TranslateModule } from '@ngx-translate/core';
 @Component({
   selector: 'app-work-request',
   standalone: true,
   imports: [
-    CommonModule, MatButtonModule, MatIconModule, MatExpansionModule, DatePipe
+    CommonModule, MatButtonModule, MatIconModule, MatExpansionModule, DatePipe,TranslateModule
   ],
   templateUrl: './work-request.component.html',
   styleUrls: ['./work-request.component.css']
@@ -22,7 +22,7 @@ export class WorkRequestComponent {
   @Output() acceptWork = new EventEmitter<WorkRequest>();
   @Output() rejectWork = new EventEmitter<WorkRequest>();
 
-  defaultMapImage: string = 'assets/images/map-placeholder.png';
+  defaultMapImage: string = 'https://via.placeholder.com/300x150';
 
   constructor() {}
 

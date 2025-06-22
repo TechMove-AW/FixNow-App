@@ -13,7 +13,7 @@ import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { ConfirmationDeleteComponent } from '../../components/confirmation-delete/confirmation-delete.component';
 import { WorkRequestComponent } from '../../components/work-request/work-request.component'; // El modal de detalle
 import { WorkRequest, ConfirmationDeleteDialogData } from '../../../model/work-request.model'; // Hacia arriba a tec-section/model/
-
+import { TranslateModule } from '@ngx-translate/core';
 registerLocaleData(localeEs, 'es');
 
 @Component({
@@ -25,7 +25,8 @@ registerLocaleData(localeEs, 'es');
     MatButtonModule,
     MatIconModule,
     MatDialogModule,
-    WorkRequestComponent
+    WorkRequestComponent,
+    TranslateModule
   ],
   templateUrl: './agenda.component.html',
   styleUrls: ['./agenda.component.css'],
@@ -58,7 +59,7 @@ export class AgendaComponent implements OnInit {
         dayText: 'Hoy',
         technicianName: 'Luisa Fernandez',
         address: 'Calle Falsa 123, Miraflores',
-        mapImageUrl: 'assets/images/map-placeholder.png'
+        mapImageUrl:"https://static-maps.yandex.ru/1.x/?lang=en_US&ll=-46.6333,-23.5505&z=14&l=map&size=600,300&pt=-46.6333,-23.5505,pm2rdm",
       },
       {
         id: 'job456',
@@ -70,7 +71,7 @@ export class AgendaComponent implements OnInit {
         dayText: 'Mañana',
         technicianName: 'Mario Gomez',
         address: 'Av. Siempreviva 742, San Isidro',
-        mapImageUrl: 'assets/images/map-placeholder.png'
+        mapImageUrl:"https://static-maps.yandex.ru/1.x/?lang=en_US&ll=-3.7038,40.4168&z=14&l=map&size=600,300&pt=-3.7038,40.4168,pm2rdm"
       }
     ];
   }

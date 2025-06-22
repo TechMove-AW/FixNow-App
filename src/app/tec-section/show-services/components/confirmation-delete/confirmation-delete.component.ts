@@ -3,11 +3,11 @@ import { CommonModule } from '@angular/common';
 import { MatDialogModule, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
 import { ConfirmationDeleteDialogData } from '../../../model/work-request.model';
-
+import { TranslateModule } from '@ngx-translate/core';
 @Component({
   selector: 'app-confirmation-delete',
   standalone: true,
-  imports: [CommonModule, MatDialogModule, MatButtonModule],
+  imports: [CommonModule, MatDialogModule, MatButtonModule,TranslateModule],
   templateUrl: './confirmation-delete.component.html',
   styleUrls: ['./confirmation-delete.component.css']
 })

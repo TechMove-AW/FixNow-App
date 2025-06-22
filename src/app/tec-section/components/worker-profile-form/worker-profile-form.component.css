@@ -1,3 +1,4 @@
+/* Estilos existentes */
 .profile-form {
   display: flex;
   flex-direction: column;
@@ -13,7 +14,6 @@
 .profile-form .mat-mdc-form-field .mat-mdc-text-field-wrapper.mdc-text-field--outlined .mdc-notched-outline__trailing {
 }
 .profile-form .mat-mdc-form-field .mat-mdc-floating-label {
-
 }
 
 .profile-form .mat-mdc-form-field input.mat-mdc-input-element,
@@ -47,4 +47,109 @@
   background-color: #d1d5db !important;
   color: #9ca3af !important;
   cursor: not-allowed;
+}
+
+/* --- ESTILOS AÑADIDOS PARA LA SECCIÓN DE VALIDACIÓN --- */
+.validation-section-title {
+  margin-top: 24px;
+  margin-bottom: 8px;
+  font-size: 1.2em;
+  font-weight: 500;
+  border-top: 1px solid #e0e0e0;
+  padding-top: 24px;
+}
+
+.validation-section-subtitle {
+  font-size: 0.9em;
+  color: #616161;
+  margin-bottom: 16px;
+}
+
+.file-upload-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.file-upload-label {
+  font-weight: 500;
+  flex-basis: 250px;
+  flex-shrink: 0;
+}
+
+.file-name {
+  font-style: italic;
+  color: #388e3c;
+  font-size: 0.9em;
+  flex-grow: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.chip {
+  background-color: #e0e0e0;
+  padding: 4px 8px;
+  border-radius: 16px;
+  font-size: 0.8em;
+  margin-right: 4px;
+  display: inline-block;
+  margin-bottom: 4px;
+}
+
+.terms-checkbox {
+  margin-top: 16px;
+}
+
+.validation-section-title {
+  margin-top: 24px;
+  margin-bottom: 8px;
+  font-size: 1.2em;
+  font-weight: 500;
+  border-top: 1px solid #e0e0e0;
+  padding-top: 24px;
+}
+
+.validation-section-subtitle {
+  font-size: 0.9em;
+  color: #616161;
+  margin-bottom: 16px;
+}
+
+.file-upload-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.file-upload-label {
+  font-weight: 500;
+  flex-basis: 250px;
+  flex-shrink: 0;
+}
+
+.file-name {
+  font-style: italic;
+  color: #388e3c;
+  font-size: 0.9em;
+  flex-grow: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.chip {
+  background-color: #e0e0e0;
+  padding: 4px 8px;
+  border-radius: 16px;
+  font-size: 0.8em;
+  margin-right: 4px;
+  display: inline-block;
+  margin-bottom: 4px;
+}
+
+.terms-checkbox {
+  margin-top: 16px;
 }

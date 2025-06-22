@@ -2,9 +2,9 @@
   <header class="dialog-header-price">
     <div class="header-content-price">
       <mat-icon class="header-icon-main-price">payments</mat-icon>
-      <h2>Ingresar Precio Final</h2>
+      <h2>{{ 'dialogs.putPrice.title' | translate }}</h2>
     </div>
-    <button mat-icon-button (click)="onCancel()" aria-label="Cerrar diálogo">
+    <button mat-icon-button (click)="onCancel()" [attr.aria-label]="'dialogs.putPrice.closeLabel' | translate">
       <mat-icon>close</mat-icon>
     </button>
   </header>
@@ -12,21 +12,21 @@
   <mat-dialog-content class="dialog-content-price">
     <form [formGroup]="putPriceForm" (ngSubmit)="onSubmit()">
       <mat-form-field appearance="outline" class="full-width-field-price">
-        <mat-label>Monto final</mat-label>
-        <input matInput formControlName="finalAmount" type="number" placeholder="Ingresa precio" required>
+        <mat-label>{{ 'dialogs.putPrice.amountLabel' | translate }}</mat-label>
+        <input matInput formControlName="finalAmount" type="number" [placeholder]="'dialogs.putPrice.amountPlaceholder' | translate" required>
         <mat-error *ngIf="putPriceForm.get('finalAmount') && putPriceForm.get('finalAmount')!.hasError('required')">
-          El monto es requerido.
+          {{ 'dialogs.putPrice.amountRequiredError' | translate }}
         </mat-error>
         <mat-error *ngIf="putPriceForm.get('finalAmount') && putPriceForm.get('finalAmount')!.hasError('pattern')">
-          Monto inválido (ej: 150 o 150.50).
+          {{ 'dialogs.putPrice.amountPatternError' | translate }}
         </mat-error>
       </mat-form-field>
 
       <mat-form-field appearance="outline" class="full-width-field-price description-field-price">
-        <mat-label>Descripción del trabajo realizado</mat-label>
+        <mat-label>{{ 'dialogs.putPrice.descriptionLabel' | translate }}</mat-label>
         <textarea matInput
                   formControlName="workDescription"
-                  placeholder="Detalles del trabajo completado..."
+                  [placeholder]="'dialogs.putPrice.descriptionPlaceholder' | translate"
                   cdkTextareaAutosize
                   #autosize="cdkTextareaAutosize"
                   cdkAutosizeMinRows="4"
@@ -34,10 +34,10 @@
                   required>
         </textarea>
         <mat-error *ngIf="putPriceForm.get('workDescription') && putPriceForm.get('workDescription')!.hasError('required')">
-          La descripción es requerida.
+          {{ 'dialogs.putPrice.descriptionRequiredError' | translate }}
         </mat-error>
         <mat-error *ngIf="putPriceForm.get('workDescription') && putPriceForm.get('workDescription')!.hasError('maxlength')">
-          Máximo 500 caracteres.
+          {{ 'dialogs.putPrice.descriptionMaxLengthError' | translate }}
         </mat-error>
       </mat-form-field>
     </form>
@@ -48,7 +48,7 @@
             class="terminar-button-dialog-price"
             (click)="onSubmit()"
             [disabled]="putPriceForm.invalid">
-      Terminar
+      {{ 'dialogs.putPrice.submitButton' | translate }}
     </button>
   </mat-dialog-actions>
 </div>

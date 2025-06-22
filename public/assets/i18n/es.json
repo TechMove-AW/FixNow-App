@@ -1,0 +1,197 @@
+{
+  "loginType": {
+    "title": "ELIGE TU TIPO DE USUARIO",
+    "customerButton": "Deseo contratar<br>un servicio",
+    "workerButton": "Deseo brindar<br>mis servicios"
+  },
+  "authForm": {
+    "registerTab": "REGISTRARSE",
+    "loginTab": "INICIAR SESIÓN",
+    "emailLabel": "Correo",
+    "emailPlaceholder": "ejemplo@correo.com",
+    "passwordLabel": "Contraseña",
+    "passwordPlaceholder": "Tu contraseña",
+    "forgotPasswordLink": "¿Olvidaste tu contraseña?",
+    "submitButton": "Iniciar Sesión",
+    "socialDivider": "O inicia sesión con",
+    "nameLabel": "Nombre",
+    "namePlaceholder": "Tu nombre completo",
+    "createPasswordPlaceholder": "Crea una contraseña",
+    "submitButtonRegister": "Registrarse",
+    "socialDividerRegister": "O regístrate con",
+    "workerRegister": {
+      "lastNameLabel": "Apellido",
+      "lastNamePlaceholder": "Tu apellido",
+      "phoneLabel": "Teléfono",
+      "phonePlaceholder": "Tu número de teléfono",
+      "specialtyLabel": "Especialidad Principal",
+      "avatarUrlLabel": "URL de Avatar",
+      "avatarUrlPlaceholder": "https://ejemplo.com/tu-avatar.jpg",
+      "avatarUrlHint": "Introduce la URL de tu imagen de perfil",
+      "submitting": "Registrando..."
+    },
+    "worker": {
+      "registerTab": "REGISTRARSE (TRABAJADOR)",
+      "loginTab": "INICIAR SESIÓN (TRABAJADOR)"
+    }
+  },
+  "homePage": {
+    "banner": {
+      "title": "Únete a FIX IT PRO",
+      "description": "Contamos Con Profesionales De Distintas Áreas Para Brindarte Soluciones Rápidas, Confiables Y De Calidad.",
+      "seeMoreButton": "Ver Más"
+    },
+    "professionals": {
+      "estimatedTime": "Tiempo estimado:",
+      "jobsSuffix": "trabajos"
+    },
+    "ecosmart": {
+      "buyButton": "Ir a Comprar"
+    }
+  },
+  "dialogs": {
+    "fieldError": {
+      "title": "ERROR",
+      "message": "Complete los campos antes de usar esta opción",
+      "acceptButton": "Aceptar"
+    },
+    "putPrice": {
+      "title": "Ingresar Precio Final",
+      "closeLabel": "Cerrar diálogo",
+      "amountLabel": "Monto final",
+      "amountPlaceholder": "Ingresa precio",
+      "amountRequiredError": "El monto es requerido.",
+      "amountPatternError": "Monto inválido (ej: 150 o 150.50).",
+      "descriptionLabel": "Descripción del trabajo realizado",
+      "descriptionPlaceholder": "Detalles del trabajo completado...",
+      "descriptionRequiredError": "La descripción es requerida.",
+      "descriptionMaxLengthError": "Máximo 500 caracteres.",
+      "submitButton": "Terminar"
+    }
+  },
+  "profilePage": {
+    "nameLabel": "Nombre",
+    "emailLabel": "Email",
+    "phoneLabel": "Número",
+    "ageLabel": "Edad",
+    "dniLabel": "DNI",
+    "specialtyLabel": "¿Cuál es tu especialidad?",
+    "experienceLabel": "Años de Experiencia",
+    "addressLabel": "Dirección/Local",
+    "saveButton": "Guardar",
+    "verification": {
+      "title": "Verificación de Perfil",
+      "subtitle": "Completa los siguientes campos para activar tu perfil en nuestra plataforma.",
+      "dniFrontLabel": "Foto de DNI (Parte Frontal) *",
+      "dniBackLabel": "Foto de DNI (Parte Trasera) *",
+      "certificatesLabel": "Certificados o Diplomas (Opcional)",
+      "selectFileButton": "Seleccionar Archivo",
+      "addCertificatesButton": "Añadir Certificados",
+      "termsCheckbox": "Acepto los Términos y Condiciones.",
+      "submitButtonVerification": "Guardar y Activar Perfil",
+      "dniRequiredError": "Por favor, sube ambos lados de tu DNI.",
+      "successMessage": "¡Perfil guardado con éxito! Serás redirigido."
+    },
+    "view": {
+      "editButton": "EDITAR",
+      "agendaButton": "Agenda",
+      "changePhotoButton": "CAMBIAR FOTO",
+      "profilePhotoAlt": "Foto de perfil",
+      "specialtyLabel": "Especialidad",
+      "fullNameLabel": "Nombre Completo",
+      "experienceLabel": "Año de Experiencia",
+      "experienceSuffix": "años",
+      "phoneLabel": "Número de Celular",
+      "paymentMethodLabel": "Método de pago",
+      "loadingText": "Cargando perfil..."
+    }
+  },
+  "agendaModal": {
+    "title": "Agenda",
+    "subtitle": "Tienes una cita",
+    "mapAlt": "Mapa de ubicación",
+    "today": "Hoy",
+    "detailsTitle": "Detalles",
+    "dateLabel": "Fecha:",
+    "timeLabel": "Hora:",
+    "technicianLabel": "Técnico:",
+    "notAssigned": "No asignado",
+    "addressLabel": "Dirección:",
+    "notSpecified": "No especificada",
+    "acceptButton": "Aceptar Trabajo",
+    "rejectButton": "Rechazar Trabajo"
+  },
+  "agendaPage": {
+    "title": "Agenda de Trabajos",
+    "viewMoreButton": "Ver Más",
+    "deleteButtonLabel": "Eliminar solicitud",
+    "noRequestsMessage": "No tienes solicitudes de trabajo pendientes en tu agenda."
+  },
+  "servicesPage": {
+    "titleSuffix": "Profesionales",
+    "profileImageAlt": "Foto de perfil del profesional",
+    "professionalLabel": "Profesional:",
+    "specialtyLabel": "Dedicación:",
+    "locationLabel": "Ubicación:",
+    "memberSinceLabel": "Miembro desde:",
+    "hireButton": "Contratar",
+    "previousJobsTitle": "Trabajos Anteriores",
+    "descriptionPlaceholder": "Ingresa descripción",
+    "newPublicationTitle": "Ingresar publicación",
+    "descriptionLabel": "Descripción",
+    "priceLabel": "Precio",
+    "uploadImageButton": "Subir imagen",
+    "updateButton": "Actualizar",
+    "publishButton": "Publicar",
+    "previewImageAlt": "Vista previa de la imagen",
+    "editButton": "Editar",
+    "deleteButton": "Eliminar",
+    "noServicesAvailable": "No hay servicios disponibles"
+  },
+  "workInProgressPage": {
+    "title": "Trabajo en Curso",
+    "closeButtonLabel": "Cerrar",
+    "subtitle": "Detalles del trabajo y chat con el cliente.",
+    "mapAlt": "Mapa de ubicación",
+    "today": "Hoy",
+    "detailsTitle": "Detalles del Trabajo",
+    "dateLabel": "Fecha:",
+    "timeLabel": "Hora:",
+    "clientLabel": "Cliente:",
+    "notSpecified": "No especificado",
+    "addressLabel": "Dirección:",
+    "chatTitlePrefix": "Chat con Sra./Sr.",
+    "chatPlaceholder": "Escribe un mensaje...",
+    "sendButtonLabel": "Enviar mensaje",
+    "finishWorkButton": "Terminar Trabajo",
+    "loadingText": "Cargando detalles del trabajo o no se encontraron datos...",
+    "backToAgendaButton": "Volver a la Agenda"
+  },
+  "workerListPage": {
+    "noWorkersAvailable": "No hay trabajadores disponibles"
+  },
+  "workerCard": {
+    "profilePictureAlt": "Foto de perfil del trabajador",
+    "viewProfileButton": "Ver perfil",
+    "minutesAbbreviation": "min"
+  },
+  "categoryPage": {
+    "titleSuffix": "Profesionales disponibles"
+  },
+  "customerWorkerProfile": {
+    "titleFallback": "Profesional",
+    "titleSuffix": "Profesionales",
+    "professionalLabel": "Profesional:",
+    "specialtyLabel": "Dedicación:",
+    "locationLabel": "Ubicación:",
+    "estimatedTimeLabel": "Tiempo estimado:",
+    "hireButton": "Contratar",
+    "previousJobsTitle": "Trabajos Anteriores",
+    "defaultExperienceDescription": "Profesional con experiencia en el sector.",
+    "offeredServicesTitle": "Servicios Ofrecidos",
+    "reviewsTitle": "Opiniones",
+    "sampleReview1": "Trabajo rápido y limpio. Instaló todo con mucha precisión.",
+    "sampleReview2": "Me ayudó a reparar una fuga de agua en tiempo récord. Muy profesional y con precios justos.",
+    "sampleReview3": "Excelente servicio. Llegó puntual y dejó todo impecable."
+  }
+}

@@ -1078,6 +1078,36 @@
       "rating": 0,
       "reviewIds": [],
       "serviceIds": []
+    },
+    {
+      "id": 1750384984341,
+      "user": {
+        "id": 1750384984341,
+        "firstName": "pepe",
+        "lastName": "perez",
+        "email": "coco@gmail.com",
+        "role": "worker",
+        "age": 30,
+        "dni": "12345678X",
+        "profilePicture": "https://randomuser.me/api/portraits/men/1.jpg",
+        "password": "Yuyu23",
+        "location": {
+          "display_name": "Lima, Perú",
+          "latitude": 40.4168,
+          "longitude": -3.7038
+        }
+      },
+      "category": {
+        "id": 1,
+        "name": "Fontanería",
+        "slug": "fontaneria"
+      },
+      "experienceDescription": "Nuevo profesional en la plataforma",
+      "hourlyRate": 25,
+      "projectsCompleted": 0,
+      "rating": 0,
+      "reviewIds": [],
+      "serviceIds": []
     }
   ],
   "worker-services": [
@@ -1599,6 +1629,22 @@
         "lastName": "Vega",
         "profilePicture": "https://randomuser.me/api/portraits/men/19.jpg"
       }
+    }
+  ],
+  "registers": [
+    {
+      "name": "cameron",
+      "email": "cmaer@gmail.com",
+      "password": "yuta202",
+      "timestamp": "2025-06-19T20:26:15.021Z",
+      "id": 4
+    },
+    {
+      "name": "cameron",
+      "email": "cameronb@gmail.com",
+      "password": "caa3",
+      "timestamp": "2025-06-20T02:02:15.887Z",
+      "id": 5
     }
   ]
 }

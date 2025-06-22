@@ -7,6 +7,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { WorkerService } from '@/shared/services/worker.service';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-register-worker',
@@ -20,6 +21,7 @@ import { WorkerService } from '@/shared/services/worker.service';
     RouterLink,
     RouterLinkActive,
     ReactiveFormsModule,
+    TranslateModule
   ],
   templateUrl: './register-worker.component.html',
   styleUrl: './register-worker.component.css',
