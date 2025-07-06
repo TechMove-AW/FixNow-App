@@ -1,14 +1,19 @@
-<h1 class="section-title">{{ worker?.specialty || '' }} | {{ 'servicesPage.titleSuffix' | translate }}</h1>
+<h1 class="section-title">
+  {{ worker?.category?.displayName || '' }} | {{ 'servicesPage.titleSuffix' | translate }}
+</h1>
 
 <div class="container">
   <mat-card class="profile-card">
     <div class="profile-content">
-      <img [src]="worker?.profileImageUrl || 'https://via.placeholder.com/150'" [alt]="'servicesPage.profileImageAlt' | translate" class="profile-img-lg">
+
       <div class="profile-info">
-        <p><strong>{{ 'servicesPage.professionalLabel' | translate }}</strong> {{worker?.fullName || 'Nombre no disponible'}}</p>
-        <p><strong>{{ 'servicesPage.specialtyLabel' | translate }}</strong> {{worker?.specialty || 'Dedicación no disponible'}}</p>
-        <p><strong>{{ 'servicesPage.locationLabel' | translate }}</strong> {{worker?.location || 'Ubicación no disponible'}}</p>
-        <p><strong>{{ 'servicesPage.memberSinceLabel' | translate }}</strong> {{worker?.memberSince || 'Fecha de registro no disponible'}}</p>
+        <p><strong>{{ 'servicesPage.professionalLabel' | translate }}</strong>
+          {{ user?.firstName }} {{ user?.lastName || 'Nombre no disponible' }}</p>
+        <p><strong>{{ 'servicesPage.specialtyLabel' | translate }}</strong>
+          {{ worker?.category?.displayName || 'Dedicación no disponible' }}</p>
+
+        <p><strong>{{ 'servicesPage.memberSinceLabel' | translate }}</strong>
+          {{ worker?.createdAt ? (worker?.createdAt | date:'longDate') : 'Fecha de registro no disponible' }}</p>
         <button mat-raised-button class="btn-contratar">
           <mat-icon>person_add</mat-icon> {{ 'servicesPage.hireButton' | translate }}
         </button>
@@ -26,9 +31,15 @@
   <section class="section">
     <h3>{{ 'servicesPage.newPublicationTitle' | translate }}</h3>
     <form (ngSubmit)="addOrUpdateService()" class="form-publication">
-      <img *ngIf="previewUrl" [src]="previewUrl" class="preview-img" [alt]="'servicesPage.previewImageAlt' | translate" />
+      <img *ngIf="previewUrl" [src]="previewUrl" class="preview-img"
+           [alt]="'servicesPage.previewImageAlt' | translate" />
 
       <div class="form-fields">
+        <mat-form-field appearance="fill">
+          <mat-label>{{ 'servicesPage.serviceNameLabel' | translate }}</mat-label>
+          <input matInput [(ngModel)]="newService.serviceName" name="serviceName" required>
+        </mat-form-field>
+
         <mat-form-field appearance="fill">
           <mat-label>{{ 'servicesPage.descriptionLabel' | translate }}</mat-label>
           <input matInput [(ngModel)]="newService.description" name="description" required>
@@ -51,7 +62,6 @@
             {{ (editingIndex !== null ? 'servicesPage.updateButton' : 'servicesPage.publishButton') | translate }}
           </button>
         </div>
-
       </div>
     </form>
   </section>
@@ -60,7 +70,8 @@
     <mat-card *ngFor="let service of services; let i = index" class="service-card">
       <img mat-card-image [src]="service.imageUrl" *ngIf="service.imageUrl">
       <mat-card-content>
-        <p><strong>{{ service.description }}</strong></p>
+        <h4>{{ service.serviceName }}</h4>
+        <p>{{ service.description }}</p>
         <p class="price">${{ service.price }}</p>
 
         <button mat-stroked-button color="primary" (click)="editService(i)">
@@ -69,7 +80,6 @@
         <button mat-stroked-button color="warn" (click)="deleteService(i)">
           <mat-icon>delete</mat-icon> {{ 'servicesPage.deleteButton' | translate }}
         </button>
-
       </mat-card-content>
     </mat-card>
   </div>
