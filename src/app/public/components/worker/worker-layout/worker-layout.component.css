@@ -1,0 +1,70 @@
+.worker-dashboard-container {
+  min-height: 100vh;
+  background-image: url("/assets/auth-background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+}
+
+.worker-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 25px;
+  background-color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid hsl(210, 16%, 93%);
+}
+
+.logo {
+  font-size: 1.6em;
+  font-weight: 700;
+  color: #2c3e50;
+  display: flex;
+  align-items: center;
+}
+.logo-icon-placeholder {
+  margin-right: 8px;
+  font-size: 0.9em;
+  color: #3498db;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.header-actions .mat-icon-button .mat-icon {
+  color: #0d61c9;
+  font-size: 24px;
+}
+
+.profile-icon-button {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #3498db;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+
+.profile-initial {
+  font-size: 1em;
+  font-weight: 600;
+}
+
+.worker-content {
+  flex-grow: 1;
+  padding: 20px;
+}

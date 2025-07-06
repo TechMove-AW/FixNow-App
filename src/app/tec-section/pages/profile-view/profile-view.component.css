@@ -1,0 +1,193 @@
+.profile-view-page {
+  max-width: 750px;
+  margin: 10px auto;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: #374151;
+}
+
+.profile-header-actions {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.action-button {
+  border-radius: 20px !important;
+  padding: 6px 22px !important;
+  font-weight: 500 !important;
+  text-transform: none !important;
+  font-size: 0.9em !important;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.yellow-button {
+  background-color: #fde047 !important;
+  color: #4b5563 !important;
+}
+.yellow-button:hover {
+  background-color: #facc15 !important;
+}
+.yellow-button:disabled {
+  background-color: #fde047 !important;
+  color: #4b5563 !important;
+  opacity: 0.8;
+}
+
+
+.profile-card {
+  background-color: #fff;
+  padding: 20px 25px;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+}
+
+.profile-main-info {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.profile-picture-container {
+  text-align: center;
+}
+
+.profile-picture {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 10px auto;
+}
+
+.change-photo-button {
+  font-size: 0.75em;
+  color: #60a5fa;
+  text-transform: uppercase;
+  font-weight: 500;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px 0;
+}
+.change-photo-button:hover {
+  color: #3b82f6;
+}
+
+
+.profile-name-and-edit {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.profile-name {
+  font-size: 1.25em;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.profile-username {
+  font-size: 0.9em;
+  color: #6b7280;
+  margin-bottom: 8px;
+}
+
+.edit-link-inline-button {
+  font-size: 0.7em;
+  color: #9ca3af;
+  text-transform: uppercase;
+  font-weight: 500;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+.edit-link-inline-button:hover {
+  color: #60a5fa;
+}
+
+.profile-location-joined {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.8em;
+  color: #6b7280;
+}
+.profile-location-joined span {
+  display: flex;
+  align-items: center;
+}
+
+.profile-divider {
+  display: none;
+}
+
+.detail-item {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #f3f4f6;
+}
+.detail-item:last-child {
+  border-bottom: none;
+}
+
+
+.detail-label {
+  font-weight: 600;
+  color: #374151;
+  font-size: 0.85em;
+  margin-bottom: 2px;
+  text-transform: uppercase;
+}
+
+.edit-link-button {
+  font-size: 0.75em;
+  color: #9ca3af;
+  text-decoration: none;
+  font-weight: 500;
+  text-transform: uppercase;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  margin-left: 10px;
+}
+.edit-link-button:hover {
+  color: #60a5fa;
+}
+
+.detail-value {
+  color: #4b5563;
+  font-size: 0.95em;
+  margin: 0;
+}
+
+.payment-methods {
+  display: flex;
+  gap: 8px;
+  margin-top: 4px;
+  flex-wrap: wrap;
+}
+.payment-method-item {
+  font-size: 0.8em;
+  color: #4b5563;
+  background-color: #e5e7eb;
+  padding: 3px 10px;
+  border-radius: 12px;
+  line-height: 1.2;
+}
+.loading-text {
+  text-align: center;
+  padding: 20px;
+  font-style: italic;
+  color: #6b7280;
+}

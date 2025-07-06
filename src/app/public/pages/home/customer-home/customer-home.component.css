@@ -1,0 +1,270 @@
+/* Estilos del banner principal */
+.fixit-banner {
+  padding: 1rem 2rem;
+  background: linear-gradient(to right, #1c3b70, #3e77c1);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 4px;
+  margin-bottom: 2rem;
+}
+
+.banner-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.banner-content h2 {
+  font-size: 1.75rem;
+  margin-bottom: 0.25rem;
+}
+
+.banner-content p {
+  font-size: 0.9rem;
+  margin-top: 0;
+}
+
+.ver-mas-container {
+  display: flex;
+  align-items: center;
+}
+
+.ver-mas-button {
+  background-color: white;
+  color: #1c3b70;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.ver-mas-button:hover {
+  background-color: #eee;
+}
+
+/* Estilos de la sección de profesionales */
+.profesionales-container {
+  padding: 1rem 2rem;
+  margin-bottom: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto 2rem auto;
+}
+
+.profesionales-list {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  max-width: 100%;
+}
+
+.profesional-card {
+  width: 300px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: left;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.profesional-card .mat-card-header {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+
+.profesional-header-content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.profesional-avatar-container {
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-right: 1rem;
+  flex-shrink: 0;
+}
+
+.profesional-avatar-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profesional-info-header {
+  display: flex;
+  flex-direction: column;
+}
+
+.profesional-card .mat-card-title {
+  font-size: 1.2rem;
+  margin-bottom: 0.25rem;
+}
+
+.profesional-card .mat-card-subtitle {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+.profesional-card .mat-card-content {
+  padding: 0.75rem 1rem;
+  font-size: 0.9rem;
+}
+
+.profesional-card .badge {
+  background-color: #ffcc00;
+  color: #000;
+  border-radius: 12px;
+  padding: 0.25rem 0.5rem;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 0.5rem;
+}
+
+/* Estilos de la sección del producto EcoSmart */
+.ecosmart-section {
+  display: flex;
+  justify-content: center;
+  padding: 1rem 2rem;
+  margin-bottom: 2rem;
+}
+
+.ecosmart-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+}
+
+.ecosmart-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-bottom: 1px solid #eee;
+}
+
+.ecosmart-info {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ecosmart-info .mat-card-title {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.ecosmart-info .mat-card-subtitle {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.ecosmart-info .mat-card-content {
+  padding: 0;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.ecosmart-info .mat-card-content ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.ecosmart-info .mat-card-content li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.ecosmart-info .mat-card-content .mat-icon {
+  margin-right: 0.5rem;
+  color: #1c3b70;
+}
+
+.ecosmart-info .mat-card-actions {
+  padding: 1rem 0;
+}
+
+.ecosmart-info .mat-card-actions button {
+  background-color: #ffcc00;
+  color: #000;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.ecosmart-info .mat-card-actions button:hover {
+  background-color: #e6b800;
+}
+
+/* Estilos de los iconos de pago */
+.pago-icons {
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.pago-icons img {
+  height: 40px;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.pago-icons img:hover {
+  opacity: 1;
+}
+/* Estilos para el modal (añadidos aquí también para asegurar que estén) */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  position: relative;
+  min-width: 350px;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1001;
+  cursor: pointer;
+}

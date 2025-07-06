@@ -1,0 +1,49 @@
+<div class="agenda-container">
+  <header class="agenda-header">
+    <mat-icon class="header-icon">calendar_today</mat-icon>
+    <h1>{{ 'agendaPage.title' | translate }}</h1>
+  </header>
+
+  <div class="requests-list" *ngIf="workRequests.length > 0; else noRequestsTemplate">
+
+    <mat-card class="request-card" *ngFor="let request of workRequests">
+      <mat-card-content class="card-content">
+
+        <div class="info-section" (click)="openDetails(request)">
+          <div class="avatar-container">
+            <mat-icon class="default-avatar">person</mat-icon>
+          </div>
+          <div class="details-section">
+            <h3 class="request-title">{{ request.title }}</h3>
+            <p class="request-description">{{ request.description }}</p>
+          </div>
+        </div>
+
+        <div class="actions-section">
+          <span class="request-time">{{ request.time }}</span>
+          <button mat-flat-button class="view-more-button" (click)="openDetails(request, $event)">
+            {{ 'agendaPage.viewMoreButton' | translate }}
+          </button>
+          <button mat-icon-button class="delete-button" (click)="askToDelete(request, $event)" [attr.aria-label]="'agendaPage.deleteButtonLabel' | translate">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <ng-template #noRequestsTemplate>
+    <div class="empty-agenda">
+      <mat-icon class="empty-icon">event_busy</mat-icon>
+      <p>{{ 'agendaPage.noRequestsMessage' | translate }}</p>
+    </div>
+  </ng-template>
+</div>
+
+<app-work-request
+  [requestData]="currentRequestForDetail"
+  [isVisible]="showDetailModal"
+  (closeModal)="closeDetails()"
+  (acceptWork)="acceptWorkRequest($event)"
+  (rejectWork)="rejectWorkRequest($event)">
+</app-work-request>
