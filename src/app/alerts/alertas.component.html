@@ -1,0 +1,33 @@
+<div class="alerts-container">
+  <h2>Mis Notificaciones</h2>
+  @if (alerts.length === 0) {
+    <div class="empty-alerts">
+      <p>No tienes notificaciones en este momento.</p>
+    </div>
+  }
+  @for (alert of alerts; track alert.id) {
+    <!-- Usamos routerLink o un método de clic para marcar como leído -->
+    <a [routerLink]="alert.link || '#'" (click)="markAsRead(alert, $event)" class="alert-link">
+      <!-- Añadimos una clase 'read' si la alerta ya fue leída -->
+      <mat-card class="alert-card" [class.read]="alert.read">
+        <!-- Encabezado con imagen y nombre -->
+        <div class="alert-header">
+          <div class="avatar-container" *ngIf="alert.sender">
+            <img [src]="alert.sender.profilePicture || 'assets/images/default-avatar.png'" [alt]="'Avatar de ' + alert.sender.firstName">
+          </div>
+          <div class="user-info" *ngIf="alert.sender">
+            <span class="username">{{ alert.sender.firstName }} {{ alert.sender.lastName }}</span>
+          </div>
+        </div>
+        <!-- Contenido del mensaje -->
+        <mat-card-content class="alert-content">
+          <p>{{ alert.message }}</p>
+        </mat-card-content>
+        <!-- Pie de la tarjeta con la fecha -->
+        <mat-card-footer class="alert-footer">
+          <span class="timestamp">{{ formatDate(alert.createdAt) }}</span>
+        </mat-card-footer>
+      </mat-card>
+    </a>
+  }
+</div>

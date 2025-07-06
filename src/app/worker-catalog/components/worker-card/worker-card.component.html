@@ -1,0 +1,23 @@
+<mat-card class="worker-card" appearance="outlined" *ngIf="worker">
+  <img mat-card-image src="https://via.placeholder.com/300x200?text={{ worker.user?.firstName?.charAt(0) }}" [alt]="worker.user?.firstName">
+  <div class="worker-info">
+    <div class="worker-header">
+      <!-- Ahora sí podemos mostrar el nombre -->
+      <span class="worker-name">{{ worker.user?.firstName }} {{ worker.user?.lastName }}</span>
+      <div class="worker-rating">
+        <mat-icon>star</mat-icon>
+        <span>4.5</span> <!-- El rating aún es un valor fijo -->
+      </div>
+    </div>
+    <!-- La categoría no la tenemos aquí, la vemos en el perfil detallado -->
+    <p class="category-name">Especialista</p>
+    <p class="worker-description">{{ worker.availability }}</p>
+    <div class="card-actions">
+      <!-- Usamos workerId para la navegación -->
+      <a mat-button color="primary" class="view-profile" [routerLink]="['/customer/worker-profile', worker.workerId]">
+        {{ 'workerCard.viewProfileButton' | translate }}
+      </a>
+      <span class="worker-time">20-25 {{ 'workerCard.minutesAbbreviation' | translate }}</span>
+    </div>
+  </div>
+</mat-card>
