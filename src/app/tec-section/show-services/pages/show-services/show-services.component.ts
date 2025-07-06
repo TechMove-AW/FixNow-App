@@ -8,7 +8,24 @@ import { MatIcon } from '@angular/material/icon';
 import { MatFormField, MatInput, MatLabel } from '@angular/material/input';
 import { TextareaModule } from 'primeng/textarea';
 import { TranslateModule } from '@ngx-translate/core';
-import { WorkerApiService, WorkerResource, UserResource, ServiceResource } from '../../../services/worker-api.service';
+import { WorkerApiService } from '../../../services/worker-api.service';
+
+interface Service {
+  serviceName: string;
+  description: string;
+  price: number;
+  imageUrl: string;
+}
+
+interface User {
+  id: number;
+  accountId: number;
+  workerId: number;
+  firstName: string;
+  lastName: string;
+  description: string;
+
+}
 
 @Component({
   selector: 'app-show-services',
@@ -33,11 +50,11 @@ import { WorkerApiService, WorkerResource, UserResource, ServiceResource } from 
   ]
 })
 export class ShowServicesComponent implements OnInit {
-  worker: WorkerResource | null = null;
-  user: UserResource | null = null;
+  worker: any = null;
+  user: User | null = null;
   workerId!: number;
-  services: ServiceResource[] = [];
-  newService: Partial<ServiceResource> = {};
+  services: Service[] = [];
+  newService: Partial<Service> = {};
   editingIndex: number | null = null;
   previewUrl: string | null = null;
 
@@ -47,32 +64,18 @@ export class ShowServicesComponent implements OnInit {
   ) {}
 
 ngOnInit(): void {
-  const urlWorkerId = Number(1);
+  const urlWorkerId = Number(this.router.url.split('/').pop());
 
   this.workerApiService.getWorkerById(urlWorkerId).subscribe({
-    next: (workerRes: WorkerResource) => {
+    next: (workerRes: any) => {
       this.worker = workerRes;
       this.workerId = workerRes.workerId;
       this.services = workerRes.services || [];
 
-      // Cargar categoría del trabajador
-      if (workerRes.workerCategoryId) {
-        this.workerApiService.getWorkerCategoryById(workerRes.workerCategoryId).subscribe({
-          next: (categoryRes) => {
-            if (this.worker) {
-              this.worker.category = categoryRes;
-            }
-          },
-          error: (err: any) => {
-            console.error('Error al obtener categoría', err);
-          }
-        });
-      }
-
       const userId = workerRes.userId;
       if (userId) {
         this.workerApiService.getUserById(userId).subscribe({
-          next: (userRes: UserResource) => {
+          next: (userRes: any) => {
             this.user = userRes;
           },
           error: (err: any) => {
@@ -88,48 +91,30 @@ ngOnInit(): void {
 }
 
   addOrUpdateService(): void {
-    console.log('Método addOrUpdateService llamado');
-    console.log('Datos del nuevo servicio:', this.newService);
-    
-    // Validar que todos los campos requeridos estén presentes
-    if (!this.newService.serviceName || !this.newService.description || !this.newService.price) {
-      console.error('Faltan campos requeridos');
-      alert('Por favor, completa todos los campos requeridos: Nombre del servicio, Descripción y Precio');
-      return;
-    }
-
     if (this.editingIndex !== null) {
       this.services[this.editingIndex] = {
         serviceName: this.newService.serviceName!,
         description: this.newService.description!,
         price: +this.newService.price!,
-        imageUrl: this.newService.imageUrl || 'https://via.placeholder.com/300x200?text=Sin+Imagen'
+        imageUrl: this.newService.imageUrl || ''
       };
       this.editingIndex = null;
-      this.newService = {};
-      this.previewUrl = null;
     } else {
-      const newService: ServiceResource = {
+      const newService: Service = {
         serviceName: this.newService.serviceName!,
         description: this.newService.description!,
         price: +this.newService.price!,
-        imageUrl: this.newService.imageUrl || 'https://via.placeholder.com/300x200?text=Sin+Imagen'
+        imageUrl: this.newService.imageUrl || ''
       };
 
-      console.log('Enviando servicio al backend:', newService);
-      console.log('Worker ID:', this.workerId);
-
       this.workerApiService.addServiceToWorker(this.workerId, newService).subscribe({
-        next: (response) => {
-          console.log('Servicio agregado exitosamente:', response);
+        next: () => {
           this.services.push(newService);
           this.newService = {};
           this.previewUrl = null;
-          alert('Servicio agregado exitosamente');
         },
         error: (error: any) => {
-          console.error('Error al agregar servicio:', error);
-          alert('Error al agregar servicio: ' + (error.message || 'Error desconocido'));
+          console.error('Error al agregar servicio', error);
         }
       });
     }
