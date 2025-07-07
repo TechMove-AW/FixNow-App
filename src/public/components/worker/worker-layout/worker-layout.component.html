@@ -1,0 +1,24 @@
+<div class="worker-dashboard-container">
+  <header class="worker-header">
+    <div class="logo">
+      <a routerLink="/tec-section" class="logo-container">
+        <img src="logo.svg" class="logo" width="200">
+      </a>
+    </div>
+    <div class="header-actions">
+      <button mat-icon-button aria-label="Notificaciones">
+        <mat-icon>notifications_none</mat-icon>
+      </button>
+      <button mat-icon-button aria-label="Mensajes">
+        <mat-icon>mail_outline</mat-icon>
+      </button>
+      <!-- Botón de perfil ahora tiene dos funciones: ir al perfil y hacer logout (o podría ser un menú) -->
+      <button mat-icon-button class="profile-icon-button" aria-label="Perfil del trabajador" (click)="logout()">
+        <span class="profile-initial">{{ workerInitial }}</span>
+      </button>
+    </div>
+  </header>
+  <main class="worker-content">
+    <router-outlet></router-outlet>
+  </main>
+</div>
