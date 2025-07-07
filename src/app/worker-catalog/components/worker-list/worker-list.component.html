@@ -1,7 +1,0 @@
-<div class="worker-list-container">
-  @for(worker of workers; track worker.id){
-    <app-worker-card [worker]="worker"></app-worker-card>
-  }@empty {
-    <p>{{ 'workerListPage.noWorkersAvailable' | translate }}</p>
-  }
-</div>
