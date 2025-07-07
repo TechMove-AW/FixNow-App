@@ -1,0 +1,67 @@
+<div *ngIf="isLoading" class="loading-container">
+  <mat-spinner></mat-spinner>
+</div>
+
+<div class="profile-view-page" *ngIf="!isLoading && worker">
+
+  <div class="profile-header-actions">
+    <button mat-flat-button routerLink="/tec-section/agenda" class="action-button">
+      <mat-icon>calendar_today</mat-icon>
+      Agenda
+    </button>
+    <button mat-flat-button (click)="navigateToManageServices()" class="action-button">
+      <mat-icon>build</mat-icon>
+      Gestionar mis Servicios
+    </button>
+  </div>
+
+  <div class="profile-card">
+    <div class="profile-main-info">
+      <div class="profile-picture-container">
+        <img [src]="'https://via.placeholder.com/150/007bff/FFFFFF?Text=' + (worker.user?.firstName?.charAt(0) || 'W')"
+             [alt]="'profilePage.view.profilePhotoAlt' | translate" class="profile-picture"/>
+      </div>
+      <div class="profile-text-details">
+        <div class="profile-name-and-edit">
+          <span class="profile-name">{{ worker.user?.firstName }} {{ worker.user?.lastName }}</span>
+        </div>
+        <div class="profile-username">
+          <button (click)="navigateToEdit()" class="edit-link-inline-button">
+            {{ 'profilePage.view.editButton' | translate }} perfil
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="profile-details">
+      <div class="detail-item">
+        <div class="detail-content">
+          <div class="detail-label">{{ 'profilePage.view.specialtyLabel' | translate }}</div>
+          <p class="detail-value">{{ worker.category?.displayName }}</p>
+        </div>
+      </div>
+      <div class="detail-item">
+        <div class="detail-content">
+          <div class="detail-label">{{ 'profilePage.view.fullNameLabel' | translate }}</div>
+          <p class="detail-value">{{ worker.user?.firstName }} {{ worker.user?.lastName }}</p>
+        </div>
+      </div>
+      <div class="detail-item">
+        <div class="detail-content">
+          <div class="detail-label">Disponibilidad</div>
+          <p class="detail-value">{{ worker.availability }}</p>
+        </div>
+      </div>
+      <div class="detail-item">
+        <div class="detail-content">
+          <div class="detail-label">Tarifa por hora</div>
+          <p class="detail-value">S/ {{ worker.hourlyRateAmount }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="!isLoading && !worker">
+  <p>No se pudieron cargar los datos del perfil. <a routerLink="/login/worker">Intenta iniciar sesión de nuevo</a>.</p>
+</div>

@@ -1,0 +1,88 @@
+<div class="page-container" *ngIf="workRequestDetails">
+  <header class="page-header">
+    <div class="header-content">
+      <mat-icon class="header-icon-main">assignment_turned_in</mat-icon>
+      <h1>{{ 'workInProgressPage.title' | translate }}</h1>
+    </div>
+    <button mat-icon-button (click)="closePage()" [attr.aria-label]="'workInProgressPage.closeButtonLabel' | translate">
+      <mat-icon>close</mat-icon>
+    </button>
+  </header>
+
+  <p class="cita-subtitle">{{ 'workInProgressPage.subtitle' | translate }}</p>
+
+  <div class="work-details-card">
+    <div class="map-container">
+      <img [src]="workRequestDetails.mapImageUrl || defaultMapImage" [alt]="'workInProgressPage.mapAlt' | translate" class="map-image">
+    </div>
+    <div class="time-info">
+      <p class="day-text">{{ workRequestDetails.dayText || ('workInProgressPage.today' | translate) }}</p>
+      <p class="time-range-text">
+        {{ workRequestDetails.time }}
+        <span *ngIf="workRequestDetails.endTime"> - {{ workRequestDetails.endTime }}</span>
+      </p>
+    </div>
+    <mat-accordion>
+      <mat-expansion-panel class="details-expansion-panel" [(expanded)]="detailsPanelOpenState">
+        <mat-expansion-panel-header>
+          <mat-panel-title class="details-title">
+            {{ 'workInProgressPage.detailsTitle' | translate }}
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <div class="details-content-panel">
+          <div class="detail-item">
+            <mat-icon>event</mat-icon>
+            <span><strong>{{ 'workInProgressPage.dateLabel' | translate }}</strong> {{ workRequestDetails.date | date:'dd MMMM yyyy':'':'es' }}</span>
+          </div>
+          <div class="detail-item">
+            <mat-icon>schedule</mat-icon>
+            <span><strong>{{ 'workInProgressPage.timeLabel' | translate }}</strong> {{ workRequestDetails.time }} <span *ngIf="workRequestDetails.endTime">- {{ workRequestDetails.endTime }}</span></span>
+          </div>
+          <div class="detail-item">
+            <mat-icon>person_pin</mat-icon>
+            <span><strong>{{ 'workInProgressPage.clientLabel' | translate }}</strong> {{ workRequestDetails.technicianName || ('workInProgressPage.notSpecified' | translate) }}</span>
+          </div>
+          <div class="detail-item">
+            <mat-icon>location_on</mat-icon>
+            <span><strong>{{ 'workInProgressPage.addressLabel' | translate }}</strong> {{ workRequestDetails.address || ('workInProgressPage.notSpecified' | translate) }}</span>
+          </div>
+        </div>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
+
+  <div class="chat-window">
+    <header class="chat-header-internal">
+      <mat-icon class="avatar-icon">chat_bubble_outline</mat-icon>
+      <span class="client-name">{{ 'workInProgressPage.chatTitlePrefix' | translate }} {{ clientName }}</span>
+    </header>
+    <div class="messages-area" #chatMessagesContainer>
+      <div *ngFor="let msg of messages"
+           class="message-bubble"
+           [ngClass]="{'sent': msg.sender === 'worker', 'received': msg.sender === 'client'}">
+        <p class="message-text">{{ msg.text }}</p>
+        <span class="message-timestamp">{{ msg.timestamp | date:'shortTime' }}</span>
+      </div>
+    </div>
+    <footer class="chat-input-area">
+      <mat-form-field appearance="outline" class="message-input-field">
+        <input matInput
+               [(ngModel)]="newMessageText"
+               [placeholder]="'workInProgressPage.chatPlaceholder' | translate"
+               (keyup.enter)="sendMessage()">
+      </mat-form-field>
+      <button mat-icon-button color="primary" (click)="sendMessage()" class="send-button" [attr.aria-label]="'workInProgressPage.sendButtonLabel' | translate">
+        <mat-icon>send</mat-icon>
+      </button>
+    </footer>
+  </div>
+
+  <button mat-flat-button class="terminar-main-button" (click)="openPutPriceDialog()">
+    {{ 'workInProgressPage.finishWorkButton' | translate }}
+  </button>
+</div>
+
+<div *ngIf="!workRequestDetails" class="loading-error-container">
+  <p>{{ 'workInProgressPage.loadingText' | translate }}</p>
+  <button mat-stroked-button routerLink="/tec-section/agenda">{{ 'workInProgressPage.backToAgendaButton' | translate }}</button>
+</div>
