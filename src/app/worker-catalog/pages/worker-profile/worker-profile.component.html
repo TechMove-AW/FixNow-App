@@ -1,0 +1,67 @@
+<div *ngIf="isLoading" class="loading-container">
+  <mat-spinner></mat-spinner>
+</div>
+
+<div *ngIf="!isLoading && worker" class="profile-container">
+  <h1 class="section-title">
+    {{ worker.category?.displayName || 'Especialidad' }} | {{ 'customerWorkerProfile.titleSuffix' | translate }}
+  </h1>
+
+  <div class="container">
+    <mat-card class="profile-card">
+      <div class="profile-content">
+        <img src="https://via.placeholder.com/150" [alt]="worker.user?.firstName" class="profile-img-lg">
+        <div class="profile-info">
+          <p><strong>{{ 'customerWorkerProfile.professionalLabel' | translate }}:</strong> {{ worker.user?.firstName }} {{ worker.user?.lastName }}</p>
+          <p><strong>{{ 'customerWorkerProfile.specialtyLabel' | translate }}:</strong> {{ worker.category?.displayName }}</p>
+          <p><strong>Disponibilidad:</strong> {{ worker.availability }}</p>
+          <p><strong>Tarifa por hora:</strong> S/ {{ worker.hourlyRateAmount }}</p>
+          <button mat-raised-button class="btn-contratar" (click)="handleHireWorker()">{{ 'customerWorkerProfile.hireButton' | translate }}</button>
+        </div>
+      </div>
+    </mat-card>
+
+    <section class="section">
+      <h3>Servicios Ofrecidos</h3>
+      <div class="services-grid" *ngIf="worker.services.length > 0; else noServices">
+        <mat-card *ngFor="let service of worker.services" class="service-card">
+          <mat-card-header>
+            <mat-card-title>{{service.serviceName}}</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <p>{{service.description}}</p>
+            <p class="price">S/ {{service.price}}</p>
+          </mat-card-content>
+        </mat-card>
+      </div>
+      <ng-template #noServices>
+        <p>Este trabajador aún no ha publicado servicios.</p>
+      </ng-template>
+    </section>
+
+    <section class="section">
+      <h3>{{ 'customerWorkerProfile.reviewsTitle' | translate }}</h3>
+      <div *ngIf="reviews.length > 0; else noReviews" class="reviews-container">
+        <mat-card *ngFor="let review of reviews" class="review-card">
+          <mat-card-header>
+            <mat-card-title>Usuario #{{ review.userId }}</mat-card-title>
+            <mat-card-subtitle>Calificación: {{ review.rating }} / 5</mat-card-subtitle>
+          </mat-card-header>
+          <mat-card-content>
+            <p>"{{ review.comment }}"</p>
+          </mat-card-content>
+          <mat-card-footer>
+            <p>{{ review.date | date:'longDate':'':'es' }}</p>
+          </mat-card-footer>
+        </mat-card>
+      </div>
+      <ng-template #noReviews>
+        <p>Este trabajador aún no tiene reseñas.</p>
+      </ng-template>
+    </section>
+  </div>
+</div>
+
+<div *ngIf="!isLoading && !worker" class="error-container">
+  <p>No se pudo cargar el perfil del trabajador. Por favor, intente de nuevo.</p>
+</div>
